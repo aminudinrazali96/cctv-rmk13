@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-06T10:40",
- "excel_diubah": "2026-10-06T02:40",
+ "dijana": "2026-10-06T14:05",
+ "excel_diubah": "2026-10-06T04:17",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 37,
   "ptj_belum": 17,
-  "ptj_selesai": 13,
+  "ptj_selesai": 15,
   "pct_cctv_dijadualkan": 37.6,
-  "pct_cctv_selesai": 9.4,
+  "pct_cctv_selesai": 10.8,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 11
   },
   "selesai_team": {
-   "A": 10,
+   "A": 12,
    "B": 3
   },
-  "sesi_selesai": 13,
+  "sesi_selesai": 15,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -182,7 +182,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "KK2",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       26
      ]
@@ -192,7 +192,7 @@
      "sesi": "Pagi",
      "masa": "11:30 – 13:00",
      "ptj": "KK6",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       29
      ]
@@ -790,12 +790,12 @@
   {
    "no": 26,
    "nama": "Kolej Kediaman Kedua (Tuanku Bahiyah) — KK2",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-06",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -826,12 +826,12 @@
   {
    "no": 29,
    "nama": "Kolej Kediaman Keenam (Ibnu Sina) — KK6",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-06",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
