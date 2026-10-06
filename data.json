@@ -1,6 +1,6 @@
 {
- "dijana": "2026-10-06T22:53",
- "excel_diubah": "2026-10-06T07:53",
+ "dijana": "2026-10-07T06:30",
+ "excel_diubah": "2026-10-06T15:17",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
@@ -13,12 +13,12 @@
    "B": 83
   },
   "ditempah": {
-   "A": 27,
-   "B": 11
+   "A": 28,
+   "B": 10
   },
   "selesai_team": {
-   "A": 13,
-   "B": 4
+   "A": 14,
+   "B": 3
   },
   "sesi_selesai": 17,
   "sesi_ditunda": 0
@@ -201,20 +201,20 @@
      "team": "A",
      "sesi": "Petang",
      "masa": "14:30 – 16:00",
-     "ptj": "KK10",
-     "status": "selesai",
-     "ptj_id": [
-      33
-     ]
-    },
-    {
-     "team": "B",
-     "sesi": "Petang",
-     "masa": "14:30 – 16:00",
      "ptj": "FAB",
      "status": "selesai",
      "ptj_id": [
       13
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
+     "ptj": "KK10",
+     "status": "selesai",
+     "ptj_id": [
+      33
      ]
     }
    ]
@@ -676,7 +676,7 @@
    "lawatan": [
     {
      "tarikh": "2026-10-06",
-     "team": "B",
+     "team": "A",
      "status": "selesai"
     }
    ]
