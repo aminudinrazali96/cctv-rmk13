@@ -1,0 +1,1074 @@
+{
+ "dijana": "2026-10-06T10:40",
+ "excel_diubah": "2026-10-06T02:40",
+ "ringkasan": {
+  "ptj": 54,
+  "ptj_dijadualkan": 37,
+  "ptj_belum": 17,
+  "ptj_selesai": 13,
+  "pct_cctv_dijadualkan": 37.6,
+  "pct_cctv_selesai": 9.4,
+  "slot": {
+   "A": 84,
+   "B": 83
+  },
+  "ditempah": {
+   "A": 25,
+   "B": 11
+  },
+  "selesai_team": {
+   "A": 10,
+   "B": 3
+  },
+  "sesi_selesai": 13,
+  "sesi_ditunda": 0
+ },
+ "hari": [
+  {
+   "tarikh": "2026-10-01",
+   "hari": "Khamis",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "KK4",
+     "status": "selesai",
+     "ptj_id": [
+      28
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "KK3",
+     "status": "selesai",
+     "ptj_id": [
+      27
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "Penerbit",
+     "status": "selesai",
+     "ptj_id": [
+      44
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
+     "ptj": "FSSE dan Pusat Sukan",
+     "status": "selesai",
+     "ptj_id": [
+      8,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-02",
+   "hari": "Jumaat",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "09:00 – 10:30",
+     "ptj": "KK11",
+     "status": "selesai",
+     "ptj_id": [
+      34
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:30 – 12:00",
+     "ptj": "KK7",
+     "status": "selesai",
+     "ptj_id": [
+      30
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-05",
+   "hari": "Isnin",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Bangunan Peperiksaan (ASD)",
+     "status": "selesai",
+     "ptj_id": [
+      40
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "Balai Ungku Aziz",
+     "status": "selesai",
+     "ptj_id": [
+      24
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "Fakulti Pergigian",
+     "status": "selesai",
+     "ptj_id": [
+      9
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
+     "ptj": "Fakulti Pergigian",
+     "status": "selesai",
+     "ptj_id": [
+      9
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "JHB",
+     "status": "selesai",
+     "ptj_id": [
+      42
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "KK13 (LAKIM PJ)",
+     "status": "selesai",
+     "ptj_id": [
+      36
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "INPUMA",
+     "status": "selesai",
+     "ptj_id": [
+      19
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-06",
+   "hari": "Selasa",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "KK2",
+     "status": "akan",
+     "ptj_id": [
+      26
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "KK6",
+     "status": "akan",
+     "ptj_id": [
+      29
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "KK10",
+     "status": "akan",
+     "ptj_id": [
+      33
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "FAB",
+     "status": "akan",
+     "ptj_id": [
+      13
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-07",
+   "hari": "Rabu",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "KK9",
+     "status": "akan",
+     "ptj_id": [
+      32
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "Perpustakaan Utama",
+     "status": "akan",
+     "ptj_id": [
+      22
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "AEI",
+     "status": "akan",
+     "ptj_id": [
+      17
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "RIMBA ILMU",
+     "status": "akan",
+     "ptj_id": [
+      48
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-08",
+   "hari": "Khamis",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "FBL",
+     "status": "akan",
+     "ptj_id": [
+      2
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "Apartment Jepun",
+     "status": "akan",
+     "ptj_id": [
+      52
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Pendidikan",
+     "status": "akan",
+     "ptj_id": [
+      12
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "UMCCed",
+     "status": "akan",
+     "ptj_id": [
+      53
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
+     "ptj": "Inkubator UMX",
+     "status": "akan",
+     "ptj_id": [
+      39
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-09",
+   "hari": "Jumaat",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "09:00 – 10:30",
+     "ptj": "KK1",
+     "status": "akan",
+     "ptj_id": [
+      25
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-12",
+   "hari": "Isnin",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Perpustakaan Za'ba dan Muzium Seni Asia",
+     "status": "akan",
+     "ptj_id": [
+      23,
+      46
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-13",
+   "hari": "Selasa",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Kejuruteraan (FK)",
+     "status": "akan",
+     "ptj_id": [
+      1
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Sastera dan Sains Sosial",
+     "status": "akan",
+     "ptj_id": [
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-14",
+   "hari": "Rabu",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "PASUM",
+     "status": "akan",
+     "ptj_id": [
+      18
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "FSK",
+     "status": "akan",
+     "ptj_id": [
+      6
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Sains",
+     "status": "akan",
+     "ptj_id": [
+      11
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-15",
+   "hari": "Khamis",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Perniagaan dan Ekonomi",
+     "status": "akan",
+     "ptj_id": [
+      16
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-16",
+   "hari": "Jumaat",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "15:00 – 16:30",
+     "ptj": "FUU",
+     "status": "akan",
+     "ptj_id": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-19",
+   "hari": "Isnin",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-20",
+   "hari": "Selasa",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-21",
+   "hari": "Rabu",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-22",
+   "hari": "Khamis",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-23",
+   "hari": "Jumaat",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-26",
+   "hari": "Isnin",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-27",
+   "hari": "Selasa",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-28",
+   "hari": "Rabu",
+   "sesi": []
+  },
+  {
+   "tarikh": "2026-10-29",
+   "hari": "Khamis",
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Klinik Kesihatan UM",
+     "status": "akan",
+     "ptj_id": [
+      54
+     ]
+    }
+   ]
+  },
+  {
+   "tarikh": "2026-10-30",
+   "hari": "Jumaat",
+   "sesi": []
+  }
+ ],
+ "tba": [
+  {
+   "ptj": "Wisma R&D",
+   "tarikh_asal": "1/10/2026",
+   "catatan": "Dipindah ke minggu 5–9/10, tarikh & masa TBA"
+  }
+ ],
+ "ptj": [
+  {
+   "no": 1,
+   "nama": "Fakulti Kejuruteraan (FK)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-13",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "nama": "Fakulti Bahasa dan Linguistik (FBL)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-08",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "nama": "Fakulti Perubatan",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 4,
+   "nama": "Fakulti Farmasi",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 5,
+   "nama": "Fakulti Undang-Undang (FUU)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-16",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "nama": "Fakulti Seni Kreatif (FSK)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-14",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "nama": "Pusat Sukan",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-01",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "nama": "Fakulti Sains Sukan dan Eksesais (FSSE)",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-01",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "nama": "Fakulti Pergigian",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-05",
+     "team": "A",
+     "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-05",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "nama": "Fakulti Sastera dan Sains Sosial (FSSS)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-13",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "nama": "Fakulti Sains",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-14",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "nama": "Fakulti Pendidikan",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-08",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "nama": "Fakulti Alam Bina (FAB)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-06",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "nama": "Jabatan Hal Ehwal Pelajar (JHEP)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 15,
+   "nama": "Galeri Seni (UMAG)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 16,
+   "nama": "Fakulti Perniagaan dan Ekonomi (FPE)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-15",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "nama": "Institut Asia Eropah (AEI)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-07",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "nama": "Pusat Asasi Sains UM (PASUM)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-14",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "nama": "Institut Antarabangsa Polisi Awam dan Pengurusan (INPUMA)",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-05",
+     "team": "B",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "nama": "Pusat Pembelajaran Integral (CITRA)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 21,
+   "nama": "Institut Pengajian Termaju (IAS)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 22,
+   "nama": "Perpustakaan Utama",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-07",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "nama": "Perpustakaan Za'ba",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-12",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "nama": "Balai Ungku Aziz",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-05",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 25,
+   "nama": "Kolej Kediaman Pertama (ASTAR) — KK1",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-09",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 26,
+   "nama": "Kolej Kediaman Kedua (Tuanku Bahiyah) — KK2",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-06",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 27,
+   "nama": "Kolej Kediaman Ketiga (Tuanku Kurshiah) — KK3",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-01",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 28,
+   "nama": "Kolej Kediaman Keempat (Bestari) — KK4",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-01",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 29,
+   "nama": "Kolej Kediaman Keenam (Ibnu Sina) — KK6",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-06",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 30,
+   "nama": "Kolej Kediaman Ketujuh (Za'ba) — KK7",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-02",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 31,
+   "nama": "Kolej Kediaman Kelapan (Kinabalu) — KK8",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 32,
+   "nama": "Kolej Kediaman Kesembilan (Tun Syed Zahiruddin) — KK9",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-07",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 33,
+   "nama": "Kolej Kediaman Kesepuluh (Tun Ahmad Zaidi) — KK10",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-06",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 34,
+   "nama": "Kolej Kediaman Kesebelas (Ungku Aziz) — KK11",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-02",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 35,
+   "nama": "Kolej Kediaman Kedua Belas (Raja Dr. Nazrin Shah) — KK12",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 36,
+   "nama": "Kolej Kediaman Ketiga Belas — KK13",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-05",
+     "team": "B",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 37,
+   "nama": "Polis Bantuan UM (PBUM)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 38,
+   "nama": "Kompleks Pengurusan Penyelidikan dan Inovasi (KPPI)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 39,
+   "nama": "Kompleks Inkubator Inovasi UM (UMX)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-08",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 40,
+   "nama": "Bangunan Peperiksaan",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-05",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 41,
+   "nama": "Wisma R&D",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 42,
+   "nama": "Jabatan Harta Benda (JHB)",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-05",
+     "team": "B",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 43,
+   "nama": "High Impact Research (HIR)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 44,
+   "nama": "Penerbit",
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-01",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
+  },
+  {
+   "no": 45,
+   "nama": "Institut Kongzi",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 46,
+   "nama": "Muzium Seni Asia",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-12",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 47,
+   "nama": "Kampus Bachok API",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 48,
+   "nama": "Rimba Ilmu",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-07",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 49,
+   "nama": "Dewan Tunku Canselor (DTC)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 50,
+   "nama": "Pusat Pendidikan Awal Kanak-kanak Universiti Malaya (PPAKKUM)",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 51,
+   "nama": "Zero Waste",
+   "status": "belum",
+   "lawatan": []
+  },
+  {
+   "no": 52,
+   "nama": "Apartment Jepun (AJ)",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-08",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 53,
+   "nama": "UMCCed",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-08",
+     "team": "B",
+     "status": "akan"
+    }
+   ]
+  },
+  {
+   "no": 54,
+   "nama": "Klinik UM",
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-29",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
+  }
+ ],
+ "nama_tidak_dikenali": []
+}
