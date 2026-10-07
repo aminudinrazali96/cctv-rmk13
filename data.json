@@ -1,26 +1,26 @@
 {
- "dijana": "2026-10-07T06:30",
- "excel_diubah": "2026-10-06T15:17",
+ "dijana": "2026-10-08T07:45",
+ "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 17,
+  "ptj_selesai": 21,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 12.5,
+  "pct_cctv_selesai": 15.6,
   "slot": {
    "A": 84,
    "B": 83
   },
   "ditempah": {
-   "A": 28,
-   "B": 10
+   "A": 29,
+   "B": 9
   },
   "selesai_team": {
-   "A": 14,
-   "B": 3
+   "A": 17,
+   "B": 4
   },
-  "sesi_selesai": 17,
+  "sesi_selesai": 21,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -228,7 +228,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "KK9",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       32
      ]
@@ -238,9 +238,19 @@
      "sesi": "Pagi",
      "masa": "11:30 – 13:00",
      "ptj": "Perpustakaan Utama",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       22
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "RIMBA ILMU",
+     "status": "selesai",
+     "ptj_id": [
+      48
      ]
     },
     {
@@ -248,19 +258,9 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "AEI",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       17
-     ]
-    },
-    {
-     "team": "B",
-     "sesi": "Petang",
-     "masa": "14:30 – 16:00",
-     "ptj": "RIMBA ILMU",
-     "status": "akan",
-     "ptj_id": [
-      48
      ]
     }
    ]
@@ -708,12 +708,12 @@
   {
    "no": 17,
    "nama": "Institut Asia Eropah (AEI)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-07",
      "team": "B",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -756,12 +756,12 @@
   {
    "no": 22,
    "nama": "Perpustakaan Utama",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-07",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -870,12 +870,12 @@
   {
    "no": 32,
    "nama": "Kolej Kediaman Kesembilan (Tun Syed Zahiruddin) — KK9",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-07",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1032,12 +1032,12 @@
   {
    "no": 48,
    "nama": "Rimba Ilmu",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-07",
-     "team": "B",
-     "status": "akan"
+     "team": "A",
+     "status": "selesai"
     }
    ]
   },
