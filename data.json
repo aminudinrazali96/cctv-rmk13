@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-08T07:45",
+ "dijana": "2026-10-08T14:20",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 21,
+  "ptj_selesai": 24,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 15.6,
+  "pct_cctv_selesai": 18.7,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 17,
-   "B": 4
+   "A": 19,
+   "B": 5
   },
-  "sesi_selesai": 21,
+  "sesi_selesai": 24,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -274,7 +274,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "FBL",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       2
      ]
@@ -284,7 +284,7 @@
      "sesi": "Pagi",
      "masa": "11:30 – 13:00",
      "ptj": "Apartment Jepun",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       52
      ]
@@ -304,7 +304,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Fakulti Pendidikan",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       12
      ]
@@ -547,12 +547,12 @@
   {
    "no": 2,
    "nama": "Fakulti Bahasa dan Linguistik (FBL)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-08",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -660,12 +660,12 @@
   {
    "no": 12,
    "nama": "Fakulti Pendidikan",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-08",
      "team": "B",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1062,12 +1062,12 @@
   {
    "no": 52,
    "nama": "Apartment Jepun (AJ)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-08",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
