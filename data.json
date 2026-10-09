@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-08T14:20",
+ "dijana": "2026-10-09T07:59",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 24,
+  "ptj_selesai": 27,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 18.7,
+  "pct_cctv_selesai": 20.5,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 19,
-   "B": 5
+   "A": 20,
+   "B": 7
   },
-  "sesi_selesai": 24,
+  "sesi_selesai": 27,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -294,7 +294,7 @@
      "sesi": "Petang",
      "masa": "14:30 – 16:00",
      "ptj": "WISMA R&D",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       41
      ]
@@ -314,7 +314,7 @@
      "sesi": "Petang",
      "masa": "14:30 – 16:00",
      "ptj": "UMCCed",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       53
      ]
@@ -324,7 +324,7 @@
      "sesi": "Petang",
      "masa": "16:00 – 17:30",
      "ptj": "Inkubator UMX",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       39
      ]
@@ -942,12 +942,12 @@
   {
    "no": 39,
    "nama": "Kompleks Inkubator Inovasi UM (UMX)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-08",
      "team": "B",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -966,12 +966,12 @@
   {
    "no": 41,
    "nama": "Wisma R&D",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-08",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1074,12 +1074,12 @@
   {
    "no": 53,
    "nama": "UMCCed",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-08",
      "team": "B",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
