@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-09T07:59",
+ "dijana": "2026-10-09T15:41",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 27,
+  "ptj_selesai": 29,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 20.5,
+  "pct_cctv_selesai": 21.9,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 20,
+   "A": 22,
    "B": 7
   },
-  "sesi_selesai": 27,
+  "sesi_selesai": 29,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -340,7 +340,7 @@
      "sesi": "Pagi",
      "masa": "09:00 – 10:30",
      "ptj": "KK1",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       25
      ]
@@ -350,7 +350,7 @@
      "sesi": "Pagi",
      "masa": "10:30 – 12:00",
      "ptj": "KK12",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       35
      ]
@@ -792,12 +792,12 @@
   {
    "no": 25,
    "nama": "Kolej Kediaman Pertama (ASTAR) — KK1",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-09",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -906,12 +906,12 @@
   {
    "no": 35,
    "nama": "Kolej Kediaman Kedua Belas (Raja Dr. Nazrin Shah) — KK12",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-09",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
