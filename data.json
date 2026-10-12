@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-09T15:41",
+ "dijana": "2026-10-12T14:30",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 29,
+  "ptj_selesai": 31,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 21.9,
+  "pct_cctv_selesai": 22.6,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 22,
+   "A": 23,
    "B": 7
   },
-  "sesi_selesai": 29,
+  "sesi_selesai": 30,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -366,7 +366,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Perpustakaan Za'ba dan Muzium Seni Asia",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       23,
       46
@@ -768,12 +768,12 @@
   {
    "no": 23,
    "nama": "Perpustakaan Za'ba",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-12",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1014,12 +1014,12 @@
   {
    "no": 46,
    "nama": "Muzium Seni Asia",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-12",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
