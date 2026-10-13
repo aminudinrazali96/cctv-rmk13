@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-12T14:30",
+ "dijana": "2026-10-13T14:00",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 31,
+  "ptj_selesai": 33,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 22.6,
+  "pct_cctv_selesai": 28.3,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 23,
-   "B": 7
+   "A": 24,
+   "B": 8
   },
-  "sesi_selesai": 30,
+  "sesi_selesai": 32,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -383,7 +383,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Fakulti Kejuruteraan (FK)",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       1
      ]
@@ -393,7 +393,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Fakulti Sastera dan Sains Sosial",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       10
      ]
@@ -535,12 +535,12 @@
   {
    "no": 1,
    "nama": "Fakulti Kejuruteraan (FK)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-13",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -636,12 +636,12 @@
   {
    "no": 10,
    "nama": "Fakulti Sastera dan Sains Sosial (FSSS)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-13",
      "team": "B",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
