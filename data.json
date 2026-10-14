@@ -1,5 +1,5 @@
 {
- "dijana": "2026-10-13T14:00",
+ "dijana": "2026-10-14T10:09",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
@@ -1096,5 +1096,201 @@
    ]
   }
  ],
- "nama_tidak_dikenali": []
+ "nama_tidak_dikenali": [],
+ "gantt": {
+  "rujukan": "UM.FC/FSD/PC/612/16/2026/11 · Enclosure G",
+  "mula_w1": "2026-09-21",
+  "minggu": 24,
+  "aktiviti": [
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Kick-Off Meeting",
+    "w": [
+     1,
+     1
+    ],
+    "sebenar": {
+     "status": "selesai",
+     "peratus": 100,
+     "tarikh_siap": "2026-09-22",
+     "catatan": "Mesyuarat kick-off 22/9/2026"
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Project Planning & Scheduling",
+    "w": [
+     1,
+     2
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Procurement Preparation (BOQ Confirmation)",
+    "w": [
+     2,
+     4
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Equipment Procurement & Logistics",
+    "w": [
+     2,
+     8
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 1 (Project Planning & Design)",
+    "nama": "Detailed Site Assessment & Verification",
+    "w": [
+     2,
+     5
+    ],
+    "auto": "lawatan_tapak",
+    "sebenar": {
+     "peratus": 61,
+     "catatan": "Auto daripada jadual lawatan: 33/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+    }
+   },
+   {
+    "seksyen": "Stage 1 (Project Planning & Design)",
+    "nama": "System Architecture & Network Design",
+    "w": [
+     4,
+     6
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 1 (Project Planning & Design)",
+    "nama": "Technical Submission & Approval",
+    "w": [
+     6,
+     8
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 (Implementation)",
+    "nama": "Infrastructure Preparation (Power, Mounting)",
+    "w": [
+     9,
+     12
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 (Implementation)",
+    "nama": "Network & Cabling Deployment",
+    "w": [
+     10,
+     13
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 (Implementation)",
+    "nama": "CCTV Installation (Phased Deployment)",
+    "w": [
+     11,
+     16
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 (Implementation)",
+    "nama": "Server, Storage & NVR Setup",
+    "w": [
+     12,
+     16
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 (Implementation)",
+    "nama": "System Configuration & Integration",
+    "w": [
+     14,
+     17
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "nama": "System Testing (Functional & Performance)",
+    "w": [
+     16,
+     19
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "nama": "Integration Testing (CSIM & Analytics)",
+    "w": [
+     17,
+     20
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "nama": "Issue Rectification & Optimization",
+    "w": [
+     18,
+     21
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "nama": "User Acceptance Test (UAT)",
+    "w": [
+     21,
+     22
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Training (Admin & End Users)",
+    "w": [
+     21,
+     22
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Documentation",
+    "w": [
+     22,
+     23
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Final Handover & Acceptance",
+    "w": [
+     23,
+     24
+    ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Project closure and sign-off",
+    "w": [
+     24,
+     24
+    ],
+    "sebenar": {}
+   }
+  ]
+ }
 }
