@@ -146,6 +146,9 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .gt td.wk.today{background:linear-gradient(90deg,transparent calc(var(--tp) - 1px),var(--bad) calc(var(--tp) - 1px),var(--bad) calc(var(--tp) + 1px),transparent calc(var(--tp) + 1px))}
 .gbar{position:absolute;top:11px;height:18px;border-radius:4px;background:var(--track);border:1px solid var(--ink2);overflow:hidden;z-index:1}
 .gbar i{display:block;height:100%}
+.gbase{position:absolute;top:32px;height:4px;border-radius:2px;background:var(--mute);opacity:.55;z-index:1}
+.gt td.sec span{float:right;color:var(--mute);font-weight:700}
+.gt td.wk.cur{background-color:rgba(31,111,209,.05)}
 .gbar span{position:absolute;inset:0;font-size:10.5px;font-weight:900;color:var(--ink);display:flex;align-items:center;justify-content:center;font-style:normal}
 .c-ikut{background:#E6EFFB;color:var(--a)}
 .c-lewat{background:var(--badbg);color:var(--bad)}
@@ -157,6 +160,25 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .c-ikut,:root:not([data-theme="light"]) .c-berjalan{background:#1B2C45}}
 .gkpi{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:16px}
 .ghead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:flex-end;margin-bottom:12px}
+/* projek */
+.pjt{font-size:clamp(17px,2.2vw,21px);font-weight:900;color:var(--navy);line-height:1.3;max-width:900px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;margin-top:16px}
+.fact span{display:block;font-size:12px;font-weight:900;letter-spacing:.6px;color:var(--mute)}
+.fact b{display:block;font-size:19px;font-weight:900;color:var(--ink);margin-top:4px;line-height:1.25}
+.fact small{display:block;color:var(--ink2);font-size:13px;margin-top:3px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
+.step{border-top:3px solid var(--navy);background:var(--bg);border-radius:8px;padding:10px 12px}
+.step b{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--navy)}
+.step b i{font-style:normal;background:var(--navy);color:var(--bg);font-size:11px;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.step p{font-size:13px;color:var(--ink2);margin-top:4px}
+td.q{text-align:right;font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap}
+.yr{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.yr:first-child{border-top:0}
+.yr>b{font-size:18px;font-weight:900;color:var(--navy)}
+.ms{display:flex;flex-wrap:wrap;gap:6px}
+.ms span{font-size:12.5px;padding:3px 9px;border-radius:999px;background:var(--track);color:var(--ink);max-width:100%}
+.ms span.k{background:var(--navy);color:var(--bg);font-weight:700}
+.ms span.done{background:var(--okbg);color:var(--ok)}
 @media (max-width:640px){.gt .nm{min-width:170px;max-width:190px}.gt .nm b{font-size:12px}}
 </style>
 </head>
@@ -182,6 +204,7 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
     <button role="tab" data-tab="jadual" aria-selected="false">Jadual lawatan</button>
     <button role="tab" data-tab="ptj" aria-selected="false">Senarai PTj</button>
     <button role="tab" data-tab="gantt" aria-selected="false">Gantt chart</button>
+    <button role="tab" data-tab="projek" aria-selected="false">Perincian projek</button>
   </nav>
 
   <section id="t-ringkasan">
@@ -249,11 +272,45 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
         <span><i style="background:var(--ok)"></i>Selesai</span>
         <span><i style="background:var(--a)"></i>Kemajuan</span>
         <span><i style="background:var(--bad)"></i>Lewat jadual</span>
+        <span><i style="background:var(--mute);opacity:.55;height:4px;vertical-align:2px"></i>Pelan asal (Enclosure G)</span>
         <span><i style="background:var(--bad);width:2px"></i>Hari ini</span>
       </div>
     </div>
     <div class="card gwrap" id="gantt"></div>
-    <p class="h2s" style="margin-top:10px">Bar = tempoh dirancang. Isian = peratus siap sebenar. Status dibanding dengan kemajuan yang dijangka pada hari ini.</p>
+    <p class="h2s" style="margin-top:10px">Bar = jadual pelaksanaan pembekal (dibentang semasa Mesyuarat Kick-Off 22/9/2026). Isian = peratus siap sebenar. Garis kelabu di bawah bar = tempoh dalam Gantt Chart tawaran (Enclosure G). Status dibanding dengan kemajuan yang dijangka pada hari ini.</p>
+  </section>
+
+  <section id="t-projek" hidden>
+    <div class="card">
+      <span class="tag" style="font-size:11px">PROFIL PROJEK</span>
+      <p class="pjt" id="pj-tajuk" style="margin-top:10px"></p>
+      <div class="facts" id="pj-facts"></div>
+      <div id="pj-prog" style="margin-top:6px"></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h2>Skop kerja</h2>
+      <p class="h2s">Daripada bekalan sehingga sokongan jangka panjang</p>
+      <div class="steps" id="pj-skop"></div>
+    </div>
+    <div class="grid two">
+      <div class="card tblwrap">
+        <h2>Senarai bahan</h2>
+        <p class="h2s" id="pj-bom-sub"></p>
+        <table><thead><tr><th>BIL.</th><th>ITEM</th><th style="text-align:right">KUANTITI</th></tr></thead><tbody id="pj-bom"></tbody></table>
+      </div>
+      <div>
+        <div class="card">
+          <h2>Perkhidmatan</h2>
+          <p class="h2s">Oleh pembekal</p>
+          <table><tbody id="pj-svc"></tbody></table>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h2>Pelan kontrak 5 tahun</h2>
+          <p class="h2s" id="pj-p5-sub"></p>
+          <div id="pj-p5"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer id="foot">Data dijana automatik daripada fail Excel jadual lawatan tapak. Halaman ini menyemak data baharu setiap 5 minit.</footer>
@@ -280,7 +337,7 @@ $('#theme').onclick=()=>{const cur=document.documentElement.dataset.theme||(matc
 /* tab */
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected',x===b));
-  ['ringkasan','jadual','ptj','gantt'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.tab);
+  ['ringkasan','jadual','ptj','gantt','projek'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.tab);
   try{sessionStorage.setItem('tab',b.dataset.tab)}catch(e){}
   if(b.dataset.tab==='gantt'&&D)ganttScroll();
 });
@@ -378,9 +435,11 @@ const GST={selesai:['✓','SELESAI'],ikut:['●','IKUT JADUAL'],berjalan:['●',
 const gchip=st=>`<span class="chip c-${st}">${GST[st][0]} ${GST[st][1]}</span>`;
 const addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
 const dmy=d=>d.getDate()+' '+BULAN[d.getMonth()];
+const dmyy=d=>d.getDate()+' '+BULAN[d.getMonth()]+' '+d.getFullYear();
+const dayN=(a,b)=>Math.round((b-a)/864e5);
 function ganttStatus(a,S,E,T){
-  const s=a.sebenar||{}, pct=s.peratus, tot=(E-S)/864e5+1;
-  const exp=T<S?0:T>E?100:Math.round(((T-S)/864e5+1)/tot*100);
+  const s=a.sebenar||{}, pct=s.peratus, tot=dayN(S,E)+1;
+  const exp=T<S?0:T>E?100:Math.round((dayN(S,T)+1)/tot*100);
   let st;
   if(s.status==='selesai'||pct>=100)st='selesai';
   else if(s.status==='ditangguh')st='ditangguh';
@@ -389,42 +448,55 @@ function ganttStatus(a,S,E,T){
   else st=pct<exp-10?'lewat':'ikut';
   return {st,exp,pct:(pct==null||pct==='')?null:Math.max(0,Math.min(100,+pct))};
 }
+function ganttDates(a,M0){
+  if(a.tarikh)return [pd(a.tarikh[0]),pd(a.tarikh[1])];
+  return [addD(M0,(a.w[0]-1)*7),addD(M0,a.w[1]*7-1)];
+}
 function ganttScroll(){const el=$('#gantt'),th=el.querySelector('th.cur');if(!th||$('#t-gantt').hidden||el.dataset.scrolled)return;el.dataset.scrolled=1;requestAnimationFrame(()=>{el.scrollLeft=Math.max(0,th.offsetLeft-el.querySelector('.nm').offsetWidth-140)})}
+/* span dalam sel minggu: kedudukan pecahan */
+function span(M0,W,d0,d1){ // d0 inklusif, d1 eksklusif (hari dari M0)
+  d0=Math.max(0,d0);d1=Math.min(W*7,d1);if(d1<=d0)return null;
+  const w=Math.floor(d0/7)+1, off=(d0-(w-1)*7)/7, len=(d1-d0)/7;
+  return {w,css:`left:calc(${(off*100).toFixed(2)}% + 2px);width:calc(${(len*100).toFixed(2)}% + ${Math.max(0,Math.floor(off+len-.001))}px - 4px)`};
+}
 function renderGantt(){
   const G=D.gantt, el=$('#gantt');
   const tab=document.querySelector('nav button[data-tab="gantt"]');
   if(!G){tab.hidden=true;return}
   tab.hidden=false;
   const W=G.minggu||24, M0=pd(G.mula_w1), T=pd(todayIso());
-  const curW=Math.floor((T-M0)/864e5/7)+1, inW=curW>=1&&curW<=W, dayInW=((T-M0)/864e5)%7;
+  const curW=Math.floor(dayN(M0,T)/7)+1, inW=curW>=1&&curW<=W, dayInW=dayN(M0,T)-(curW-1)*7;
   const endP=addD(M0,W*7-1);
-  $('#gsub').textContent=`${G.rujukan||''} · W1 bermula ${dmy(M0)} ${M0.getFullYear()}, W${W} tamat ${dmy(endP)} ${endP.getFullYear()}`;
-  // header
+  $('#gsub').textContent=`${G.rujukan||''} · W1 bermula ${dmyy(M0)}, W${W} tamat ${dmyy(endP)}`;
   let h1='<tr><th class="nm" rowspan="2" style="vertical-align:bottom">AKTIVITI</th>', h2='<tr>';
   for(let m=0;m<Math.ceil(W/4);m++)h1+=`<th colspan="${Math.min(4,W-m*4)}">BULAN ${m+1}</th>`;
   for(let w=1;w<=W;w++){const d=addD(M0,(w-1)*7);h2+=`<th class="${w===curW?'cur':''}" data-tip="W${w}: ${dmy(d)} – ${dmy(addD(d,6))}">W${w}</th>`}
   h1+='</tr>';h2+='</tr>';
   let body='', sec='', cnt={selesai:0,aktif:0,lewat:0,sahkan:0}, totExp=0, totAct=0, nw=0, noUpd=0;
+  const J=G.seksyen_julat||{};
   G.aktiviti.forEach(a=>{
-    if(a.seksyen!==sec){sec=a.seksyen;body+=`<tr><td class="sec" colspan="${W+1}">${esc(sec.toUpperCase())}</td></tr>`}
-    const [w0,w1]=a.w, S=addD(M0,(w0-1)*7), E=addD(M0,w1*7-1);
-    const r=ganttStatus(a,S,E,T), s=a.sebenar||{};
+    if(a.seksyen!==sec){sec=a.seksyen;body+=`<tr><td class="sec" colspan="${W+1}">${esc(sec.toUpperCase())}${J[sec]?`<span>${esc(J[sec])}</span>`:''}</td></tr>`}
+    const [S,E]=ganttDates(a,M0), r=ganttStatus(a,S,E,T), s=a.sebenar||{};
     if(r.st==='selesai')cnt.selesai++;
     else if(r.st==='lewat')cnt.lewat++;
     else if(r.st==='sahkan')cnt.sahkan++;
     if(['ikut','berjalan','dalam','lewat'].includes(r.st))cnt.aktif++;
-    const len=w1-w0+1, rep=r.st==='selesai'||r.pct!=null;
+    const len=dayN(S,E)+1, rep=r.st==='selesai'||r.pct!=null;
     if(S<=T){if(rep){nw+=len;totExp+=r.exp*len;totAct+=(r.st==='selesai'?100:r.pct)*len}else noUpd++}
     const fill=r.st==='selesai'?100:(r.pct||0), fc=r.st==='selesai'?'var(--ok)':r.st==='lewat'?'var(--bad)':'var(--a)';
-    const tipTxt=`<b>${esc(a.nama)}</b><br>Dirancang: W${w0}${w1!==w0?'–W'+w1:''} (${dmy(S)} – ${dmy(E)})<br>Dijangka hari ini: ${r.exp}%<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}`.replace(/"/g,'&quot;');
+    let asalTxt='', bs=null;
+    if(a.asal){const A0=addD(M0,(a.asal[0]-1)*7),A1=addD(M0,a.asal[1]*7-1);asalTxt=`<br>Pelan asal (Enclosure G): W${a.asal[0]}${a.asal[1]!==a.asal[0]?'–W'+a.asal[1]:''} (${dmy(A0)} – ${dmy(A1)})`;bs=span(M0,W,(a.asal[0]-1)*7,a.asal[1]*7)}
+    const tipTxt=`<b>${esc(a.nama)}</b><br>Jadual: ${dmy(S)} – ${dmy(E)} (${len} hari)${asalTxt}<br>Dijangka hari ini: ${r.exp}%<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}`.replace(/"/g,'&quot;');
+    const bb=span(M0,W,dayN(M0,S),dayN(M0,E)+1);
     let cells='';
     for(let w=1;w<=W;w++){
       const today=w===curW?` today" style="--tp:${((dayInW+.5)/7*100).toFixed(1)}%`:'';
-      let bar='';
-      if(w===w0)bar=`<div class="gbar" style="left:3px;width:calc(${len*100}% + ${len-1}px - 6px)" data-tip="${tipTxt}"><i style="width:${fill}%;background:${fc}"></i>${len>1&&fill>0&&fill<100?`<span>${fill}%</span>`:''}</div>`;
-      cells+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${today}">${bar}</td>`;
+      let x='';
+      if(bb&&w===bb.w)x+=`<div class="gbar" style="${bb.css}" data-tip="${tipTxt}"><i style="width:${fill}%;background:${fc}"></i>${len>10&&fill>0&&fill<100?`<span>${fill}%</span>`:''}</div>`;
+      if(bs&&w===bs.w)x+=`<div class="gbase" style="${bs.css}" data-tip="${tipTxt}"></div>`;
+      cells+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${today}">${x}</td>`;
     }
-    body+=`<tr><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${s.catatan&&a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}</small></td>${cells}</tr>`;
+    body+=`<tr><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}</small></td>${cells}</tr>`;
   });
   el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${body}</tbody></table>`;
   const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
@@ -434,8 +506,36 @@ function renderGantt(){
     [cnt.selesai+'<span style="font-size:20px;color:var(--mute)"> / '+G.aktiviti.length+'</span>','aktiviti selesai',`${cnt.aktif} aktiviti dalam tempoh`,'var(--ok)'],
     [cnt.lewat+cnt.sahkan,'perlu perhatian',`${cnt.lewat} lewat · ${cnt.sahkan} melepasi tempoh, belum disahkan`,cnt.lewat+cnt.sahkan?'var(--warn)':'var(--ok)'],
   ].map(([v,l,s,c])=>`<div class="card kpi"><b style="color:${c}">${v}</b><span>${l}</span><small>${s}</small></div>`).join('');
-  // skrol ke minggu semasa
   ganttScroll();
+}
+function renderProjek(){
+  const P=D.projek, tab=document.querySelector('nav button[data-tab="projek"]');
+  if(!P){tab.hidden=true;return}
+  tab.hidden=false;
+  const T=pd(todayIso()), K0=pd(P.kontrak[0]), K1=pd(P.kontrak[1]), J1=pd(P.jaminan[1]);
+  const G=D.gantt, M0=G?pd(G.mula_w1):K0, Pend=addD(M0,(P.pelaksanaan_minggu||24)*7-1);
+  $('#pj-tajuk').textContent=P.tajuk;
+  $('#pj-facts').innerHTML=[
+    ['KONTRAKTOR',esc(P.kontraktor),''],
+    ['SURAT SETUJU TERIMA',dmyy(pd(P.sst_tarikh)),esc(P.sst_no)],
+    ['TEMPOH KONTRAK',`${dmyy(K0)} – ${dmyy(K1)}`,'Satu (1) tahun'],
+    ['JAMINAN & SOKONGAN',`hingga ${dmyy(J1)}`,'Lima (5) tahun dari SST'],
+    ['TEMPOH PELAKSANAAN',`${P.pelaksanaan_minggu} minggu`,`${dmyy(M0)} – ${dmyy(Pend)}`],
+    ['NILAI KONTRAK',esc(P.nilai_kontrak),'Termasuk SST 8%'],
+  ].map(([l,v,s])=>`<div class="fact"><span>${l}</span><b>${v}</b>${s?`<small>${s}</small>`:''}</div>`).join('');
+  const p=Math.max(0,Math.min(100,Math.round(dayN(M0,T)/(dayN(M0,Pend)+1)*100)));
+  $('#pj-prog').innerHTML=`<div class="meter"><div class="mlab"><b>Masa pelaksanaan berlalu</b><em>${p}% · hari ke-${Math.max(0,dayN(M0,T)+1)} daripada ${dayN(M0,Pend)+1}</em></div><div class="track"><div style="width:${p}%;background:var(--navy)"></div></div></div>`;
+  $('#pj-skop').innerHTML=P.skop.map(([n,t],i)=>`<div class="step"><b><i>${i+1}</i>${esc(n)}</b><p>${esc(t)}</p></div>`).join('');
+  const cam=P.bom.filter(([n])=>/camera/i.test(n)&&!/licen|cabling/i.test(n)).reduce((a,[,q])=>a+q,0);
+  $('#pj-bom-sub').textContent=`${P.bom.length} item perkakasan dan lesen · ${cam.toLocaleString('ms-MY')} unit kamera CCTV`;
+  $('#pj-bom').innerHTML=P.bom.map(([n,q],i)=>`<tr><td class="num">${i+1}</td><td>${esc(n)}</td><td class="q">${q.toLocaleString('ms-MY')}</td></tr>`).join('');
+  $('#pj-svc').innerHTML=P.perkhidmatan.map(([n,q])=>`<tr><td>${esc(n)}</td><td class="q">${esc(q)}</td></tr>`).join('');
+  $('#pj-p5-sub').textContent=P.pelan5_nota||'';
+  const by={};P.pelan5.forEach(([ym,k,t])=>{(by[ym.slice(0,4)]=by[ym.slice(0,4)]||[]).push([ym,k,t])});
+  by['2026']=[['2026-09','SST',''],['2026-09','Kick-off','']].concat(by['2026']||[]);
+  const tIso=todayIso().slice(0,7);
+  $('#pj-p5').innerHTML=Object.keys(by).sort().map(y=>`<div class="yr"><b>${y}</b><div class="ms">${by[y].map(([ym,k,t])=>{const m=+ym.slice(5,7);return `<span class="${ym<tIso?'done':(/^(FAT|TOT)$/.test(k)?'k':'')}" title="${esc(t)}">${esc(k)} · ${BULAN[m-1]}${t?' · '+esc(t):''}</span>`}).join('')}</div></div>`).join('')+
+   `<div class="yr"><b></b><div class="ms"><span>Pelaksanaan ${P.pelaksanaan_minggu} minggu</span><span>Sokongan 5 tahun · respons 4 jam · NBD di tapak</span></div></div>`;
 }
 
 function renderHeader(){
@@ -455,7 +555,7 @@ async function load(){
     $('#err').style.display='none';
     if(txt===lastJson)return;
     lastJson=txt;D=JSON.parse(txt);
-    renderHeader();renderSummary();renderTimeline();renderPtj();renderGantt();
+    renderHeader();renderSummary();renderTimeline();renderPtj();renderGantt();renderProjek();
   }catch(e){const el=$('#err');el.textContent='Data tidak dapat dimuatkan ('+e.message+'). Cuba muat semula sebentar lagi.';el.style.display='block'}
 }
 $('#reload').onclick=load;
