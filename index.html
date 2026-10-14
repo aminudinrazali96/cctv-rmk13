@@ -6,26 +6,29 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Lawatan Tapak CCTV RMK13</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F4F6FA; --card:#FFFFFF; --ink:#13213A; --ink2:#4C5D74; --mute:#7C8AA0; --line:#E3E9F2; --track:#E8EDF4;
-  --navy:#0E2A47; --a:#1F6FD1; --b:#E07A1F; --ok:#118556; --okbg:#E3F4EC; --warn:#B45309; --warnbg:#FDF1E3;
-  --bad:#C73636; --badbg:#FBE9E9; --gap:#FFFFFF; --shadow:0 1px 2px rgba(16,32,60,.06),0 4px 14px rgba(16,32,60,.05);
+  --bg:#F5F7FB; --card:#FFFFFF; --ink:#0D1320; --ink2:#5B6577; --mute:#7D8698; --line:#DFE3EA; --track:#EAEEF5;
+  --navy:#0D1320; --brand:#0B6FD6; --brand2:#0E7490; --a:#0B6FD6; --b:#C98A0B; --ok:#0F8A5F; --okbg:#E2F3EC; --warn:#B45309; --warnbg:#FDF1E3;
+  --bad:#C73636; --badbg:#FBE9E9; --gap:#FFFFFF; --shadow:0 1px 2px rgba(13,19,32,.05),0 10px 30px -18px rgba(13,19,32,.25);
+  --grad:linear-gradient(135deg,#0B6FD6 0%,#0E7490 100%); --gridln:rgba(13,19,32,.035);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#12161D; --card:#1A2029; --ink:#E7ECF3; --ink2:#AEB9C8; --mute:#8592A5; --line:#2A323E; --track:#262E3A;
-  --navy:#9CC2F0; --a:#4F8FE8; --b:#CF7A2A; --ok:#3DBE86; --okbg:#173A2C; --warn:#E39A4C; --warnbg:#3A2A19;
-  --bad:#EE7070; --badbg:#3D1F22; --gap:#1A2029; --shadow:none;
+  --bg:#0A0C10; --card:#0F131A; --ink:#EEF1F6; --ink2:#9AA3B2; --mute:#7D8698; --line:#222833; --track:#1A1F28;
+  --navy:#EEF1F6; --brand:#3BA9FF; --brand2:#6EE7FF; --a:#3BA9FF; --b:#F0B43C; --ok:#3DBE86; --okbg:#122E24; --warn:#E39A4C; --warnbg:#33251A;
+  --bad:#EE7070; --badbg:#3A1E21; --gap:#0F131A; --shadow:0 1px 0 rgba(255,255,255,.04) inset,0 20px 50px -25px rgba(0,0,0,.8);
+  --grad:linear-gradient(135deg,#3BA9FF 0%,#6EE7FF 100%); --gridln:rgba(255,255,255,.025);
 }}
 :root[data-theme="dark"]{
-  --bg:#12161D; --card:#1A2029; --ink:#E7ECF3; --ink2:#AEB9C8; --mute:#8592A5; --line:#2A323E; --track:#262E3A;
-  --navy:#9CC2F0; --a:#4F8FE8; --b:#CF7A2A; --ok:#3DBE86; --okbg:#173A2C; --warn:#E39A4C; --warnbg:#3A2A19;
-  --bad:#EE7070; --badbg:#3D1F22; --gap:#1A2029; --shadow:none;
+  --bg:#0A0C10; --card:#0F131A; --ink:#EEF1F6; --ink2:#9AA3B2; --mute:#7D8698; --line:#222833; --track:#1A1F28;
+  --navy:#EEF1F6; --brand:#3BA9FF; --brand2:#6EE7FF; --a:#3BA9FF; --b:#F0B43C; --ok:#3DBE86; --okbg:#122E24; --warn:#E39A4C; --warnbg:#33251A;
+  --bad:#EE7070; --badbg:#3A1E21; --gap:#0F131A; --shadow:0 1px 0 rgba(255,255,255,.04) inset,0 20px 50px -25px rgba(0,0,0,.8);
+  --grad:linear-gradient(135deg,#3BA9FF 0%,#6EE7FF 100%); --gridln:rgba(255,255,255,.025);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{font-family:Lato,'Segoe UI',Calibri,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}
+body{font-family:Inter,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}
 .wrap{max-width:1240px;margin:0 auto;padding:28px 16px 40px}
 header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between}
 .tag{display:inline-block;background:var(--navy);color:var(--bg);font-size:12px;font-weight:900;padding:4px 10px;border-radius:6px;letter-spacing:1px}
@@ -168,7 +171,7 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .lk-err{color:var(--bad);font-size:13.5px;min-height:20px;margin-top:8px}
 .btn-pdf{background:var(--navy);color:var(--bg);border:0;border-radius:9px;padding:9px 14px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;white-space:nowrap}
 .btn-pdf:hover{opacity:.9}.btn-pdf[disabled]{opacity:.6;cursor:wait}
-.pdfx{position:fixed;left:-20000px;top:0;width:1560px;background:#fff;padding:28px 30px;font-family:Lato,'Segoe UI',system-ui,sans-serif;color:#13213A}
+.pdfx{position:fixed;left:-20000px;top:0;width:1560px;background:#fff;padding:28px 30px;font-family:Inter,'Segoe UI',system-ui,sans-serif;color:#0D1320}
 .pdfx .gwrap{overflow:visible}
 .pdfx .gt .nm{position:static}
 .pdfx .gt td.sec{position:static}
@@ -206,6 +209,41 @@ td.q{text-align:right;font-weight:900;font-variant-numeric:tabular-nums;white-sp
 .ms span.k{background:var(--navy);color:var(--bg);font-weight:700}
 .ms span.done{background:var(--okbg);color:var(--ok)}
 @media (max-width:640px){.gt .nm{min-width:170px;max-width:190px}.gt .nm b{font-size:12px}}
+
+/* ===== Tema korporat (ikut weststar-engineering.com) ===== */
+:root{--f-disp:'Space Grotesk','Google Sans',Inter,system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+body{background-image:linear-gradient(var(--gridln) 1px,transparent 1px),linear-gradient(90deg,var(--gridln) 1px,transparent 1px);background-size:56px 56px;background-attachment:fixed}
+h1,h2,.kpi b,.dd b,.fact b,.pjt,.yr>b{font-family:var(--f-disp);font-weight:700;letter-spacing:-.02em}
+h1{font-weight:500;letter-spacing:-.03em}
+h1 .acc{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-weight:500;font-size:19px}
+.kpi b{font-weight:500}
+.tag{font-family:var(--f-mono);font-weight:500;background:none;color:var(--brand);padding:0;letter-spacing:2.4px;font-size:12px;border-radius:0}
+.tag::before{content:'';display:inline-block;width:18px;height:1px;background:var(--brand);vertical-align:4px;margin-right:10px}
+nav button{font-family:var(--f-mono);font-weight:500;font-size:12.5px;text-transform:uppercase;letter-spacing:1.2px}
+nav button[aria-selected="true"]{color:var(--brand);border-color:var(--brand)}
+th,.week,.col h4,.fact span,.gt thead th,.gt td.sec,.chip,.team,.h2s.mono,.dd span,.dd i{font-family:var(--f-mono)}
+.chip{font-weight:500;letter-spacing:.8px;font-size:10.5px}
+.team{font-weight:500;letter-spacing:.6px;border-radius:999px;padding:2px 9px}
+.tA{background:var(--a);color:#fff}.tB{background:var(--b);color:#1a1200}
+.card{border-radius:14px}
+button.ghost,.seg-ctl,input[type=search],.lock input[type=password]{border-radius:999px}
+button.ghost{font-family:var(--f-mono);text-transform:uppercase;letter-spacing:.8px;font-size:11.5px;padding:7px 14px}
+.seg-ctl button{font-size:13px}
+.seg-ctl button[aria-pressed="true"]{background:var(--brand);color:#fff}
+.btn-pdf{border-radius:999px;background:var(--grad);color:#fff;font-family:var(--f-mono);font-weight:500;text-transform:uppercase;letter-spacing:.8px;font-size:12px;padding:11px 20px;box-shadow:0 10px 30px -12px var(--brand)}
+.gt th.cur{background:var(--brand)}
+.gt thead th.calm{color:var(--ink);background:var(--track)}
+.gt td.sec{color:var(--brand);letter-spacing:1.4px}
+.step{border-top-color:var(--brand)}
+.step b{color:var(--ink)}.step b i{background:var(--brand);color:#fff}
+.ms span.k{background:var(--brand);color:#fff}
+.day.today{border-color:var(--brand)}
+.dd b{color:var(--ink)}.dd i{color:var(--brand)}
+.c-ikut,.c-berjalan{background:color-mix(in srgb,var(--brand) 14%,transparent);color:var(--brand)}
+:root[data-theme="dark"] .c-ikut,:root[data-theme="dark"] .c-berjalan{background:color-mix(in srgb,var(--brand) 18%,transparent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .c-ikut,:root:not([data-theme="light"]) .c-berjalan{background:color-mix(in srgb,var(--brand) 18%,transparent)}}
+.pdfx{background-image:none}
 </style>
 </head>
 <body>
@@ -213,7 +251,7 @@ td.q{text-align:right;font-weight:900;font-variant-numeric:tabular-nums;white-sp
   <header>
     <div>
       <span class="tag">PROJEK CCTV RMK13</span>
-      <h1>Status Lawatan Tapak PTj</h1>
+      <h1>Status <span class="acc">Lawatan Tapak</span> PTj</h1>
       <p class="sub" id="range">Memuatkan data…</p>
     </div>
     <div class="live">
@@ -625,7 +663,7 @@ async function ganttPdf(){
       <div><span class="tag">PROJEK CCTV RMK13</span>
       <h1 style="font-size:26px;margin-top:8px">Gantt Chart Pelaksanaan Projek</h1>
       <p class="sub" style="font-size:13px">${D.projek?esc(D.projek.tajuk):'Penggantian dan Pemasangan Sistem Keselamatan Fizikal (CCTV), Universiti Malaya'}</p></div>
-      <div style="text-align:right;font-size:12.5px;color:#4C5D74;white-space:nowrap">Status setakat<br><b style="font-size:15px;color:#13213A">${stamp}</b></div></div>
+      <div style="text-align:right;font-size:12.5px;color:#5B6577;white-space:nowrap">Status setakat<br><b style="font-size:15px;color:#0D1320">${stamp}</b></div></div>
       <p class="h2s" style="margin:0 0 12px">${$('#gsub').innerHTML}</p>
       <div class="grid kpis gkpi">${$('#gkpis').innerHTML}</div>
       <div class="legend" style="margin:0 0 10px">${document.querySelector('#t-gantt .legend').innerHTML}</div>
