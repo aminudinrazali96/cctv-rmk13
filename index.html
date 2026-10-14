@@ -135,7 +135,10 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .gt{border-collapse:separate;border-spacing:0;font-size:13px;min-width:1000px;width:100%}
 .gt th,.gt td{padding:0;border-bottom:1px solid var(--line);cursor:default}
 .gt thead th{font-size:11px;color:var(--mute);font-weight:900;text-align:center;padding:6px 0;letter-spacing:.3px;background:var(--card)}
-.gt thead tr:first-child th{color:var(--navy);font-size:11.5px;border-left:1px solid var(--line)}
+.gt thead tr:nth-child(2) th{color:var(--mute);font-size:10.5px;border-left:1px solid var(--line);padding:3px 0}
+.gt thead th.calm{color:var(--navy);font-size:11.5px;border-left:1px solid var(--ink2);background:var(--track);letter-spacing:.6px}
+.gt thead th small{display:block;font-size:9.5px;font-weight:700;color:var(--mute);margin-top:1px}
+.gt thead th.cur small{color:var(--bg);opacity:.85}
 .gt th.cur{color:var(--bg);background:var(--a);border-radius:4px 4px 0 0}
 .gt .nm{position:sticky;left:0;z-index:2;background:var(--card);text-align:left;padding:7px 10px 7px 14px;min-width:250px;max-width:300px;border-right:1px solid var(--line)}
 .gt .nm b{display:block;font-weight:700;font-size:13px;line-height:1.25}
@@ -468,10 +471,13 @@ function renderGantt(){
   const curW=Math.floor(dayN(M0,T)/7)+1, inW=curW>=1&&curW<=W, dayInW=dayN(M0,T)-(curW-1)*7;
   const endP=addD(M0,W*7-1);
   $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">${G.po?'PO DITERIMA '+esc(G.po):'TARIKH ANGGARAN · PO BELUM DITERIMA'}</span>`:'');
-  let h1='<tr><th class="nm" rowspan="2" style="vertical-align:bottom">AKTIVITI</th>', h2='<tr>';
+  // baris 1: bulan kalendar (minggu dikira ikut hari Khamis), baris 2: bulan projek, baris 3: minggu + tarikh Isnin
+  const cal=[];for(let w=1;w<=W;w++){const t=addD(M0,(w-1)*7+3),k=t.getFullYear()*12+t.getMonth();if(cal.length&&cal[cal.length-1].k===k)cal[cal.length-1].n++;else cal.push({k,n:1,d:t})}
+  let h0='<tr><th class="nm" rowspan="3" style="vertical-align:bottom">AKTIVITI</th>'+cal.map((c,i)=>`<th class="calm" colspan="${c.n}" data-tip="${BULANP[c.d.getMonth()]} ${c.d.getFullYear()}">${c.n>=2?BULANP[c.d.getMonth()].toUpperCase():BULAN[c.d.getMonth()].toUpperCase()}${(i===0||c.d.getMonth()===0)&&c.n>=3?` <span style="font-weight:700;color:var(--mute)">${c.d.getFullYear()}</span>`:''}</th>`).join('')+'</tr>';
+  let h1='<tr>', h2='<tr>';
   for(let m=0;m<Math.ceil(W/4);m++)h1+=`<th colspan="${Math.min(4,W-m*4)}">BULAN ${m+1}</th>`;
-  for(let w=1;w<=W;w++){const d=addD(M0,(w-1)*7);h2+=`<th class="${w===curW?'cur':''}" data-tip="W${w}: ${dmy(d)} – ${dmy(addD(d,6))}">W${w}</th>`}
-  h1+='</tr>';h2+='</tr>';
+  for(let w=1;w<=W;w++){const d=addD(M0,(w-1)*7);h2+=`<th class="${w===curW?'cur':''}" data-tip="W${w}: ${dmy(d)} – ${dmy(addD(d,6))}">W${w}<small>${d.getDate()}/${d.getMonth()+1}</small></th>`}
+  h1='\n'+h0+h1+'</tr>';h2+='</tr>';
   let body='', sec='', cnt={selesai:0,aktif:0,lewat:0,sahkan:0}, totExp=0, totAct=0, nw=0, noUpd=0;
   const J=G.seksyen_julat||{};
   G.aktiviti.forEach(a=>{
