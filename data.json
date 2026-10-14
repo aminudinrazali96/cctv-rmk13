@@ -1,5 +1,5 @@
 {
- "dijana": "2026-10-14T10:15",
+ "dijana": "2026-10-14T10:20",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
@@ -1178,7 +1178,9 @@
      2,
      8
     ],
-    "sebenar": {}
+    "sebenar": {
+     "catatan": "PO belum diterima"
+    }
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
@@ -1392,7 +1394,10 @@
     ],
     "sebenar": {}
    }
-  ]
+  ],
+  "mula_anggaran": true,
+  "nota_mula": "Tarikh mula dianggar ikut SST (7/9/2026). PO belum diterima.",
+  "po": null
  },
  "projek": {
   "tajuk": "Perolehan Penggantian dan Pemasangan Sistem Keselamatan Fizikal Beserta Sokongan Teknikal Selama 5 Tahun oleh Jabatan Teknologi Digital (JTD), Universiti Malaya",
@@ -1615,6 +1620,8 @@
     "Latihan admin"
    ]
   ],
-  "pelan5_nota": "Tarikh PM dan latihan akan dipersetujui bersama UM."
+  "pelan5_nota": "Tarikh PM dan latihan akan dipersetujui bersama UM.",
+  "po": null,
+  "mula_anggaran": true
  }
 }
