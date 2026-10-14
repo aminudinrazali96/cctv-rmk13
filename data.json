@@ -1,5 +1,5 @@
 {
- "dijana": "2026-10-14T10:09",
+ "dijana": "2026-10-14T10:15",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
@@ -1098,14 +1098,39 @@
  ],
  "nama_tidak_dikenali": [],
  "gantt": {
-  "rujukan": "UM.FC/FSD/PC/612/16/2026/11 · Enclosure G",
-  "mula_w1": "2026-09-21",
+  "rujukan": "Jadual pelaksanaan pembekal (Kick-Off 22/9/2026) · garis rujukan: Enclosure G UM.FC/FSD/PC/612/16/2026/11",
+  "mula_w1": "2026-09-07",
   "minggu": 24,
+  "seksyen_julat": {
+   "Preliminaries": "W1 – W8",
+   "Stage 1 · Project Planning & Design": "W2 – W8",
+   "Stage 2 · Implementation": "W9 – W17",
+   "Stage 3 · Testing and Commissioning": "W16 – W22",
+   "Transition and Closure": "W21 – W24"
+  },
   "aktiviti": [
    {
     "seksyen": "Preliminaries",
+    "nama": "SST Diterima",
+    "tarikh": [
+     "2026-09-07",
+     "2026-09-13"
+    ],
+    "sebenar": {
+     "status": "selesai",
+     "peratus": 100,
+     "tarikh_siap": "2026-09-07",
+     "catatan": "Surat Setuju Terima 7/9/2026"
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
     "nama": "Kick-Off Meeting",
-    "w": [
+    "tarikh": [
+     "2026-09-21",
+     "2026-09-27"
+    ],
+    "asal": [
      1,
      1
     ],
@@ -1113,13 +1138,17 @@
      "status": "selesai",
      "peratus": 100,
      "tarikh_siap": "2026-09-22",
-     "catatan": "Mesyuarat kick-off 22/9/2026"
+     "catatan": "Mesyuarat kick-off 22/9/2026, Bilik Mesyuarat Azalea, FBL"
     }
    },
    {
     "seksyen": "Preliminaries",
     "nama": "Project Planning & Scheduling",
-    "w": [
+    "tarikh": [
+     "2026-09-17",
+     "2026-09-30"
+    ],
+    "asal": [
      1,
      2
     ],
@@ -1128,7 +1157,11 @@
    {
     "seksyen": "Preliminaries",
     "nama": "Procurement Preparation (BOQ Confirmation)",
-    "w": [
+    "tarikh": [
+     "2026-09-17",
+     "2026-10-08"
+    ],
+    "asal": [
      2,
      4
     ],
@@ -1137,16 +1170,24 @@
    {
     "seksyen": "Preliminaries",
     "nama": "Equipment Procurement & Logistics",
-    "w": [
+    "tarikh": [
+     "2026-10-12",
+     "2026-11-08"
+    ],
+    "asal": [
      2,
      8
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 1 (Project Planning & Design)",
+    "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Detailed Site Assessment & Verification",
-    "w": [
+    "tarikh": [
+     "2026-09-28",
+     "2026-10-25"
+    ],
+    "asal": [
      2,
      5
     ],
@@ -1157,99 +1198,143 @@
     }
    },
    {
-    "seksyen": "Stage 1 (Project Planning & Design)",
+    "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "System Architecture & Network Design",
-    "w": [
+    "tarikh": [
+     "2026-09-28",
+     "2026-10-25"
+    ],
+    "asal": [
      4,
      6
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 1 (Project Planning & Design)",
+    "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Technical Submission & Approval",
-    "w": [
+    "tarikh": [
+     "2026-10-12",
+     "2026-11-01"
+    ],
+    "asal": [
      6,
      8
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 2 (Implementation)",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Infrastructure Preparation (Power, Mounting)",
-    "w": [
+    "tarikh": [
+     "2026-10-15",
+     "2026-12-03"
+    ],
+    "asal": [
      9,
      12
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 2 (Implementation)",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Network & Cabling Deployment",
-    "w": [
+    "tarikh": [
+     "2026-10-15",
+     "2026-12-13"
+    ],
+    "asal": [
      10,
      13
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 2 (Implementation)",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "CCTV Installation (Phased Deployment)",
-    "w": [
+    "tarikh": [
+     "2026-10-19",
+     "2026-12-13"
+    ],
+    "asal": [
      11,
      16
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 2 (Implementation)",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Server, Storage & NVR Setup",
-    "w": [
+    "tarikh": [
+     "2026-10-19",
+     "2026-12-13"
+    ],
+    "asal": [
      12,
      16
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 2 (Implementation)",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "System Configuration & Integration",
-    "w": [
+    "tarikh": [
+     "2026-12-04",
+     "2026-12-31"
+    ],
+    "asal": [
      14,
      17
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "System Testing (Functional & Performance)",
-    "w": [
+    "tarikh": [
+     "2026-12-21",
+     "2027-01-17"
+    ],
+    "asal": [
      16,
      19
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Integration Testing (CSIM & Analytics)",
-    "w": [
+    "tarikh": [
+     "2026-12-28",
+     "2027-01-24"
+    ],
+    "asal": [
      17,
      20
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Issue Rectification & Optimization",
-    "w": [
+    "tarikh": [
+     "2027-01-04",
+     "2027-01-31"
+    ],
+    "asal": [
      18,
      21
     ],
     "sebenar": {}
    },
    {
-    "seksyen": "Stage 3 (Testing and Commissioning)",
+    "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "User Acceptance Test (UAT)",
-    "w": [
+    "tarikh": [
+     "2027-01-25",
+     "2027-02-07"
+    ],
+    "asal": [
      21,
      22
     ],
@@ -1258,7 +1343,11 @@
    {
     "seksyen": "Transition and Closure",
     "nama": "Training (Admin & End Users)",
-    "w": [
+    "tarikh": [
+     "2027-01-25",
+     "2027-02-07"
+    ],
+    "asal": [
      21,
      22
     ],
@@ -1267,7 +1356,11 @@
    {
     "seksyen": "Transition and Closure",
     "nama": "Documentation",
-    "w": [
+    "tarikh": [
+     "2027-02-01",
+     "2027-02-14"
+    ],
+    "asal": [
      22,
      23
     ],
@@ -1276,7 +1369,11 @@
    {
     "seksyen": "Transition and Closure",
     "nama": "Final Handover & Acceptance",
-    "w": [
+    "tarikh": [
+     "2027-02-08",
+     "2027-02-21"
+    ],
+    "asal": [
      23,
      24
     ],
@@ -1285,12 +1382,239 @@
    {
     "seksyen": "Transition and Closure",
     "nama": "Project closure and sign-off",
-    "w": [
+    "tarikh": [
+     "2027-02-15",
+     "2027-02-21"
+    ],
+    "asal": [
      24,
      24
     ],
     "sebenar": {}
    }
   ]
+ },
+ "projek": {
+  "tajuk": "Perolehan Penggantian dan Pemasangan Sistem Keselamatan Fizikal Beserta Sokongan Teknikal Selama 5 Tahun oleh Jabatan Teknologi Digital (JTD), Universiti Malaya",
+  "kontraktor": "Weststar Engineering Sdn Bhd",
+  "sst_tarikh": "2026-09-07",
+  "sst_no": "UM.FC/FSD/PC/612/15/(63b)/2026/sa/FS",
+  "kickoff": "2026-09-22",
+  "kontrak": [
+   "2026-09-07",
+   "2027-09-08"
+  ],
+  "jaminan": [
+   "2026-09-07",
+   "2031-09-08"
+  ],
+  "pelaksanaan_minggu": 24,
+  "nilai_kontrak": "RM 5,534,687.00",
+  "skop": [
+   [
+    "Supply",
+    "Bekal perkakasan, perisian, lesen dan peralatan ikut spesifikasi"
+   ],
+   [
+    "Installation",
+    "Pasang sistem, peralatan dan kabel di lokasi ditetapkan"
+   ],
+   [
+    "Configuration",
+    "Konfigurasi peranti, perisian dan tetapan sistem"
+   ],
+   [
+    "Integration",
+    "Integrasi dengan sistem dan pangkalan data sedia ada (cth. ALPR)"
+   ],
+   [
+    "Testing",
+    "Pengujian fungsi dan prestasi sistem"
+   ],
+   [
+    "UAT",
+    "Ujian penerimaan pengguna bersama pengguna akhir"
+   ],
+   [
+    "Training",
+    "Latihan pengguna dan pemindahan pengetahuan"
+   ],
+   [
+    "Technology Transfer",
+    "Serahan dokumentasi, pengetahuan dan akses sistem"
+   ],
+   [
+    "Support",
+    "Sokongan teknikal 5 tahun: respons 4 jam, NBD di tapak (Isn–Jum 8.00–5.00)"
+   ],
+   [
+    "Preventive Maintenance",
+    "Penyelenggaraan pencegahan 2 kali setahun selama 5 tahun, dengan laporan"
+   ]
+  ],
+  "bom": [
+   [
+    "2MP Indoor/Outdoor Dome Camera",
+    800
+   ],
+   [
+    "2MP Outdoor Bullet Camera",
+    100
+   ],
+   [
+    "4MP Indoor Dome Camera for Analytics",
+    100
+   ],
+   [
+    "5MP IR Outdoor Bullet Camera with AI Engine and Pole Mounting",
+    10
+   ],
+   [
+    "16 Channel NVR with 4 x HDD Slots, Max 72TB",
+    1
+   ],
+   [
+    "ALPR License",
+    10
+   ],
+   [
+    "Rapid Review Analytics",
+    60
+   ],
+   [
+    "Device License for CCTV Camera",
+    300
+   ],
+   [
+    "Client Workstation (per 100 display)",
+    10
+   ],
+   [
+    "ALPR Server",
+    1
+   ],
+   [
+    "64 Channel Network Recorder, 64TB HDD",
+    16
+   ],
+   [
+    "Video Wall Controller, Encoder/Decoder System",
+    16
+   ],
+   [
+    "24 Port 10/100/1000BASE-T + 4 Port 1G/10G SFP+ PoE Switch",
+    45
+   ],
+   [
+    "UTP Cat6 Indoor Cabling (all camera locations)",
+    500
+   ]
+  ],
+  "perkhidmatan": [
+   [
+    "Entire Project Installation, Testing and Commissioning",
+    "1 lot"
+   ],
+   [
+    "System planning & configuration, ALPR DB integration, migration, user training, UAT, FAT, technology transfer",
+    "1 lot"
+   ],
+   [
+    "Sokongan 5 tahun · respons 4 jam · NBD di tapak",
+    "5 lot"
+   ],
+   [
+    "Penyelenggaraan pencegahan 2 kali setahun, 5 tahun",
+    "10 lot"
+   ]
+  ],
+  "pelan5": [
+   [
+    "2027-01",
+    "FAT",
+    "Penerimaan & FAT"
+   ],
+   [
+    "2027-02",
+    "TOT",
+    "Pemindahan teknologi"
+   ],
+   [
+    "2027-06",
+    "PM1",
+    ""
+   ],
+   [
+    "2027-12",
+    "PM2",
+    ""
+   ],
+   [
+    "2027-12",
+    "LT1",
+    "Latihan admin"
+   ],
+   [
+    "2028-06",
+    "PM3",
+    ""
+   ],
+   [
+    "2028-12",
+    "PM4",
+    ""
+   ],
+   [
+    "2028-12",
+    "LT2",
+    "Latihan admin"
+   ],
+   [
+    "2029-06",
+    "PM5",
+    ""
+   ],
+   [
+    "2029-12",
+    "PM6",
+    ""
+   ],
+   [
+    "2029-12",
+    "LT3",
+    "Latihan admin"
+   ],
+   [
+    "2030-06",
+    "PM7",
+    ""
+   ],
+   [
+    "2030-12",
+    "PM8",
+    ""
+   ],
+   [
+    "2030-12",
+    "LT4",
+    "Latihan admin"
+   ],
+   [
+    "2031-06",
+    "PM9",
+    ""
+   ],
+   [
+    "2031-09",
+    "PM10",
+    ""
+   ],
+   [
+    "2031-09",
+    "LT5",
+    "Latihan admin"
+   ]
+  ],
+  "pelan5_nota": "Tarikh PM dan latihan akan dipersetujui bersama UM."
  }
 }
