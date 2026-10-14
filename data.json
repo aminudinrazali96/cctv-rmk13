@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-14T11:21",
+ "dijana": "2026-10-14T11:38",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 33,
+  "ptj_selesai": 35,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 28.3,
+  "pct_cctv_selesai": 36.0,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 24,
-   "B": 8
+   "A": 25,
+   "B": 9
   },
-  "sesi_selesai": 32,
+  "sesi_selesai": 34,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -409,7 +409,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "PASUM",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       18
      ]
@@ -429,7 +429,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Fakulti Sains",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       11
      ]
@@ -648,12 +648,12 @@
   {
    "no": 11,
    "nama": "Fakulti Sains",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-14",
      "team": "B",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -720,12 +720,12 @@
   {
    "no": 18,
    "nama": "Pusat Asasi Sains UM (PASUM)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-14",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1195,8 +1195,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 61,
-     "catatan": "Auto daripada jadual lawatan: 33/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 65,
+     "catatan": "Auto daripada jadual lawatan: 35/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
