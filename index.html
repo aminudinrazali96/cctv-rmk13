@@ -467,7 +467,7 @@ function renderGantt(){
   const W=G.minggu||24, M0=pd(G.mula_w1), T=pd(todayIso());
   const curW=Math.floor(dayN(M0,T)/7)+1, inW=curW>=1&&curW<=W, dayInW=dayN(M0,T)-(curW-1)*7;
   const endP=addD(M0,W*7-1);
-  $('#gsub').textContent=`${G.rujukan||''} · W1 bermula ${dmyy(M0)}, W${W} tamat ${dmyy(endP)}`;
+  $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">${G.po?'PO DITERIMA '+esc(G.po):'TARIKH ANGGARAN · PO BELUM DITERIMA'}</span>`:'');
   let h1='<tr><th class="nm" rowspan="2" style="vertical-align:bottom">AKTIVITI</th>', h2='<tr>';
   for(let m=0;m<Math.ceil(W/4);m++)h1+=`<th colspan="${Math.min(4,W-m*4)}">BULAN ${m+1}</th>`;
   for(let w=1;w<=W;w++){const d=addD(M0,(w-1)*7);h2+=`<th class="${w===curW?'cur':''}" data-tip="W${w}: ${dmy(d)} – ${dmy(addD(d,6))}">W${w}</th>`}
@@ -520,11 +520,12 @@ function renderProjek(){
     ['SURAT SETUJU TERIMA',dmyy(pd(P.sst_tarikh)),esc(P.sst_no)],
     ['TEMPOH KONTRAK',`${dmyy(K0)} – ${dmyy(K1)}`,'Satu (1) tahun'],
     ['JAMINAN & SOKONGAN',`hingga ${dmyy(J1)}`,'Lima (5) tahun dari SST'],
-    ['TEMPOH PELAKSANAAN',`${P.pelaksanaan_minggu} minggu`,`${dmyy(M0)} – ${dmyy(Pend)}`],
+    ['TEMPOH PELAKSANAAN',`${P.pelaksanaan_minggu} minggu`,`${P.mula_anggaran?'Anggaran ':''}${dmyy(M0)} – ${dmyy(Pend)}`],
+    ['PESANAN BELIAN (PO)',P.po?dmyy(pd(P.po)):'<em style="color:var(--warn);font-style:normal">Belum diterima</em>',P.mula_anggaran?'Tarikh mula projek masih anggaran ikut SST':''],
     ['NILAI KONTRAK',esc(P.nilai_kontrak),'Termasuk SST 8%'],
   ].map(([l,v,s])=>`<div class="fact"><span>${l}</span><b>${v}</b>${s?`<small>${s}</small>`:''}</div>`).join('');
   const p=Math.max(0,Math.min(100,Math.round(dayN(M0,T)/(dayN(M0,Pend)+1)*100)));
-  $('#pj-prog').innerHTML=`<div class="meter"><div class="mlab"><b>Masa pelaksanaan berlalu</b><em>${p}% · hari ke-${Math.max(0,dayN(M0,T)+1)} daripada ${dayN(M0,Pend)+1}</em></div><div class="track"><div style="width:${p}%;background:var(--navy)"></div></div></div>`;
+  $('#pj-prog').innerHTML=`<div class="meter"><div class="mlab"><b>Masa pelaksanaan berlalu${P.mula_anggaran?' (anggaran)':''}</b><em>${p}% · hari ke-${Math.max(0,dayN(M0,T)+1)} daripada ${dayN(M0,Pend)+1}</em></div><div class="track"><div style="width:${p}%;background:var(--navy)"></div></div></div>`;
   $('#pj-skop').innerHTML=P.skop.map(([n,t],i)=>`<div class="step"><b><i>${i+1}</i>${esc(n)}</b><p>${esc(t)}</p></div>`).join('');
   const cam=P.bom.filter(([n])=>/camera/i.test(n)&&!/licen|cabling/i.test(n)).reduce((a,[,q])=>a+q,0);
   $('#pj-bom-sub').textContent=`${P.bom.length} item perkakasan dan lesen · ${cam.toLocaleString('ms-MY')} unit kamera CCTV`;
@@ -533,8 +534,9 @@ function renderProjek(){
   $('#pj-p5-sub').textContent=P.pelan5_nota||'';
   const by={};P.pelan5.forEach(([ym,k,t])=>{(by[ym.slice(0,4)]=by[ym.slice(0,4)]||[]).push([ym,k,t])});
   by['2026']=[['2026-09','SST',''],['2026-09','Kick-off','']].concat(by['2026']||[]);
+  if(!P.po)by['2026'].push(['9999','PO','belum diterima']);
   const tIso=todayIso().slice(0,7);
-  $('#pj-p5').innerHTML=Object.keys(by).sort().map(y=>`<div class="yr"><b>${y}</b><div class="ms">${by[y].map(([ym,k,t])=>{const m=+ym.slice(5,7);return `<span class="${ym<tIso?'done':(/^(FAT|TOT)$/.test(k)?'k':'')}" title="${esc(t)}">${esc(k)} · ${BULAN[m-1]}${t?' · '+esc(t):''}</span>`}).join('')}</div></div>`).join('')+
+  $('#pj-p5').innerHTML=Object.keys(by).sort().map(y=>`<div class="yr"><b>${y}</b><div class="ms">${by[y].map(([ym,k,t])=>{const m=+ym.slice(5,7);return ym==='9999'?`<span style="background:var(--warnbg);color:var(--warn)">PO · ${esc(t)}</span>`:`<span class="${ym<tIso?'done':(/^(FAT|TOT)$/.test(k)?'k':'')}" title="${esc(t)}">${esc(k)} · ${BULAN[m-1]}${t?' · '+esc(t):''}</span>`}).join('')}</div></div>`).join('')+
    `<div class="yr"><b></b><div class="ms"><span>Pelaksanaan ${P.pelaksanaan_minggu} minggu</span><span>Sokongan 5 tahun · respons 4 jam · NBD di tapak</span></div></div>`;
 }
 
