@@ -129,6 +129,35 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
   td.lwc{display:none}
   .col.none{display:none}
 }
+
+/* gantt */
+.gwrap{overflow-x:auto;padding:0}
+.gt{border-collapse:separate;border-spacing:0;font-size:13px;min-width:1000px;width:100%}
+.gt th,.gt td{padding:0;border-bottom:1px solid var(--line);cursor:default}
+.gt thead th{font-size:11px;color:var(--mute);font-weight:900;text-align:center;padding:6px 0;letter-spacing:.3px;background:var(--card)}
+.gt thead tr:first-child th{color:var(--navy);font-size:11.5px;border-left:1px solid var(--line)}
+.gt th.cur{color:var(--bg);background:var(--a);border-radius:4px 4px 0 0}
+.gt .nm{position:sticky;left:0;z-index:2;background:var(--card);text-align:left;padding:7px 10px 7px 14px;min-width:250px;max-width:300px;border-right:1px solid var(--line)}
+.gt .nm b{display:block;font-weight:700;font-size:13px;line-height:1.25}
+.gt .nm small{display:flex;gap:6px;align-items:center;margin-top:3px;flex-wrap:wrap}
+.gt td.sec{background:var(--track);color:var(--navy);font-weight:900;font-size:12px;letter-spacing:.5px;padding:6px 14px;position:sticky;left:0}
+.gt td.wk{width:34px;min-width:30px;height:40px;position:relative;border-left:1px solid var(--line)}
+.gt td.wk.m{border-left:1px solid var(--ink2)}
+.gt td.wk.today{background:linear-gradient(90deg,transparent calc(var(--tp) - 1px),var(--bad) calc(var(--tp) - 1px),var(--bad) calc(var(--tp) + 1px),transparent calc(var(--tp) + 1px))}
+.gbar{position:absolute;top:11px;height:18px;border-radius:4px;background:var(--track);border:1px solid var(--ink2);overflow:hidden;z-index:1}
+.gbar i{display:block;height:100%}
+.gbar span{position:absolute;inset:0;font-size:10.5px;font-weight:900;color:var(--ink);display:flex;align-items:center;justify-content:center;font-style:normal}
+.c-ikut{background:#E6EFFB;color:var(--a)}
+.c-lewat{background:var(--badbg);color:var(--bad)}
+.c-sahkan,.c-ditangguh{background:var(--warnbg);color:var(--warn)}
+.c-berjalan{background:#E6EFFB;color:var(--a)}
+.c-dalam{background:var(--track);color:var(--ink2)}
+.c-belummula{background:var(--track);color:var(--mute)}
+:root[data-theme="dark"] .c-ikut,:root[data-theme="dark"] .c-berjalan{background:#1B2C45}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .c-ikut,:root:not([data-theme="light"]) .c-berjalan{background:#1B2C45}}
+.gkpi{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:16px}
+.ghead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:flex-end;margin-bottom:12px}
+@media (max-width:640px){.gt .nm{min-width:170px;max-width:190px}.gt .nm b{font-size:12px}}
 </style>
 </head>
 <body>
@@ -152,6 +181,7 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
     <button role="tab" data-tab="ringkasan" aria-selected="true">Ringkasan</button>
     <button role="tab" data-tab="jadual" aria-selected="false">Jadual lawatan</button>
     <button role="tab" data-tab="ptj" aria-selected="false">Senarai PTj</button>
+    <button role="tab" data-tab="gantt" aria-selected="false">Gantt chart</button>
   </nav>
 
   <section id="t-ringkasan">
@@ -210,6 +240,22 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
     </div>
   </section>
 
+  <section id="t-gantt" hidden>
+    <div class="grid kpis gkpi" id="gkpis"></div>
+    <div class="ghead">
+      <div><h2>Gantt chart pelaksanaan projek</h2><p class="h2s" id="gsub" style="margin-bottom:0"></p></div>
+      <div class="legend" style="margin-top:0">
+        <span><i style="background:var(--track);border:1px solid var(--ink2)"></i>Dirancang</span>
+        <span><i style="background:var(--ok)"></i>Selesai</span>
+        <span><i style="background:var(--a)"></i>Kemajuan</span>
+        <span><i style="background:var(--bad)"></i>Lewat jadual</span>
+        <span><i style="background:var(--bad);width:2px"></i>Hari ini</span>
+      </div>
+    </div>
+    <div class="card gwrap" id="gantt"></div>
+    <p class="h2s" style="margin-top:10px">Bar = tempoh dirancang. Isian = peratus siap sebenar. Status dibanding dengan kemajuan yang dijangka pada hari ini.</p>
+  </section>
+
   <footer id="foot">Data dijana automatik daripada fail Excel jadual lawatan tapak. Halaman ini menyemak data baharu setiap 5 minit.</footer>
 </div>
 <div id="tip" role="tooltip"></div>
@@ -234,8 +280,9 @@ $('#theme').onclick=()=>{const cur=document.documentElement.dataset.theme||(matc
 /* tab */
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected',x===b));
-  ['ringkasan','jadual','ptj'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.tab);
+  ['ringkasan','jadual','ptj','gantt'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.tab);
   try{sessionStorage.setItem('tab',b.dataset.tab)}catch(e){}
+  if(b.dataset.tab==='gantt'&&D)ganttScroll();
 });
 try{const t=sessionStorage.getItem('tab');if(t)document.querySelector(`nav button[data-tab="${t}"]`)?.click()}catch(e){}
 
@@ -326,6 +373,71 @@ segCtl('#teamf',v=>{teamF=v;renderTimeline()});
 segCtl('#stf',v=>{stF=v;renderPtj()});
 $('#jq').oninput=renderTimeline;$('#hidepast').onchange=renderTimeline;$('#pq').oninput=renderPtj;
 
+
+const GST={selesai:['✓','SELESAI'],ikut:['●','IKUT JADUAL'],berjalan:['●','SEDANG BERJALAN'],lewat:['!','LEWAT'],sahkan:['?','PERLU PENGESAHAN'],dalam:['○','DALAM TEMPOH'],belummula:['○','BELUM MULA'],ditangguh:['↻','DITANGGUH']};
+const gchip=st=>`<span class="chip c-${st}">${GST[st][0]} ${GST[st][1]}</span>`;
+const addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+const dmy=d=>d.getDate()+' '+BULAN[d.getMonth()];
+function ganttStatus(a,S,E,T){
+  const s=a.sebenar||{}, pct=s.peratus, tot=(E-S)/864e5+1;
+  const exp=T<S?0:T>E?100:Math.round(((T-S)/864e5+1)/tot*100);
+  let st;
+  if(s.status==='selesai'||pct>=100)st='selesai';
+  else if(s.status==='ditangguh')st='ditangguh';
+  else if(pct==null||pct===''){st=T<S?'belummula':T>E?'sahkan':(s.status==='berjalan'?'berjalan':'dalam')}
+  else if(T<S)st=pct>0?'berjalan':'belummula';
+  else st=pct<exp-10?'lewat':'ikut';
+  return {st,exp,pct:(pct==null||pct==='')?null:Math.max(0,Math.min(100,+pct))};
+}
+function ganttScroll(){const el=$('#gantt'),th=el.querySelector('th.cur');if(!th||$('#t-gantt').hidden||el.dataset.scrolled)return;el.dataset.scrolled=1;requestAnimationFrame(()=>{el.scrollLeft=Math.max(0,th.offsetLeft-el.querySelector('.nm').offsetWidth-140)})}
+function renderGantt(){
+  const G=D.gantt, el=$('#gantt');
+  const tab=document.querySelector('nav button[data-tab="gantt"]');
+  if(!G){tab.hidden=true;return}
+  tab.hidden=false;
+  const W=G.minggu||24, M0=pd(G.mula_w1), T=pd(todayIso());
+  const curW=Math.floor((T-M0)/864e5/7)+1, inW=curW>=1&&curW<=W, dayInW=((T-M0)/864e5)%7;
+  const endP=addD(M0,W*7-1);
+  $('#gsub').textContent=`${G.rujukan||''} · W1 bermula ${dmy(M0)} ${M0.getFullYear()}, W${W} tamat ${dmy(endP)} ${endP.getFullYear()}`;
+  // header
+  let h1='<tr><th class="nm" rowspan="2" style="vertical-align:bottom">AKTIVITI</th>', h2='<tr>';
+  for(let m=0;m<Math.ceil(W/4);m++)h1+=`<th colspan="${Math.min(4,W-m*4)}">BULAN ${m+1}</th>`;
+  for(let w=1;w<=W;w++){const d=addD(M0,(w-1)*7);h2+=`<th class="${w===curW?'cur':''}" data-tip="W${w}: ${dmy(d)} – ${dmy(addD(d,6))}">W${w}</th>`}
+  h1+='</tr>';h2+='</tr>';
+  let body='', sec='', cnt={selesai:0,aktif:0,lewat:0,sahkan:0}, totExp=0, totAct=0, nw=0, noUpd=0;
+  G.aktiviti.forEach(a=>{
+    if(a.seksyen!==sec){sec=a.seksyen;body+=`<tr><td class="sec" colspan="${W+1}">${esc(sec.toUpperCase())}</td></tr>`}
+    const [w0,w1]=a.w, S=addD(M0,(w0-1)*7), E=addD(M0,w1*7-1);
+    const r=ganttStatus(a,S,E,T), s=a.sebenar||{};
+    if(r.st==='selesai')cnt.selesai++;
+    else if(r.st==='lewat')cnt.lewat++;
+    else if(r.st==='sahkan')cnt.sahkan++;
+    if(['ikut','berjalan','dalam','lewat'].includes(r.st))cnt.aktif++;
+    const len=w1-w0+1, rep=r.st==='selesai'||r.pct!=null;
+    if(S<=T){if(rep){nw+=len;totExp+=r.exp*len;totAct+=(r.st==='selesai'?100:r.pct)*len}else noUpd++}
+    const fill=r.st==='selesai'?100:(r.pct||0), fc=r.st==='selesai'?'var(--ok)':r.st==='lewat'?'var(--bad)':'var(--a)';
+    const tipTxt=`<b>${esc(a.nama)}</b><br>Dirancang: W${w0}${w1!==w0?'–W'+w1:''} (${dmy(S)} – ${dmy(E)})<br>Dijangka hari ini: ${r.exp}%<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}`.replace(/"/g,'&quot;');
+    let cells='';
+    for(let w=1;w<=W;w++){
+      const today=w===curW?` today" style="--tp:${((dayInW+.5)/7*100).toFixed(1)}%`:'';
+      let bar='';
+      if(w===w0)bar=`<div class="gbar" style="left:3px;width:calc(${len*100}% + ${len-1}px - 6px)" data-tip="${tipTxt}"><i style="width:${fill}%;background:${fc}"></i>${len>1&&fill>0&&fill<100?`<span>${fill}%</span>`:''}</div>`;
+      cells+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${today}">${bar}</td>`;
+    }
+    body+=`<tr><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${s.catatan&&a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}</small></td>${cells}</tr>`;
+  });
+  el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${body}</tbody></table>`;
+  const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
+  $('#gkpis').innerHTML=[
+    [inW?'W'+curW:(curW<1?'—':'Tamat'),`minggu semasa daripada ${W}`,inW?`${dmy(addD(M0,(curW-1)*7))} – ${dmy(addD(M0,curW*7-1))}`:'', 'var(--navy)'],
+    [nw?act+'%':'—','kemajuan aktiviti yang dilaporkan',`dijangka ${exp}% pada hari ini`+(noUpd?` · ${noUpd} aktiviti bermula belum dikemas kini`:''),act<exp-10?'var(--bad)':'var(--a)'],
+    [cnt.selesai+'<span style="font-size:20px;color:var(--mute)"> / '+G.aktiviti.length+'</span>','aktiviti selesai',`${cnt.aktif} aktiviti dalam tempoh`,'var(--ok)'],
+    [cnt.lewat+cnt.sahkan,'perlu perhatian',`${cnt.lewat} lewat · ${cnt.sahkan} melepasi tempoh, belum disahkan`,cnt.lewat+cnt.sahkan?'var(--warn)':'var(--ok)'],
+  ].map(([v,l,s,c])=>`<div class="card kpi"><b style="color:${c}">${v}</b><span>${l}</span><small>${s}</small></div>`).join('');
+  // skrol ke minggu semasa
+  ganttScroll();
+}
+
 function renderHeader(){
   const a=pd(D.hari[0].tarikh), b=pd(D.hari[D.hari.length-1].tarikh);
   $('#range').textContent=`Jadual lawatan bersama pembekal · ${a.getDate()} ${BULANP[a.getMonth()]} – ${b.getDate()} ${BULANP[b.getMonth()]} ${b.getFullYear()}`;
@@ -343,7 +455,7 @@ async function load(){
     $('#err').style.display='none';
     if(txt===lastJson)return;
     lastJson=txt;D=JSON.parse(txt);
-    renderHeader();renderSummary();renderTimeline();renderPtj();
+    renderHeader();renderSummary();renderTimeline();renderPtj();renderGantt();
   }catch(e){const el=$('#err');el.textContent='Data tidak dapat dimuatkan ('+e.message+'). Cuba muat semula sebentar lagi.';el.style.display='block'}
 }
 $('#reload').onclick=load;
