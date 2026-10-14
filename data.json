@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-14T11:38",
+ "dijana": "2026-10-14T13:03",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 35,
+  "ptj_selesai": 36,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 36.0,
+  "pct_cctv_selesai": 36.5,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 25,
+   "A": 26,
    "B": 9
   },
-  "sesi_selesai": 34,
+  "sesi_selesai": 35,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -419,7 +419,7 @@
      "sesi": "Pagi",
      "masa": "11:30 – 13:00",
      "ptj": "FSK",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       6
      ]
@@ -583,12 +583,12 @@
   {
    "no": 6,
    "nama": "Fakulti Seni Kreatif (FSK)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-14",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1195,8 +1195,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 65,
-     "catatan": "Auto daripada jadual lawatan: 35/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 67,
+     "catatan": "Auto daripada jadual lawatan: 36/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
