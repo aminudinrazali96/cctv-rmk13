@@ -411,6 +411,23 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
   .uplist li{grid-template-columns:46px 1fr;gap:12px}.uplist li .team{grid-column:2;justify-self:start}
   .ub{width:46px;height:46px}
 }
+
+/* perlu perhatian: tanda baris Gantt */
+.gt tr.attn td.nm{box-shadow:inset 4px 0 0 var(--warn)}
+.gt tr.attn .gbar{border-color:var(--warn);animation:attnBar 1.8s ease-in-out infinite}
+@keyframes attnBar{0%,100%{box-shadow:0 0 0 0 rgba(217,119,6,0)}50%{box-shadow:0 0 0 4px rgba(217,119,6,.38)}}
+.gt tr.attn.flash td.wk{animation:attnWk 1s ease-in-out 3}
+.gt tr.attn.flash td.nm{animation:attnNm 1s ease-in-out 3}
+@keyframes attnWk{0%,100%{background-color:transparent}50%{background-color:var(--warnbg)}}
+@keyframes attnNm{0%,100%{background-color:var(--card)}50%{background-color:var(--warnbg)}}
+.kpi.go{cursor:pointer}
+.kpi.go small.go-h{color:var(--warn);font-weight:700;margin-top:6px}
+.kpi.go small.go-h i{display:inline-block;font-style:normal;animation:attnArr 1.2s ease-in-out infinite}
+@keyframes attnArr{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+.kpi.go:focus-visible{outline:2px solid var(--warn);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.gt tr.attn .gbar,.kpi.go small.go-h i{animation:none}.gt tr.attn.flash td{animation-duration:.01s}}
+.pdfx .gt tr.attn .gbar,.pdfx .gt tr.attn.flash td{animation:none}
+.pdfx .kpi.go small.go-h{display:none}
 </style>
 </head>
 <body>
@@ -778,7 +795,7 @@ function renderGantt(){
       if(bs&&w===bs.w)x+=`<div class="gbase" style="${bs.css}" data-tip="${tipTxt}"></div>`;
       cells+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${today}">${x}</td>`;
     }
-    body+=`<tr><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}</small></td>${cells}</tr>`;
+    body+=`<tr${r.st==='lewat'||r.st==='sahkan'?` class="attn attn-${r.st}"`:''}><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}</small></td>${cells}</tr>`;
   });
   el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${body}</tbody></table>`;
   const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
@@ -787,8 +804,19 @@ function renderGantt(){
     [nw?act+'%':'—','kemajuan aktiviti yang dilaporkan',`dijangka ${exp}% pada hari ini`+(noUpd?` · ${noUpd} aktiviti bermula belum dikemas kini`:''),act<exp-10?'var(--bad)':'var(--a)'],
     [cnt.selesai+'<span style="font-size:20px;color:var(--mute)"> / '+G.aktiviti.length+'</span>','aktiviti selesai',`${cnt.aktif} aktiviti dalam tempoh`,'var(--ok)'],
     [cnt.lewat+cnt.sahkan,'perlu perhatian',`${cnt.lewat} lewat · ${cnt.sahkan} melepasi tempoh, belum disahkan`,cnt.lewat+cnt.sahkan?'var(--warn)':'var(--ok)'],
-  ].map(([v,l,s,c])=>`<div class="card kpi"><b style="color:${c}">${v}</b><span>${l}</span><small>${s}</small></div>`).join('');
+  ].map(([v,l,s,c],i)=>{const go=i===3&&cnt.lewat+cnt.sahkan>0;return `<div class="card kpi${go?' go':''}"${go?' id="kpi-attn" role="button" tabindex="0" title="Tunjuk aktiviti di carta"':''}><b style="color:${c}">${v}</b><span>${l}</span><small>${s}</small>${go?'<small class="go-h">Klik untuk tunjuk di carta <i>↓</i></small>':''}</div>`}).join('');
+  const ka=$('#kpi-attn');
+  if(ka){ka.onclick=showAttn;ka.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showAttn()}}}
   ganttScroll();
+}
+function showAttn(){
+  const el=$('#gantt'), rows=[...el.querySelectorAll('tr.attn')];
+  if(!rows.length)return;
+  const first=rows[0], bar=first.querySelector('.gbar');
+  first.scrollIntoView({behavior:'smooth',block:'center',inline:'nearest'});
+  if(bar){const td=bar.closest('td'),nm=el.querySelector('.nm');el.dataset.scrolled=1;el.scrollTo({left:Math.max(0,td.offsetLeft-(nm?nm.offsetWidth:0)-80),behavior:'smooth'})}
+  rows.forEach(r=>{r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash')});
+  clearTimeout(showAttn.t);showAttn.t=setTimeout(()=>rows.forEach(r=>r.classList.remove('flash')),3300);
 }
 function renderProjek(){
   const P=D.projek, tab=document.querySelector('nav button[data-tab="projek"]');
