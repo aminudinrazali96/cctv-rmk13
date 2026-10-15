@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-14T13:03",
+ "dijana": "2026-10-15T14:00",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 36,
+  "ptj_selesai": 37,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 36.5,
+  "pct_cctv_selesai": 37.3,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 26,
+   "A": 27,
    "B": 9
   },
-  "sesi_selesai": 35,
+  "sesi_selesai": 36,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -445,7 +445,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Fakulti Perniagaan dan Ekonomi",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       16
      ]
@@ -696,12 +696,12 @@
   {
    "no": 16,
    "nama": "Fakulti Perniagaan dan Ekonomi (FPE)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-15",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1195,8 +1195,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 67,
-     "catatan": "Auto daripada jadual lawatan: 36/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 69,
+     "catatan": "Auto daripada jadual lawatan: 37/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
