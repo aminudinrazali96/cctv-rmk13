@@ -171,6 +171,7 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .gt tr.sub .gbar span{font-size:9.5px}
 .c-skop{background:var(--warnbg);color:var(--warn)}
 .gref{color:var(--mute);font-size:11px;font-weight:700;white-space:nowrap}
+.gt .nm .gnote{display:block;margin-top:4px;font-size:11.5px;line-height:1.35;color:var(--ink2);font-weight:500}
 .gtog{display:inline-flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
 .gtog input{accent-color:var(--a);margin:0}
 :root[data-theme="dark"] .c-ikut,:root[data-theme="dark"] .c-berjalan{background:#1B2C45}
@@ -815,7 +816,7 @@ function renderGantt(){
     }
     const cls=[a.sub?'sub':'',r.st==='lewat'||r.st==='sahkan'?`attn attn-${r.st}`:''].filter(Boolean).join(' ');
     const extra=a.sub?`<span class="gref">Spek ${esc(a.rujukan)}</span>${K?`<span class="gref" style="font-weight:600">${kTxt}</span>`:''}${a.semak?`<span class="chip c-skop" data-tip="${('<b>Semak skop</b><br>'+esc(a.semak)).replace(/"/g,'&quot;')}">⚑ SEMAK SKOP</span>`:''}`:'';
-    body+=`<tr${cls?` class="${cls}"`:''}><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}${extra}</small></td>${cells}</tr>`;
+    body+=`<tr${cls?` class="${cls}"`:''}><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}${extra}</small>${a.ringkas?`<span class="gnote">${esc(a.ringkas)}</span>`:''}</td>${cells}</tr>`;
   });
   el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${body}</tbody></table>`;
   const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
