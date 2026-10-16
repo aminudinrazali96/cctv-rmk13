@@ -1,5 +1,5 @@
 {
- "dijana": "2026-10-15T14:00",
+ "dijana": "2026-10-16T15:24",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
@@ -1169,9 +1169,9 @@
      4
     ],
     "sebenar": {
-     "catatan": "Output untuk dikira selesai: (1) BOQ muktamad ikut kontrak item 2.1–3.1, termasuk 40 suis tambahan (2.13.9) dan 1 kamera + 1 lesen ALPR percuma (2.6.14); (2) model dan nombor part sama seperti tawaran; (3) agihan kamera, titik kabel baharu dan suis ikut PTj; (4) senarai kamera sedia ada yang disahkan rosak; (5) lead time OEM setiap item; (6) pengesahan JTD. BOM aksesori pemasangan boleh diminta bersama. Pesanan hanya selepas kelulusan bahan dan PO."
+     "catatan": "Output untuk dikira selesai: (1) BOQ muktamad ikut kontrak item 2.1–3.1, termasuk 40 suis tambahan (2.13.9) dan 1 kamera ALPR model sama + 1 lesen peranti tambahan tanpa kos kepada UM (2.6.14); (2) model dan nombor part sama seperti tawaran; (3) agihan kamera, titik kabel baharu dan suis ikut PTj; (4) senarai kamera sedia ada yang disahkan rosak; (5) lead time OEM setiap item; (6) pengesahan JTD. BOM aksesori pemasangan boleh diminta bersama. Pesanan hanya selepas kelulusan bahan dan PO."
     },
-    "ringkas": "Serahan: BOQ ikut kontrak (+40 suis, ALPR percuma) · model/part no. · agihan ikut PTj · senarai kamera rosak · lead time OEM · pengesahan JTD"
+    "ringkas": "Serahan: BOQ ikut kontrak (+40 suis, +1 kamera & lesen ALPR tanpa kos) · model/part no. · agihan ikut PTj · senarai kamera rosak · lead time OEM · pengesahan JTD"
    },
    {
     "seksyen": "Preliminaries",
@@ -1210,7 +1210,7 @@
    },
    {
     "seksyen": "Preliminaries",
-    "nama": "Kamera ALPR + lesen (serta 1 kamera dan 1 lesen percuma)",
+    "nama": "Kamera ALPR + lesen (10 + 1 kamera dan 1 lesen tambahan tanpa kos kepada UM)",
     "tarikh": [
      "2026-10-26",
      "2026-11-08"
