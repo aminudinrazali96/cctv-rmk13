@@ -1321,7 +1321,7 @@
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
-    "nama": "Ujian kabel UTP sedia ada",
+    "nama": "Semakan 510 titik kabel UTP sedia ada (guna semula jika tidak rosak)",
     "tarikh": [
      "2026-09-28",
      "2026-10-25"
@@ -1329,8 +1329,15 @@
     "sub": true,
     "induk": "Detailed Site Assessment & Verification",
     "rujukan": "3.1",
-    "bukti": "Senarai titik rosak dan cadangan ganti",
-    "sebenar": {}
+    "bukti": "Keputusan ujian setiap titik dan senarai titik rosak",
+    "kiraan": {
+     "sasaran": 510,
+     "unit": "titik disemak",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Additional Cabling Work 510 titik = kabel sedia ada; disemak dan diguna semula jika tidak rosak. Disahkan pengguna 16/10/2026"
+    }
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
@@ -1437,15 +1444,16 @@
     "bukti": "Laporan Fluke",
     "kiraan": {
      "sasaran": 500,
-     "unit": "titik",
+     "unit": "titik baharu",
      "siap": null
     },
-    "semak": "Kuantiti 500 tetapi teks 3.1 turut sebut \"Additional Cabling Work: 510 points\"",
-    "sebenar": {}
+    "sebenar": {
+     "catatan": "500 titik baharu sahaja; 510 titik ialah kabel sedia ada (semakan). Disahkan pengguna 16/10/2026"
+    }
    },
    {
     "seksyen": "Stage 2 · Implementation",
-    "nama": "Ganti kabel UTP sedia ada yang rosak + uji semula",
+    "nama": "Ganti kabel sedia ada yang gagal semakan + uji semula",
     "tarikh": [
      "2026-10-15",
      "2026-12-13"
@@ -1454,7 +1462,9 @@
     "induk": "Network & Cabling Deployment",
     "rujukan": "3.1",
     "bukti": "Laporan Fluke selepas ganti",
-    "sebenar": {}
+    "sebenar": {
+     "catatan": "Hanya titik daripada 510 yang disahkan rosak"
+    }
    },
    {
     "seksyen": "Stage 2 · Implementation",
@@ -1489,7 +1499,7 @@
    },
    {
     "seksyen": "Stage 2 · Implementation",
-    "nama": "Pembongkaran kamera lama",
+    "nama": "Ganti kamera sedia ada yang disahkan rosak sahaja",
     "tarikh": [
      "2026-10-19",
      "2026-12-13"
@@ -1497,9 +1507,10 @@
     "sub": true,
     "induk": "CCTV Installation (Phased Deployment)",
     "rujukan": "1.1",
-    "bukti": "Senarai kamera lama diserah kepada JTD",
-    "semak": "Spesifikasi tidak menyebut pembongkaran/pemulangan kamera lama; sahkan skop dengan pembekal",
-    "sebenar": {}
+    "bukti": "Senarai kamera rosak yang disahkan dan unit lama diserah kepada JTD",
+    "sebenar": {
+     "catatan": "Hanya kamera CCTV yang disahkan rosak diganti. Disahkan pengguna 16/10/2026"
+    }
    },
    {
     "seksyen": "Stage 2 · Implementation",
