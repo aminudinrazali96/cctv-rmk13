@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-16T15:24",
+ "dijana": "2026-10-16T21:20",
  "excel_diubah": "2026-10-07T01:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 39,
   "ptj_belum": 15,
-  "ptj_selesai": 37,
+  "ptj_selesai": 38,
   "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 37.3,
+  "pct_cctv_selesai": 38.1,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 9
   },
   "selesai_team": {
-   "A": 27,
+   "A": 28,
    "B": 9
   },
-  "sesi_selesai": 36,
+  "sesi_selesai": 37,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -461,7 +461,7 @@
      "sesi": "Petang",
      "masa": "15:00 – 16:30",
      "ptj": "FUU",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       5
      ]
@@ -571,12 +571,12 @@
   {
    "no": 5,
    "nama": "Fakulti Undang-Undang (FUU)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-16",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1321,8 +1321,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 69,
-     "catatan": "Auto daripada jadual lawatan: 37/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 70,
+     "catatan": "Auto daripada jadual lawatan: 38/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
