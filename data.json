@@ -1152,7 +1152,9 @@
      1,
      2
     ],
-    "sebenar": {}
+    "sebenar": {
+     "catatan": "Output untuk dikira selesai: (1) jadual dasar bertarikh ikut tarikh PO, mula dan tamat setiap aktiviti; (2) urutan pemasangan ikut PTj/zon (54 PTj); (3) carta organisasi pasukan projek; (4) pengesahan JTD (minit mesyuarat atau surat)."
+    }
    },
    {
     "seksyen": "Preliminaries",
