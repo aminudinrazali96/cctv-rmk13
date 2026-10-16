@@ -1183,6 +1183,126 @@
     }
    },
    {
+    "seksyen": "Preliminaries",
+    "nama": "Penghantaran kamera (800 dome, 100 bullet, 100 dome analitik, 10 bullet AI)",
+    "tarikh": [
+     "2026-10-19",
+     "2026-11-08"
+    ],
+    "sub": true,
+    "induk": "Equipment Procurement & Logistics",
+    "rujukan": "2.1–2.4",
+    "bukti": "DO dan pemeriksaan terima barang",
+    "kiraan": {
+     "sasaran": 1010,
+     "unit": "kamera",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk; bergantung pada PO."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Kamera ALPR + lesen (serta 1 kamera dan 1 lesen percuma)",
+    "tarikh": [
+     "2026-10-26",
+     "2026-11-08"
+    ],
+    "sub": true,
+    "induk": "Equipment Procurement & Logistics",
+    "rujukan": "2.6, 2.6.14",
+    "bukti": "DO dan lesen perpetual",
+    "kiraan": {
+     "sasaran": 11,
+     "unit": "set",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk; bergantung pada PO."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "NVR: 16 unit 64-saluran (64TB) + 1 unit 16-saluran (72TB)",
+    "tarikh": [
+     "2026-10-19",
+     "2026-11-08"
+    ],
+    "sub": true,
+    "induk": "Equipment Procurement & Logistics",
+    "rujukan": "2.5, 2.11",
+    "bukti": "DO, semakan kapasiti HDD dan rel rak",
+    "kiraan": {
+     "sasaran": 17,
+     "unit": "unit",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk; bergantung pada PO."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Suis PoE: 45 unit + 40 unit tambahan (penyelenggaraan)",
+    "tarikh": [
+     "2026-10-12",
+     "2026-11-01"
+    ],
+    "sub": true,
+    "induk": "Equipment Procurement & Logistics",
+    "rujukan": "2.13, 2.13.9",
+    "bukti": "DO",
+    "kiraan": {
+     "sasaran": 85,
+     "unit": "unit",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk; bergantung pada PO."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Pelayan ALPR, 10 workstation, 16 video wall controller/decoder",
+    "tarikh": [
+     "2026-10-26",
+     "2026-11-08"
+    ],
+    "sub": true,
+    "induk": "Equipment Procurement & Logistics",
+    "rujukan": "2.9, 2.10, 2.12",
+    "bukti": "DO",
+    "kiraan": {
+     "sasaran": 27,
+     "unit": "unit",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk; bergantung pada PO."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Lesen: 300 Lyt-X CSIM, 60 BriefCam add-on, pengurusan awan suis 5 tahun",
+    "tarikh": [
+     "2026-10-26",
+     "2026-11-08"
+    ],
+    "sub": true,
+    "induk": "Equipment Procurement & Logistics",
+    "rujukan": "2.7, 2.8, 2.13.8",
+    "bukti": "Sijil atau kunci lesen",
+    "kiraan": {
+     "sasaran": 360,
+     "unit": "lesen peranti",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk; bergantung pada PO."
+    }
+   },
+   {
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Detailed Site Assessment & Verification",
     "tarikh": [
@@ -1201,6 +1321,19 @@
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
+    "nama": "Ujian kabel UTP sedia ada",
+    "tarikh": [
+     "2026-09-28",
+     "2026-10-25"
+    ],
+    "sub": true,
+    "induk": "Detailed Site Assessment & Verification",
+    "rujukan": "3.1",
+    "bukti": "Senarai titik rosak dan cadangan ganti",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "System Architecture & Network Design",
     "tarikh": [
      "2026-09-28",
@@ -1214,6 +1347,19 @@
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
+    "nama": "Pelan IP/VLAN dan integrasi SDN UM",
+    "tarikh": [
+     "2026-09-28",
+     "2026-10-25"
+    ],
+    "sub": true,
+    "induk": "System Architecture & Network Design",
+    "rujukan": "2.13.8",
+    "bukti": "Lukisan rangkaian diluluskan",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Technical Submission & Approval",
     "tarikh": [
      "2026-10-12",
@@ -1223,6 +1369,33 @@
      6,
      8
     ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 1 · Project Planning & Design",
+    "nama": "Kelulusan bahan setiap item (model, NDAA, LOA OEM, surat jaminan)",
+    "tarikh": [
+     "2026-10-12",
+     "2026-11-01"
+    ],
+    "sub": true,
+    "induk": "Technical Submission & Approval",
+    "rujukan": "2.1–2.13, 5.6",
+    "bukti": "Borang kelulusan bahan ditandatangani",
+    "semak": "Spesifikasi kamera 2MP, tawaran 4MP: kelulusan bahan perlu merujuk model tawaran",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 1 · Project Planning & Design",
+    "nama": "Akses API/DB sistem stiker kenderaan (tindakan UM)",
+    "tarikh": [
+     "2026-10-12",
+     "2026-11-01"
+    ],
+    "sub": true,
+    "induk": "Technical Submission & Approval",
+    "rujukan": "2.10.11, 3.3a",
+    "bukti": "Dokumen API/SDK dan akaun ujian",
     "sebenar": {}
    },
    {
@@ -1253,6 +1426,38 @@
    },
    {
     "seksyen": "Stage 2 · Implementation",
+    "nama": "Kabel UTP Cat6 baharu + ujian Fluke setiap titik",
+    "tarikh": [
+     "2026-10-15",
+     "2026-12-13"
+    ],
+    "sub": true,
+    "induk": "Network & Cabling Deployment",
+    "rujukan": "3.1",
+    "bukti": "Laporan Fluke",
+    "kiraan": {
+     "sasaran": 500,
+     "unit": "titik",
+     "siap": null
+    },
+    "semak": "Kuantiti 500 tetapi teks 3.1 turut sebut \"Additional Cabling Work: 510 points\"",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 · Implementation",
+    "nama": "Ganti kabel UTP sedia ada yang rosak + uji semula",
+    "tarikh": [
+     "2026-10-15",
+     "2026-12-13"
+    ],
+    "sub": true,
+    "induk": "Network & Cabling Deployment",
+    "rujukan": "3.1",
+    "bukti": "Laporan Fluke selepas ganti",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 · Implementation",
     "nama": "CCTV Installation (Phased Deployment)",
     "tarikh": [
      "2026-10-19",
@@ -1262,6 +1467,38 @@
      11,
      16
     ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 · Implementation",
+    "nama": "Kamera dipasang",
+    "tarikh": [
+     "2026-10-19",
+     "2026-12-13"
+    ],
+    "sub": true,
+    "induk": "CCTV Installation (Phased Deployment)",
+    "rujukan": "2.1–2.4",
+    "bukti": "Senarai pemasangan mengikut PTj",
+    "kiraan": {
+     "sasaran": 1010,
+     "unit": "kamera",
+     "siap": null
+    },
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 2 · Implementation",
+    "nama": "Pembongkaran kamera lama",
+    "tarikh": [
+     "2026-10-19",
+     "2026-12-13"
+    ],
+    "sub": true,
+    "induk": "CCTV Installation (Phased Deployment)",
+    "rujukan": "1.1",
+    "bukti": "Senarai kamera lama diserah kepada JTD",
+    "semak": "Spesifikasi tidak menyebut pembongkaran/pemulangan kamera lama; sahkan skop dengan pembekal",
     "sebenar": {}
    },
    {
@@ -1291,6 +1528,19 @@
     "sebenar": {}
    },
    {
+    "seksyen": "Stage 2 · Implementation",
+    "nama": "Migrasi dan konfigurasi semula kamera serta rakaman sedia ada",
+    "tarikh": [
+     "2026-12-04",
+     "2026-12-31"
+    ],
+    "sub": true,
+    "induk": "System Configuration & Integration",
+    "rujukan": "3.3a",
+    "bukti": "Laporan migrasi",
+    "sebenar": {}
+   },
+   {
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "System Testing (Functional & Performance)",
     "tarikh": [
@@ -1305,6 +1555,19 @@
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
+    "nama": "Senarai semak ciri wajib (ColorHunter, SIP, face capture, people counting, ALPR ≤120 km/j, plat 2–3 baris)",
+    "tarikh": [
+     "2026-12-21",
+     "2027-01-17"
+    ],
+    "sub": true,
+    "induk": "System Testing (Functional & Performance)",
+    "rujukan": "2.1.11–2.6.14",
+    "bukti": "Rekod ujian ditandatangani",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Integration Testing (CSIM & Analytics)",
     "tarikh": [
      "2026-12-28",
@@ -1314,6 +1577,58 @@
      17,
      20
     ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 · Testing and Commissioning",
+    "nama": "Integrasi Lyt-X CSIM (300 lesen, tanpa perkakasan baharu)",
+    "tarikh": [
+     "2026-12-28",
+     "2027-01-24"
+    ],
+    "sub": true,
+    "induk": "Integration Testing (CSIM & Analytics)",
+    "rujukan": "2.8.4",
+    "bukti": "Kamera dipaparkan dalam CSIM",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 · Testing and Commissioning",
+    "nama": "BriefCam: 60 add-on dan naik taraf ke versi terkini",
+    "tarikh": [
+     "2026-12-28",
+     "2027-01-24"
+    ],
+    "sub": true,
+    "induk": "Integration Testing (CSIM & Analytics)",
+    "rujukan": "2.7.6",
+    "bukti": "Versi dan lesen disahkan",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 · Testing and Commissioning",
+    "nama": "ALPR dengan DB stiker kenderaan (allow/block 20,000 setiap senarai)",
+    "tarikh": [
+     "2026-12-28",
+     "2027-01-24"
+    ],
+    "sub": true,
+    "induk": "Integration Testing (CSIM & Analytics)",
+    "rujukan": "2.6.14, 2.10.11",
+    "bukti": "Ujian padanan plat",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Stage 3 · Testing and Commissioning",
+    "nama": "Suis dengan SDN UM dan pengurusan awan",
+    "tarikh": [
+     "2026-12-28",
+     "2027-01-24"
+    ],
+    "sub": true,
+    "induk": "Integration Testing (CSIM & Analytics)",
+    "rujukan": "2.13.8",
+    "bukti": "Suis dipantau dalam SDN/portal awan",
     "sebenar": {}
    },
    {
@@ -1343,6 +1658,20 @@
     "sebenar": {}
    },
    {
+    "seksyen": "Stage 3 · Testing and Commissioning",
+    "nama": "Final Acceptance Test (FAT) dengan pemindahan teknologi",
+    "tarikh": [
+     "2027-01-25",
+     "2027-02-07"
+    ],
+    "sub": true,
+    "induk": "User Acceptance Test (UAT)",
+    "rujukan": "3.3c",
+    "bukti": "Sijil FAT ditandatangani",
+    "semak": "Pelan 5 tahun (tab Projek) letak FAT pada Jan 2027; Gantt letak UAT 25/1–7/2/2027",
+    "sebenar": {}
+   },
+   {
     "seksyen": "Transition and Closure",
     "nama": "Training (Admin & End Users)",
     "tarikh": [
@@ -1357,6 +1686,57 @@
    },
    {
     "seksyen": "Transition and Closure",
+    "nama": "Latihan hands-on (min. 20 peserta)",
+    "tarikh": [
+     "2027-01-25",
+     "2027-02-07"
+    ],
+    "sub": true,
+    "induk": "Training (Admin & End Users)",
+    "rujukan": "4.1",
+    "bukti": "Senarai kehadiran",
+    "kiraan": {
+     "sasaran": 20,
+     "unit": "peserta",
+     "siap": null
+    },
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Latihan admin bertauliah (min. 20 peserta, setahun sekali)",
+    "tarikh": [
+     "2027-01-25",
+     "2027-02-07"
+    ],
+    "sub": true,
+    "induk": "Training (Admin & End Users)",
+    "rujukan": "4.1",
+    "bukti": "Senarai kehadiran dan sijil",
+    "kiraan": {
+     "sasaran": 20,
+     "unit": "peserta",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Sesi tahun pertama; sesi tahunan berikutnya dalam tempoh sokongan"
+    }
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Pemindahan teknologi dan kemas kini teknologi (sekali)",
+    "tarikh": [
+     "2027-01-25",
+     "2027-02-07"
+    ],
+    "sub": true,
+    "induk": "Training (Admin & End Users)",
+    "rujukan": "4.1, 3.3c",
+    "bukti": "Rekod sesi",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
     "nama": "Documentation",
     "tarikh": [
      "2027-02-01",
@@ -1366,6 +1746,46 @@
      22,
      23
     ],
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Laporan Fluke semua titik rangkaian",
+    "tarikh": [
+     "2027-02-01",
+     "2027-02-14"
+    ],
+    "sub": true,
+    "induk": "Documentation",
+    "rujukan": "3.1",
+    "bukti": "Laporan diserah",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Lukisan as-built dan manual",
+    "tarikh": [
+     "2027-02-01",
+     "2027-02-14"
+    ],
+    "sub": true,
+    "induk": "Documentation",
+    "rujukan": "3.3c",
+    "bukti": "Dokumen diserah",
+    "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Daftar jaminan (tarikh luput setiap item) dan kunci lesen",
+    "tarikh": [
+     "2027-02-01",
+     "2027-02-14"
+    ],
+    "sub": true,
+    "induk": "Documentation",
+    "rujukan": "5.4, 2.6–2.8",
+    "bukti": "Sijil jaminan pengeluar dan lesen",
+    "semak": "5.4 menyebut 5 tahun; 2.9, 2.10, 2.12 hanya 3 tahun; BriefCam CCP 2 tahun",
     "sebenar": {}
    },
    {
@@ -1393,11 +1813,25 @@
      24
     ],
     "sebenar": {}
+   },
+   {
+    "seksyen": "Transition and Closure",
+    "nama": "Mula sokongan 5 tahun (respons 4 jam, NBD) dan jadual PM pertama",
+    "tarikh": [
+     "2027-02-15",
+     "2027-02-21"
+    ],
+    "sub": true,
+    "induk": "Project closure and sign-off",
+    "rujukan": "3.4, 3.5",
+    "bukti": "Tarikh mula sokongan disahkan",
+    "sebenar": {}
    }
   ],
   "mula_anggaran": true,
   "nota_mula": "Tarikh mula dianggar ikut SST (7/9/2026). PO belum diterima.",
-  "po": null
+  "po": null,
+  "spesifikasi": "Jadual Pematuhan Spesifikasi Teknikal CCTV 1010 Unit (FINAL)"
  },
  "projek": null,
  "projek_enc": {
