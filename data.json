@@ -1168,7 +1168,10 @@
      2,
      4
     ],
-    "sebenar": {}
+    "sebenar": {
+     "catatan": "Output untuk dikira selesai: (1) BOQ muktamad ikut kontrak item 2.1–3.1, termasuk 40 suis tambahan (2.13.9) dan 1 kamera + 1 lesen ALPR percuma (2.6.14); (2) model dan nombor part sama seperti tawaran; (3) agihan kamera, titik kabel baharu dan suis ikut PTj; (4) senarai kamera sedia ada yang disahkan rosak; (5) lead time OEM setiap item; (6) pengesahan JTD. BOM aksesori pemasangan boleh diminta bersama. Pesanan hanya selepas kelulusan bahan dan PO."
+    },
+    "ringkas": "Serahan: BOQ ikut kontrak (+40 suis, ALPR percuma) · model/part no. · agihan ikut PTj · senarai kamera rosak · lead time OEM · pengesahan JTD"
    },
    {
     "seksyen": "Preliminaries",
@@ -1393,7 +1396,10 @@
     "rujukan": "2.1–2.13, 5.6",
     "bukti": "Borang kelulusan bahan ditandatangani",
     "semak": "Spesifikasi kamera 2MP, tawaran 4MP: kelulusan bahan perlu merujuk model tawaran",
-    "sebenar": {}
+    "ringkas": "Syarat: pesanan setiap item hanya selepas kelulusan bahan item itu (utamakan kamera, NVR, suis)",
+    "sebenar": {
+     "catatan": "Jadual pembekal: BOQ 17/9–8/10, pesanan bermula 12/10, kelulusan bahan 12/10–1/11; pesanan tidak patut mendahului kelulusan bahan."
+    }
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
