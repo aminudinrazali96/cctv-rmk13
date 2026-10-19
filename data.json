@@ -1,26 +1,26 @@
 {
- "dijana": "2026-10-19T08:31",
- "excel_diubah": "2026-10-19T00:30",
+ "dijana": "2026-10-19T14:45",
+ "excel_diubah": "2026-10-19T06:45",
  "ringkasan": {
   "ptj": 54,
-  "ptj_dijadualkan": 44,
-  "ptj_belum": 10,
-  "ptj_selesai": 38,
-  "pct_cctv_dijadualkan": 43.2,
-  "pct_cctv_selesai": 36.2,
+  "ptj_dijadualkan": 45,
+  "ptj_belum": 9,
+  "ptj_selesai": 40,
+  "pct_cctv_dijadualkan": 44.1,
+  "pct_cctv_selesai": 39.1,
   "slot": {
    "A": 84,
    "B": 83
   },
   "ditempah": {
-   "A": 50,
-   "B": 5
+   "A": 46,
+   "B": 6
   },
   "selesai_team": {
    "A": 37,
-   "B": 5
+   "B": 6
   },
-  "sesi_selesai": 42,
+  "sesi_selesai": 43,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -262,6 +262,16 @@
      "ptj_id": [
       17
      ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "KPPI",
+     "status": "selesai",
+     "ptj_id": [
+      38
+     ]
     }
    ]
   },
@@ -499,16 +509,6 @@
      "ptj_id": [
       5
      ]
-    },
-    {
-     "team": "A",
-     "sesi": "Petang",
-     "masa": "14:30 – 16:00",
-     "ptj": "Revisit Bangunan\nPeperiksaan",
-     "status": "selesai",
-     "ptj_id": [
-      40
-     ]
     }
    ]
   },
@@ -526,18 +526,10 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Fakulti Sastera dan Sains Sosial (FSSS)",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       10
      ]
-    },
-    {
-     "team": "A",
-     "sesi": "Pagi",
-     "masa": "11:30 – 13:00",
-     "ptj": "Mohon PTW",
-     "status": "akan",
-     "ptj_id": []
     },
     {
      "team": "A",
@@ -612,24 +604,7 @@
   {
    "tarikh": "2026-10-23",
    "hari": "Jumaat",
-   "sesi": [
-    {
-     "team": "A",
-     "sesi": "Pagi",
-     "masa": "09:00 – 10:30",
-     "ptj": "Perbincangan Weststar-UM",
-     "status": "akan",
-     "ptj_id": []
-    },
-    {
-     "team": "A",
-     "sesi": "Pagi",
-     "masa": "10:30 – 12:00",
-     "ptj": "Perbincangan Weststar-UM",
-     "status": "akan",
-     "ptj_id": []
-    }
-   ]
+   "sesi": []
   },
   {
    "tarikh": "2026-10-26",
@@ -822,12 +797,12 @@
   {
    "no": 10,
    "nama": "Fakulti Sastera dan Sains Sosial (FSSS)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-19",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1159,8 +1134,14 @@
   {
    "no": 38,
    "nama": "Kompleks Pengurusan Penyelidikan dan Inovasi (KPPI)",
-   "status": "belum",
-   "lawatan": []
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-07",
+     "team": "B",
+     "status": "selesai"
+    }
+   ]
   },
   {
    "no": 39,
@@ -1181,11 +1162,6 @@
    "lawatan": [
     {
      "tarikh": "2026-10-05",
-     "team": "A",
-     "status": "selesai"
-    },
-    {
-     "tarikh": "2026-10-15",
      "team": "A",
      "status": "selesai"
     }
@@ -1565,8 +1541,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 70,
-     "catatan": "Auto daripada jadual lawatan: 38/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 74,
+     "catatan": "Auto daripada jadual lawatan: 40/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
