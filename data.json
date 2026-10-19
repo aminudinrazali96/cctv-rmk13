@@ -1,12 +1,12 @@
 {
- "dijana": "2026-10-19T08:30",
+ "dijana": "2026-10-19T08:31",
  "excel_diubah": "2026-10-19T00:30",
  "ringkasan": {
   "ptj": 54,
-  "ptj_dijadualkan": 41,
-  "ptj_belum": 13,
+  "ptj_dijadualkan": 44,
+  "ptj_belum": 10,
   "ptj_selesai": 38,
-  "pct_cctv_dijadualkan": 39.4,
+  "pct_cctv_dijadualkan": 43.2,
   "pct_cctv_selesai": 36.2,
   "slot": {
    "A": 84,
@@ -506,7 +506,9 @@
      "masa": "14:30 – 16:00",
      "ptj": "Revisit Bangunan\nPeperiksaan",
      "status": "selesai",
-     "ptj_id": []
+     "ptj_id": [
+      40
+     ]
     }
    ]
   },
@@ -585,7 +587,9 @@
      "masa": "10:00 – 11:30",
      "ptj": "FOM",
      "status": "akan",
-     "ptj_id": []
+     "ptj_id": [
+      3
+     ]
     }
    ]
   },
@@ -599,7 +603,9 @@
      "masa": "10:00 – 11:30",
      "ptj": "FOP",
      "status": "akan",
-     "ptj_id": []
+     "ptj_id": [
+      4
+     ]
     }
    ]
   },
@@ -666,7 +672,9 @@
      "masa": "09:00 – 10:30",
      "ptj": "UM Bachok",
      "status": "akan",
-     "ptj_id": []
+     "ptj_id": [
+      47
+     ]
     },
     {
      "team": "A",
@@ -674,7 +682,9 @@
      "masa": "10:30 – 12:00",
      "ptj": "UM Bachok",
      "status": "akan",
-     "ptj_id": []
+     "ptj_id": [
+      47
+     ]
     },
     {
      "team": "A",
@@ -682,7 +692,9 @@
      "masa": "15:00 – 16:30",
      "ptj": "UM Bachok",
      "status": "akan",
-     "ptj_id": []
+     "ptj_id": [
+      47
+     ]
     }
    ]
   }
@@ -721,14 +733,26 @@
   {
    "no": 3,
    "nama": "Fakulti Perubatan",
-   "status": "belum",
-   "lawatan": []
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-21",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
   },
   {
    "no": 4,
    "nama": "Fakulti Farmasi",
-   "status": "belum",
-   "lawatan": []
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-22",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
   },
   {
    "no": 5,
@@ -1159,6 +1183,11 @@
      "tarikh": "2026-10-05",
      "team": "A",
      "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-15",
+     "team": "A",
+     "status": "selesai"
     }
    ]
   },
@@ -1225,8 +1254,24 @@
   {
    "no": 47,
    "nama": "Kampus Bachok API",
-   "status": "belum",
-   "lawatan": []
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-30",
+     "team": "A",
+     "status": "akan"
+    },
+    {
+     "tarikh": "2026-10-30",
+     "team": "A",
+     "status": "akan"
+    },
+    {
+     "tarikh": "2026-10-30",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
   },
   {
    "no": 48,
@@ -1295,14 +1340,7 @@
    ]
   }
  ],
- "nama_tidak_dikenali": [
-  "FOM",
-  "FOP",
-  "Mohon PTW",
-  "Perbincangan Weststar-UM",
-  "Revisit Bangunan\nPeperiksaan",
-  "UM Bachok"
- ],
+ "nama_tidak_dikenali": [],
  "gantt": {
   "rujukan": "Jadual pelaksanaan pembekal (Kick-Off 22/9/2026) · garis rujukan: Enclosure G UM.FC/FSD/PC/612/16/2026/11",
   "mula_w1": "2026-09-07",
