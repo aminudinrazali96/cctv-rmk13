@@ -636,7 +636,7 @@ function renderSummary(){
   {
     const t0=todayIso(); let akan=0; D.hari.forEach(h=>{if(h.tarikh>=t0)h.sesi.forEach(x=>{if(x.status==='akan')akan++})});
     const last=pd(D.hari[D.hari.length-1].tarikh), hari=Math.max(0,dayN(pd(t0),last));
-    const pctV=r.ptj?Math.round(r.ptj_selesai/r.ptj*1000)/10:0; const pctS=bk?Math.round(r.sesi_selesai/bk*1000)/10:0;
+    const pctV=r.ptj?Math.round(r.ptj_selesai/r.ptj*1000)/10:0;
     const IC={ok:'<path d="M5 12.5l4.2 4.2L19 7"/>',play:'<path d="M8 5.5v13l10.5-6.5z"/>',warn:'<path d="M12 7v6M12 17h.01"/><circle cx="12" cy="12" r="9"/>',cal:'<rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10h16M9 3.5v4M15 3.5v4"/>'};
     const tile=(c,ic,v,l,sub)=>`<div class="tile" style="--c:${c}"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${IC[ic]}</svg></i><b>${v}</b><span>${l}</span>${sub?`<small>${sub}</small>`:''}</div>`;
     const C=2*Math.PI*52;
@@ -645,7 +645,7 @@ function renderSummary(){
       <circle cx="60" cy="60" r="52" class="rt"/><circle cx="60" cy="60" r="52" class="rv" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${C.toFixed(1)}" data-off="${(C*(1-pctV/100)).toFixed(1)}"/></svg>
       <div class="rc"><b>${pctV}%</b><span>PTj selesai dilawati</span><small>${r.ptj_selesai} / ${r.ptj} PTj</small></div></div>
       <div class="tiles">
-      ${tile('var(--ok)','ok',`${pctS}%`,'sesi lawatan selesai',`${r.sesi_selesai} / ${bk} sesi · Team A ${r.selesai_team.A} · Team B ${r.selesai_team.B}`)}
+      ${tile('var(--ok)','ok',r.sesi_selesai,'sesi lawatan selesai',`Team A ${r.selesai_team.A} · Team B ${r.selesai_team.B}`)}
       ${tile('var(--b)','play',akan,'sesi akan datang',r.sesi_ditunda?`${r.sesi_ditunda} ditunda`:'belum berlangsung')}
       ${tile('var(--bad)','warn',r.ptj_belum,'PTj belum pilih tarikh',`${r.ptj_dijadualkan}/${r.ptj} sudah dijadualkan`)}
       ${tile('var(--brand)','cal',hari,'hari lagi ke akhir jadual lawatan',`(${last.getDate()} ${BULAN[last.getMonth()]})`)}
