@@ -1,26 +1,26 @@
 {
- "dijana": "2026-10-19T15:02",
- "excel_diubah": "2026-10-07T01:32",
+ "dijana": "2026-10-20T09:46",
+ "excel_diubah": "2026-10-19T06:45",
  "ringkasan": {
   "ptj": 54,
-  "ptj_dijadualkan": 39,
-  "ptj_belum": 15,
-  "ptj_selesai": 38,
-  "pct_cctv_dijadualkan": 38.6,
-  "pct_cctv_selesai": 38.1,
+  "ptj_dijadualkan": 45,
+  "ptj_belum": 9,
+  "ptj_selesai": 41,
+  "pct_cctv_dijadualkan": 44.1,
+  "pct_cctv_selesai": 39.8,
   "slot": {
    "A": 84,
    "B": 83
   },
   "ditempah": {
-   "A": 29,
-   "B": 9
+   "A": 46,
+   "B": 6
   },
   "selesai_team": {
-   "A": 28,
-   "B": 9
+   "A": 38,
+   "B": 6
   },
-  "sesi_selesai": 37,
+  "sesi_selesai": 44,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -254,13 +254,23 @@
      ]
     },
     {
-     "team": "B",
-     "sesi": "Pagi",
-     "masa": "10:00 – 11:30",
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
      "ptj": "AEI",
      "status": "selesai",
      "ptj_id": [
       17
+     ]
+    },
+    {
+     "team": "B",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "KPPI",
+     "status": "selesai",
+     "ptj_id": [
+      38
      ]
     }
    ]
@@ -273,10 +283,10 @@
      "team": "A",
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
-     "ptj": "FBL",
+     "ptj": "Fakulti Pendidikan",
      "status": "selesai",
      "ptj_id": [
-      2
+      12
      ]
     },
     {
@@ -297,16 +307,6 @@
      "status": "selesai",
      "ptj_id": [
       41
-     ]
-    },
-    {
-     "team": "B",
-     "sesi": "Pagi",
-     "masa": "10:00 – 11:30",
-     "ptj": "Fakulti Pendidikan",
-     "status": "selesai",
-     "ptj_id": [
-      12
      ]
     },
     {
@@ -365,11 +365,40 @@
      "team": "A",
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
-     "ptj": "Perpustakaan Za'ba dan Muzium Seni Asia",
+     "ptj": "Fakulti Sains",
      "status": "selesai",
      "ptj_id": [
-      23,
-      46
+      11
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "Fakulti Sains",
+     "status": "selesai",
+     "ptj_id": [
+      11
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "Fakulti Sains",
+     "status": "selesai",
+     "ptj_id": [
+      11
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
+     "ptj": "Fakulti Sains",
+     "status": "selesai",
+     "ptj_id": [
+      11
      ]
     }
    ]
@@ -382,6 +411,16 @@
      "team": "A",
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
+     "ptj": "CITRA",
+     "status": "selesai",
+     "ptj_id": [
+      20
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
      "ptj": "Fakulti Kejuruteraan (FK)",
      "status": "selesai",
      "ptj_id": [
@@ -389,13 +428,24 @@
      ]
     },
     {
-     "team": "B",
-     "sesi": "Pagi",
-     "masa": "10:00 – 11:30",
-     "ptj": "Fakulti Sastera dan Sains Sosial",
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "Fakulti Kejuruteraan (FK)",
      "status": "selesai",
      "ptj_id": [
-      10
+      1
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "16:00 – 17:30",
+     "ptj": "Perpustakaan Za'ba dan Muzium Seni Asia",
+     "status": "selesai",
+     "ptj_id": [
+      23,
+      46
      ]
     }
    ]
@@ -425,13 +475,13 @@
      ]
     },
     {
-     "team": "B",
-     "sesi": "Pagi",
-     "masa": "10:00 – 11:30",
-     "ptj": "Fakulti Sains",
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "FBL",
      "status": "selesai",
      "ptj_id": [
-      11
+      2
      ]
     }
    ]
@@ -444,22 +494,16 @@
      "team": "A",
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
-     "ptj": "Fakulti Perniagaan dan Ekonomi",
+     "ptj": "Fakulti Perniagaan dan Ekonomi (FPE)",
      "status": "selesai",
      "ptj_id": [
       16
      ]
-    }
-   ]
-  },
-  {
-   "tarikh": "2026-10-16",
-   "hari": "Jumaat",
-   "sesi": [
+    },
     {
      "team": "A",
-     "sesi": "Petang",
-     "masa": "15:00 – 16:30",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
      "ptj": "FUU",
      "status": "selesai",
      "ptj_id": [
@@ -469,24 +513,93 @@
    ]
   },
   {
+   "tarikh": "2026-10-16",
+   "hari": "Jumaat",
+   "sesi": []
+  },
+  {
    "tarikh": "2026-10-19",
    "hari": "Isnin",
-   "sesi": []
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Sastera dan Sains Sosial (FSSS)",
+     "status": "selesai",
+     "ptj_id": [
+      10
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "14:30 – 16:00",
+     "ptj": "KK8",
+     "status": "selesai",
+     "ptj_id": [
+      31
+     ]
+    }
+   ]
   },
   {
    "tarikh": "2026-10-20",
    "hari": "Selasa",
-   "sesi": []
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "Fakulti Sains",
+     "status": "akan",
+     "ptj_id": [
+      11
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "11:30 – 13:00",
+     "ptj": "Fakulti Sains",
+     "status": "akan",
+     "ptj_id": [
+      11
+     ]
+    }
+   ]
   },
   {
    "tarikh": "2026-10-21",
    "hari": "Rabu",
-   "sesi": []
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "FOM",
+     "status": "akan",
+     "ptj_id": [
+      3
+     ]
+    }
+   ]
   },
   {
    "tarikh": "2026-10-22",
    "hari": "Khamis",
-   "sesi": []
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:00 – 11:30",
+     "ptj": "FOP",
+     "status": "akan",
+     "ptj_id": [
+      4
+     ]
+    }
+   ]
   },
   {
    "tarikh": "2026-10-23",
@@ -527,7 +640,38 @@
   {
    "tarikh": "2026-10-30",
    "hari": "Jumaat",
-   "sesi": []
+   "sesi": [
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "09:00 – 10:30",
+     "ptj": "UM Bachok",
+     "status": "akan",
+     "ptj_id": [
+      47
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Pagi",
+     "masa": "10:30 – 12:00",
+     "ptj": "UM Bachok",
+     "status": "akan",
+     "ptj_id": [
+      47
+     ]
+    },
+    {
+     "team": "A",
+     "sesi": "Petang",
+     "masa": "15:00 – 16:30",
+     "ptj": "UM Bachok",
+     "status": "akan",
+     "ptj_id": [
+      47
+     ]
+    }
+   ]
   }
  ],
  "tba": [],
@@ -541,6 +685,11 @@
      "tarikh": "2026-10-13",
      "team": "A",
      "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-13",
+     "team": "A",
+     "status": "selesai"
     }
    ]
   },
@@ -550,7 +699,7 @@
    "status": "selesai",
    "lawatan": [
     {
-     "tarikh": "2026-10-08",
+     "tarikh": "2026-10-14",
      "team": "A",
      "status": "selesai"
     }
@@ -559,14 +708,26 @@
   {
    "no": 3,
    "nama": "Fakulti Perubatan",
-   "status": "belum",
-   "lawatan": []
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-21",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
   },
   {
    "no": 4,
    "nama": "Fakulti Farmasi",
-   "status": "belum",
-   "lawatan": []
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-22",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
   },
   {
    "no": 5,
@@ -574,7 +735,7 @@
    "status": "selesai",
    "lawatan": [
     {
-     "tarikh": "2026-10-16",
+     "tarikh": "2026-10-15",
      "team": "A",
      "status": "selesai"
     }
@@ -639,8 +800,8 @@
    "status": "selesai",
    "lawatan": [
     {
-     "tarikh": "2026-10-13",
-     "team": "B",
+     "tarikh": "2026-10-19",
+     "team": "A",
      "status": "selesai"
     }
    ]
@@ -651,9 +812,34 @@
    "status": "selesai",
    "lawatan": [
     {
-     "tarikh": "2026-10-14",
-     "team": "B",
+     "tarikh": "2026-10-12",
+     "team": "A",
      "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-12",
+     "team": "A",
+     "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-12",
+     "team": "A",
+     "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-12",
+     "team": "A",
+     "status": "selesai"
+    },
+    {
+     "tarikh": "2026-10-20",
+     "team": "A",
+     "status": "akan"
+    },
+    {
+     "tarikh": "2026-10-20",
+     "team": "A",
+     "status": "akan"
     }
    ]
   },
@@ -664,7 +850,7 @@
    "lawatan": [
     {
      "tarikh": "2026-10-08",
-     "team": "B",
+     "team": "A",
      "status": "selesai"
     }
    ]
@@ -712,7 +898,7 @@
    "lawatan": [
     {
      "tarikh": "2026-10-07",
-     "team": "B",
+     "team": "A",
      "status": "selesai"
     }
    ]
@@ -744,8 +930,14 @@
   {
    "no": 20,
    "nama": "Pusat Pembelajaran Integral (CITRA)",
-   "status": "belum",
-   "lawatan": []
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-13",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
   },
   {
    "no": 21,
@@ -771,7 +963,7 @@
    "status": "selesai",
    "lawatan": [
     {
-     "tarikh": "2026-10-12",
+     "tarikh": "2026-10-13",
      "team": "A",
      "status": "selesai"
     }
@@ -864,8 +1056,14 @@
   {
    "no": 31,
    "nama": "Kolej Kediaman Kelapan (Kinabalu) — KK8",
-   "status": "belum",
-   "lawatan": []
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-19",
+     "team": "A",
+     "status": "selesai"
+    }
+   ]
   },
   {
    "no": 32,
@@ -936,8 +1134,14 @@
   {
    "no": 38,
    "nama": "Kompleks Pengurusan Penyelidikan dan Inovasi (KPPI)",
-   "status": "belum",
-   "lawatan": []
+   "status": "selesai",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-07",
+     "team": "B",
+     "status": "selesai"
+    }
+   ]
   },
   {
    "no": 39,
@@ -1017,7 +1221,7 @@
    "status": "selesai",
    "lawatan": [
     {
-     "tarikh": "2026-10-12",
+     "tarikh": "2026-10-13",
      "team": "A",
      "status": "selesai"
     }
@@ -1026,8 +1230,24 @@
   {
    "no": 47,
    "nama": "Kampus Bachok API",
-   "status": "belum",
-   "lawatan": []
+   "status": "dijadualkan",
+   "lawatan": [
+    {
+     "tarikh": "2026-10-30",
+     "team": "A",
+     "status": "akan"
+    },
+    {
+     "tarikh": "2026-10-30",
+     "team": "A",
+     "status": "akan"
+    },
+    {
+     "tarikh": "2026-10-30",
+     "team": "A",
+     "status": "akan"
+    }
+   ]
   },
   {
    "no": 48,
@@ -1321,8 +1541,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 70,
-     "catatan": "Auto daripada jadual lawatan: 38/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 76,
+     "catatan": "Auto daripada jadual lawatan: 41/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
