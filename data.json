@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-20T15:32",
+ "dijana": "2026-10-21T14:53",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 47,
   "ptj_belum": 7,
-  "ptj_selesai": 41,
+  "ptj_selesai": 42,
   "pct_cctv_dijadualkan": 46.9,
-  "pct_cctv_selesai": 39.8,
+  "pct_cctv_selesai": 42.3,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 6
   },
   "selesai_team": {
-   "A": 41,
+   "A": 43,
    "B": 6
   },
-  "sesi_selesai": 47,
+  "sesi_selesai": 49,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -588,7 +588,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "FOM",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       3
      ]
@@ -598,7 +598,7 @@
      "sesi": "Pagi",
      "masa": "11:30 – 13:00",
      "ptj": "FOM",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       3
      ]
@@ -769,17 +769,17 @@
   {
    "no": 3,
    "nama": "Fakulti Perubatan",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-21",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     },
     {
      "tarikh": "2026-10-21",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1634,8 +1634,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 76,
-     "catatan": "Auto daripada jadual lawatan: 41/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 78,
+     "catatan": "Auto daripada jadual lawatan: 42/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
