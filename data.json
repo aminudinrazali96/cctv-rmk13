@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-22T08:22",
+ "dijana": "2026-10-22T16:39",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 47,
   "ptj_belum": 7,
-  "ptj_selesai": 43,
+  "ptj_selesai": 44,
   "pct_cctv_dijadualkan": 46.9,
-  "pct_cctv_selesai": 42.7,
+  "pct_cctv_selesai": 43.3,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 6
   },
   "selesai_team": {
-   "A": 45,
+   "A": 46,
    "B": 6
   },
-  "sesi_selesai": 51,
+  "sesi_selesai": 52,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -634,7 +634,7 @@
      "sesi": "Petang",
      "masa": "14:30 – 16:00",
      "ptj": "FOP",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       4
      ]
@@ -786,12 +786,12 @@
   {
    "no": 4,
    "nama": "Fakulti Farmasi",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-22",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1634,8 +1634,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 80,
-     "catatan": "Auto daripada jadual lawatan: 43/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 81,
+     "catatan": "Auto daripada jadual lawatan: 44/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
