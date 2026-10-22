@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-21T14:53",
+ "dijana": "2026-10-22T08:22",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 47,
   "ptj_belum": 7,
-  "ptj_selesai": 42,
+  "ptj_selesai": 43,
   "pct_cctv_dijadualkan": 46.9,
-  "pct_cctv_selesai": 42.3,
+  "pct_cctv_selesai": 42.7,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 6
   },
   "selesai_team": {
-   "A": 43,
+   "A": 45,
    "B": 6
   },
-  "sesi_selesai": 49,
+  "sesi_selesai": 51,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -608,7 +608,7 @@
      "sesi": "Petang",
      "masa": "14:30 – 16:00",
      "ptj": "IAS",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       21
      ]
@@ -618,7 +618,7 @@
      "sesi": "Petang",
      "masa": "16:00 – 17:30",
      "ptj": "KPPI",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       38
      ]
@@ -1013,12 +1013,12 @@
   {
    "no": 21,
    "nama": "Institut Pengajian Termaju (IAS)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-21",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1221,7 +1221,7 @@
     {
      "tarikh": "2026-10-21",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1634,8 +1634,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 78,
-     "catatan": "Auto daripada jadual lawatan: 42/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 80,
+     "catatan": "Auto daripada jadual lawatan: 43/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
