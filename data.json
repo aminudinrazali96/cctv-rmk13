@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-22T16:39",
+ "dijana": "2026-10-27T14:00",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 47,
   "ptj_belum": 7,
-  "ptj_selesai": 44,
+  "ptj_selesai": 45,
   "pct_cctv_dijadualkan": 46.9,
-  "pct_cctv_selesai": 43.3,
+  "pct_cctv_selesai": 45.7,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 6
   },
   "selesai_team": {
-   "A": 46,
+   "A": 48,
    "B": 6
   },
-  "sesi_selesai": 52,
+  "sesi_selesai": 54,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -660,7 +660,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "DTC",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       49
      ]
@@ -670,7 +670,7 @@
      "sesi": "Pagi",
      "masa": "11:30 – 13:00",
      "ptj": "DTC",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       49
      ]
@@ -1346,17 +1346,17 @@
   {
    "no": 49,
    "nama": "Dewan Tunku Canselor (DTC)",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-27",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     },
     {
      "tarikh": "2026-10-27",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1634,8 +1634,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 81,
-     "catatan": "Auto daripada jadual lawatan: 44/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 83,
+     "catatan": "Auto daripada jadual lawatan: 45/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
