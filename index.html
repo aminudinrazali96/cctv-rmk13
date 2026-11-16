@@ -781,7 +781,7 @@ function renderGantt(){
   const W=G.minggu||24, M0=pd(G.mula_w1), T=pd(todayIso());
   const curW=Math.floor(dayN(M0,T)/7)+1, inW=curW>=1&&curW<=W, dayInW=dayN(M0,T)-(curW-1)*7;
   const endP=addD(M0,W*7-1);
-  $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">${G.po?'PO DITERIMA '+esc(G.po):'TARIKH ANGGARAN · PO BELUM DITERIMA'}</span>`:'');
+  $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">${G.po?'PO DITERIMA '+dmyy(pd(G.po))+' · TARIKH MASIH ANGGARAN':'TARIKH ANGGARAN · PO BELUM DITERIMA'}</span>`:'');
   // baris 1: bulan kalendar (minggu dikira ikut hari Khamis), baris 2: bulan projek, baris 3: minggu + tarikh Isnin
   const cal=[];for(let w=1;w<=W;w++){const t=addD(M0,(w-1)*7+3),k=t.getFullYear()*12+t.getMonth();if(cal.length&&cal[cal.length-1].k===k)cal[cal.length-1].n++;else cal.push({k,n:1,d:t})}
   let h0='<tr><th class="nm" rowspan="3" style="vertical-align:bottom">AKTIVITI</th>'+cal.map((c,i)=>`<th class="calm" colspan="${c.n}" data-tip="${BULANP[c.d.getMonth()]} ${c.d.getFullYear()}">${c.n>=2?BULANP[c.d.getMonth()].toUpperCase():BULAN[c.d.getMonth()].toUpperCase()}${(i===0||c.d.getMonth()===0)&&c.n>=3?` <span style="font-weight:700;color:var(--mute)">${c.d.getFullYear()}</span>`:''}</th>`).join('')+'</tr>';
@@ -857,7 +857,7 @@ function renderProjek(){
     ['TEMPOH KONTRAK',`${dmyy(K0)} – ${dmyy(K1)}`,'Satu (1) tahun'],
     ['JAMINAN & SOKONGAN',`hingga ${dmyy(J1)}`,'Lima (5) tahun dari SST'],
     ['TEMPOH PELAKSANAAN',`${P.pelaksanaan_minggu} minggu`,`${P.mula_anggaran?'Anggaran ':''}${dmyy(M0)} – ${dmyy(Pend)}`],
-    ['PESANAN BELIAN (PO)',P.po?dmyy(pd(P.po)):'<em style="color:var(--warn);font-style:normal">Belum diterima</em>',P.mula_anggaran?'Tarikh mula projek masih anggaran ikut SST':''],
+    ['PESANAN BELIAN (PO)',P.po?dmyy(pd(P.po)):'<em style="color:var(--warn);font-style:normal">Belum diterima</em>',P.mula_anggaran?(P.po?'Tarikh mula masih anggaran ikut SST; menunggu jadual dasar pembekal ikut PO':'Tarikh mula projek masih anggaran ikut SST'):''],
     ['NILAI KONTRAK',esc(P.nilai_kontrak),'Termasuk SST 8%'],
   ].map(([l,v,s])=>`<div class="fact"><span>${l}</span><b>${v}</b>${s?`<small>${s}</small>`:''}</div>`).join('');
   const p=Math.max(0,Math.min(100,Math.round(dayN(M0,T)/(dayN(M0,Pend)+1)*100)));
