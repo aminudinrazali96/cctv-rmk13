@@ -1,5 +1,5 @@
 {
- "dijana": "2026-11-16T09:30",
+ "dijana": "2026-11-16T09:37",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
@@ -1743,8 +1743,8 @@
     "seksyen": "Stage 2 · Implementation",
     "nama": "Network & Cabling Deployment",
     "tarikh": [
-     "2026-10-15",
-     "2026-12-13"
+     "2026-11-02",
+     "2027-01-01"
     ],
     "asal": [
      10,
@@ -1752,15 +1752,16 @@
     ],
     "sebenar": {
      "peratus": 0,
-     "catatan": "Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima."
-    }
+     "catatan": "Tarikh ikut Cadangan Tarikh Pemasangan Kabel pembekal: 54 PTj, 507 unit CCTV, 2/11/2026 – 1/1/2027 (9 minggu; lihat tab Jadual kabel). Asal kick-off: 15/10 – 13/12/2026. Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima."
+    },
+    "ringkas": "Jadual kabel pembekal: 54 PTj · 507 unit · 2/11/2026 – 1/1/2027"
    },
    {
     "seksyen": "Stage 2 · Implementation",
     "nama": "Kabel UTP Cat6 baharu + ujian Fluke setiap titik",
     "tarikh": [
-     "2026-10-15",
-     "2026-12-13"
+     "2026-11-02",
+     "2027-01-01"
     ],
     "sub": true,
     "induk": "Network & Cabling Deployment",
@@ -1780,8 +1781,8 @@
     "seksyen": "Stage 2 · Implementation",
     "nama": "Ganti kabel sedia ada yang gagal semakan + uji semula",
     "tarikh": [
-     "2026-10-15",
-     "2026-12-13"
+     "2026-11-02",
+     "2027-01-01"
     ],
     "sub": true,
     "induk": "Network & Cabling Deployment",
@@ -2169,6 +2170,405 @@
   "nota_mula": "Tarikh mula dianggar ikut SST (7/9/2026).",
   "po": null,
   "spesifikasi": "Jadual Pematuhan Spesifikasi Teknikal CCTV 1010 Unit (FINAL)"
+ },
+ "kabel": {
+  "tajuk": "Cadangan Tarikh Pemasangan Kabel",
+  "sumber": "Cadangan_Tarikh_Pemasangan_Kabel - CCTV UM.pdf (Weststar)",
+  "julat": [
+   "2026-11-02",
+   "2027-01-01"
+  ],
+  "minggu_label": {
+   "1": "2 - 6 Nov",
+   "2": "9 - 13 Nov",
+   "3": "16 - 20 Nov",
+   "4": "23 - 27 Nov",
+   "5": "30 Nov - 4 Dis",
+   "6": "7 - 11 Dis",
+   "7": "14 - 18 Dis",
+   "8": "21 - 25 Dis",
+   "9": "28 Dis - 1 Jan"
+  },
+  "baris": [
+   {
+    "bil": 1,
+    "minggu": 1,
+    "ptj": "Bangunan Peperiksaan",
+    "unit": 7,
+    "mula": "2026-11-02"
+   },
+   {
+    "bil": 2,
+    "minggu": 1,
+    "ptj": "Fakulti Kejuruteraan (FK)",
+    "unit": 38,
+    "mula": "2026-11-05"
+   },
+   {
+    "bil": 3,
+    "minggu": 2,
+    "ptj": "Fakulti Perubatan",
+    "unit": 25,
+    "mula": "2026-11-10"
+   },
+   {
+    "bil": 4,
+    "minggu": 2,
+    "ptj": "Fakulti Bahasa dan Linguistik (FBL)",
+    "unit": 5,
+    "mula": "2026-11-10"
+   },
+   {
+    "bil": 5,
+    "minggu": 2,
+    "ptj": "Fakulti Sastera dan Sains Sosial (FSSS)",
+    "unit": 20,
+    "mula": "2026-11-11"
+   },
+   {
+    "bil": 6,
+    "minggu": 2,
+    "ptj": "Kolej Kediaman Pertama (ASTAR) - KK1",
+    "unit": 7,
+    "mula": "2026-11-10"
+   },
+   {
+    "bil": 7,
+    "minggu": 2,
+    "ptj": "Kolej Kediaman Ketujuh (Za'ba) - KK7",
+    "unit": 7,
+    "mula": "2026-11-12"
+   },
+   {
+    "bil": 8,
+    "minggu": 3,
+    "ptj": "Institut Pengajian Termaju (IAS)",
+    "unit": 4,
+    "mula": "2026-11-16"
+   },
+   {
+    "bil": 9,
+    "minggu": 3,
+    "ptj": "Kolej Kediaman Kedua (Tuanku Bahiyah) - KK2",
+    "unit": 7,
+    "mula": "2026-11-16"
+   },
+   {
+    "bil": 10,
+    "minggu": 3,
+    "ptj": "Pusat Sukan",
+    "unit": 7,
+    "mula": "2026-11-18"
+   },
+   {
+    "bil": 11,
+    "minggu": 3,
+    "ptj": "Fakulti Farmasi",
+    "unit": 6,
+    "mula": "2026-11-18"
+   },
+   {
+    "bil": 12,
+    "minggu": 3,
+    "ptj": "Perpustakaan Utama",
+    "unit": 10,
+    "mula": "2026-11-19"
+   },
+   {
+    "bil": 13,
+    "minggu": 3,
+    "ptj": "Perpustakaan Za'ba",
+    "unit": 2,
+    "mula": "2026-11-19"
+   },
+   {
+    "bil": 14,
+    "minggu": 3,
+    "ptj": "Kolej Kediaman Ketiga (Tuanku Kurshiah) - KK3",
+    "unit": 5,
+    "mula": "2026-11-20"
+   },
+   {
+    "bil": 15,
+    "minggu": 3,
+    "ptj": "Fakulti Seni Kreatif (FSK)",
+    "unit": 5,
+    "mula": "2026-11-20"
+   },
+   {
+    "bil": 16,
+    "minggu": 4,
+    "ptj": "Fakulti Undang-Undang (FUU)",
+    "unit": 8,
+    "mula": "2026-11-23"
+   },
+   {
+    "bil": 17,
+    "minggu": 4,
+    "ptj": "Fakulti Sains Sukan dan Eksesais (FSSE)",
+    "unit": 5,
+    "mula": "2026-11-23"
+   },
+   {
+    "bil": 18,
+    "minggu": 4,
+    "ptj": "Fakulti Pergigian",
+    "unit": 20,
+    "mula": "2026-11-24"
+   },
+   {
+    "bil": 19,
+    "minggu": 4,
+    "ptj": "Kolej Kediaman Keempat (Bestari) - KK4",
+    "unit": 5,
+    "mula": "2026-11-24"
+   },
+   {
+    "bil": 20,
+    "minggu": 4,
+    "ptj": "Kolej Kediaman Keenam (Ibnu Sina) - KK6",
+    "unit": 7,
+    "mula": "2026-11-25"
+   },
+   {
+    "bil": 21,
+    "minggu": 4,
+    "ptj": "Klinik UM",
+    "unit": 5,
+    "mula": "2026-11-26"
+   },
+   {
+    "bil": 22,
+    "minggu": 4,
+    "ptj": "Pusat Pendidikan Awal Kanak-kanak UM (PPAKKUM)",
+    "unit": 7,
+    "mula": "2026-11-28"
+   },
+   {
+    "bil": 23,
+    "minggu": 5,
+    "ptj": "Dewan Tunku Canselor (DTC)",
+    "unit": 25,
+    "mula": "2026-11-30"
+   },
+   {
+    "bil": 24,
+    "minggu": 5,
+    "ptj": "Balai Ungku Aziz",
+    "unit": 7,
+    "mula": "2026-11-30"
+   },
+   {
+    "bil": 25,
+    "minggu": 5,
+    "ptj": "Kolej Kediaman Kelapan (Kinabalu) - KK8",
+    "unit": 7,
+    "mula": "2026-11-30"
+   },
+   {
+    "bil": 26,
+    "minggu": 5,
+    "ptj": "Fakulti Alam Bina (FAB)",
+    "unit": 10,
+    "mula": "2026-12-01"
+   },
+   {
+    "bil": 27,
+    "minggu": 5,
+    "ptj": "Kolej Kediaman Kesembilan (Tun Syed Zahiruddin) - KK9",
+    "unit": 7,
+    "mula": "2026-12-02"
+   },
+   {
+    "bil": 28,
+    "minggu": 5,
+    "ptj": "Fakulti Pendidikan",
+    "unit": 18,
+    "mula": "2026-12-02"
+   },
+   {
+    "bil": 29,
+    "minggu": 6,
+    "ptj": "Kolej Kediaman Kesepuluh (Tun Ahmad Zaidi) - KK10",
+    "unit": 7,
+    "mula": "2026-12-07"
+   },
+   {
+    "bil": 30,
+    "minggu": 6,
+    "ptj": "Institut Kongzi",
+    "unit": 6,
+    "mula": "2026-12-07"
+   },
+   {
+    "bil": 31,
+    "minggu": 6,
+    "ptj": "Jabatan Hal Ehwal Pelajar (JHEP)",
+    "unit": 5,
+    "mula": "2026-12-07"
+   },
+   {
+    "bil": 32,
+    "minggu": 6,
+    "ptj": "Muzium Seni Asia",
+    "unit": 5,
+    "mula": "2026-12-08"
+   },
+   {
+    "bil": 33,
+    "minggu": 6,
+    "ptj": "Kolej Kediaman Kesebelas (Ungku Aziz) - KK11",
+    "unit": 7,
+    "mula": "2026-12-08"
+   },
+   {
+    "bil": 34,
+    "minggu": 6,
+    "ptj": "Rimba Ilmu",
+    "unit": 8,
+    "mula": "2026-12-09"
+   },
+   {
+    "bil": 35,
+    "minggu": 6,
+    "ptj": "Fakulti Perniagaan dan Ekonomi (FPE)",
+    "unit": 8,
+    "mula": "2026-12-10"
+   },
+   {
+    "bil": 36,
+    "minggu": 6,
+    "ptj": "Kolej Kediaman Kedua Belas (Raja Dr. Nazrin Shah) - KK12",
+    "unit": 7,
+    "mula": "2026-12-10"
+   },
+   {
+    "bil": 37,
+    "minggu": 6,
+    "ptj": "Zero Waste",
+    "unit": 5,
+    "mula": "2026-12-11"
+   },
+   {
+    "bil": 38,
+    "minggu": 6,
+    "ptj": "Galeri Seni (UMAG)",
+    "unit": 2,
+    "mula": "2026-12-11"
+   },
+   {
+    "bil": 39,
+    "minggu": 7,
+    "ptj": "Kolej Kediaman Ketiga Belas - KK13 (3 Blok)",
+    "unit": 15,
+    "mula": "2026-12-14"
+   },
+   {
+    "bil": 40,
+    "minggu": 7,
+    "ptj": "Kompleks Pengurusan Penyelidikan dan Inovasi (KPPI)",
+    "unit": 9,
+    "mula": "2026-12-14"
+   },
+   {
+    "bil": 41,
+    "minggu": 7,
+    "ptj": "Kompleks Inkubator Inovasi UM (UMX)",
+    "unit": 3,
+    "mula": "2026-12-14"
+   },
+   {
+    "bil": 42,
+    "minggu": 7,
+    "ptj": "Apartment Jepun (AJ)",
+    "unit": 8,
+    "mula": "2026-12-14"
+   },
+   {
+    "bil": 43,
+    "minggu": 7,
+    "ptj": "Institut Asia Eropah (AEI)",
+    "unit": 7,
+    "mula": "2026-12-15"
+   },
+   {
+    "bil": 44,
+    "minggu": 7,
+    "ptj": "Institut Antarabangsa Polisi Awam (INPUMA)",
+    "unit": 2,
+    "mula": "2026-12-15"
+   },
+   {
+    "bil": 45,
+    "minggu": 7,
+    "ptj": "Pusat Asasi Sains UM (PASUM)",
+    "unit": 8,
+    "mula": "2026-12-16"
+   },
+   {
+    "bil": 46,
+    "minggu": 7,
+    "ptj": "Wisma R&D",
+    "unit": 3,
+    "mula": "2026-12-16"
+   },
+   {
+    "bil": 47,
+    "minggu": 7,
+    "ptj": "Jabatan Harta Benda (JHB)",
+    "unit": 3,
+    "mula": "2026-12-17"
+   },
+   {
+    "bil": 48,
+    "minggu": 7,
+    "ptj": "Pusat Pembelajaran Integral (CITRA)",
+    "unit": 1,
+    "mula": "2026-12-17"
+   },
+   {
+    "bil": 49,
+    "minggu": 8,
+    "ptj": "Kampus Bachok API",
+    "unit": 7,
+    "mula": "2026-12-20"
+   },
+   {
+    "bil": 50,
+    "minggu": 8,
+    "ptj": "UMCCed",
+    "unit": 12,
+    "mula": "2026-12-21"
+   },
+   {
+    "bil": 51,
+    "minggu": 8,
+    "ptj": "High Impact Research (HIR)",
+    "unit": 6,
+    "mula": "2026-12-21"
+   },
+   {
+    "bil": 52,
+    "minggu": 8,
+    "ptj": "Penerbit",
+    "unit": 5,
+    "mula": "2026-12-23"
+   },
+   {
+    "bil": 53,
+    "minggu": 8,
+    "ptj": "One Stop Centre",
+    "unit": 2,
+    "mula": "2026-12-23"
+   },
+   {
+    "bil": 54,
+    "minggu": 9,
+    "ptj": "Fakulti Sains",
+    "unit": 70,
+    "mula": "2026-12-28"
+   }
+  ]
  },
  "projek": null,
  "projek_enc": {
