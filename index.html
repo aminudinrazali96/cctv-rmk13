@@ -427,6 +427,9 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
 /* perlu perhatian: tanda baris Gantt */
 .gt tr.attn td.nm{background-image:linear-gradient(var(--warn),var(--warn));background-size:4px 100%;background-repeat:no-repeat;background-position:left top}
 .gt tr.attn .gbar{border-color:var(--warn);animation:attnBar 1.8s ease-in-out infinite}
+.gt tr.attn-lewat .gbar{border-color:var(--bad);border-style:solid;background:var(--badbg)}
+.gt tr.attn-lewat .gbar span{color:var(--bad)}
+.gt tr.attn-lewat td.nm{background-image:linear-gradient(var(--bad),var(--bad))}
 @keyframes attnBar{0%,100%{box-shadow:0 0 0 0 rgba(217,119,6,0)}50%{box-shadow:0 0 0 4px rgba(217,119,6,.38)}}
 .gt tr.attn.flash td.wk{animation:attnWk 1s ease-in-out 3}
 .gt tr.attn.flash td.nm{animation:attnNm 1s ease-in-out 3}
@@ -810,7 +813,7 @@ function renderGantt(){
     for(let w=1;w<=W;w++){
       const today=w===curW?' today':'';
       let x=w===curW?`<div class="tline" style="left:${((dayInW+.5)/7*100).toFixed(1)}%"></div>`:'';
-      if(bb&&w===bb.w)x+=`<div class="gbar" style="${bb.css}" data-tip="${tipTxt}"><i style="width:${fill}%;background:${fc}"></i>${len>10&&fill>0&&fill<100?`<span>${fill}%</span>`:''}</div>`;
+      if(bb&&w===bb.w)x+=`<div class="gbar" style="${bb.css}" data-tip="${tipTxt}"><i style="width:${fill}%;background:${fc}"></i>${r.st==='lewat'?`<span>${fill}% · jangka ${r.exp}%</span>`:(len>10&&fill>0&&fill<100?`<span>${fill}%</span>`:'')}</div>`;
       if(bs&&w===bs.w)x+=`<div class="gbase" style="${bs.css}" data-tip="${tipTxt}"></div>`;
       cells+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${today}">${x}</td>`;
     }
