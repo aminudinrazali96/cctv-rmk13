@@ -1,13 +1,13 @@
 {
- "dijana": "2026-10-27T14:00",
+ "dijana": "2026-11-02T09:17",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
   "ptj_dijadualkan": 47,
   "ptj_belum": 7,
-  "ptj_selesai": 45,
+  "ptj_selesai": 47,
   "pct_cctv_dijadualkan": 46.9,
-  "pct_cctv_selesai": 45.7,
+  "pct_cctv_selesai": 46.9,
   "slot": {
    "A": 84,
    "B": 83
@@ -17,10 +17,10 @@
    "B": 6
   },
   "selesai_team": {
-   "A": 48,
+   "A": 52,
    "B": 6
   },
-  "sesi_selesai": 54,
+  "sesi_selesai": 58,
   "sesi_ditunda": 0
  },
  "hari": [
@@ -691,7 +691,7 @@
      "sesi": "Pagi",
      "masa": "10:00 – 11:30",
      "ptj": "Klinik Kesihatan UM",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       54
      ]
@@ -707,7 +707,7 @@
      "sesi": "Pagi",
      "masa": "09:00 – 10:30",
      "ptj": "UM Bachok",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       47
      ]
@@ -717,7 +717,7 @@
      "sesi": "Pagi",
      "masa": "10:30 – 12:00",
      "ptj": "UM Bachok",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       47
      ]
@@ -727,7 +727,7 @@
      "sesi": "Petang",
      "masa": "15:00 – 16:30",
      "ptj": "UM Bachok",
-     "status": "akan",
+     "status": "selesai",
      "ptj_id": [
       47
      ]
@@ -1312,22 +1312,22 @@
   {
    "no": 47,
    "nama": "Kampus Bachok API",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-30",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     },
     {
      "tarikh": "2026-10-30",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     },
     {
      "tarikh": "2026-10-30",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   },
@@ -1399,12 +1399,12 @@
   {
    "no": 54,
    "nama": "Klinik UM",
-   "status": "dijadualkan",
+   "status": "selesai",
    "lawatan": [
     {
      "tarikh": "2026-10-29",
      "team": "A",
-     "status": "akan"
+     "status": "selesai"
     }
    ]
   }
@@ -1634,8 +1634,8 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 83,
-     "catatan": "Auto daripada jadual lawatan: 45/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
+     "peratus": 87,
+     "catatan": "Auto daripada jadual lawatan: 47/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
     }
    },
    {
@@ -1652,10 +1652,11 @@
     "kiraan": {
      "sasaran": 510,
      "unit": "titik disemak",
-     "siap": null
+     "siap": 0
     },
     "sebenar": {
-     "catatan": "Additional Cabling Work 510 titik = kabel sedia ada; disemak dan diguna semula jika tidak rosak. Disahkan pengguna 16/10/2026"
+     "catatan": "Additional Cabling Work 510 titik = kabel sedia ada; disemak dan diguna semula jika tidak rosak. Disahkan pengguna 16/10/2026 Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima.",
+     "peratus": 0
     }
    },
    {
@@ -1751,7 +1752,10 @@
      10,
      13
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima."
+    }
    },
    {
     "seksyen": "Stage 2 · Implementation",
@@ -1767,10 +1771,11 @@
     "kiraan": {
      "sasaran": 500,
      "unit": "titik baharu",
-     "siap": null
+     "siap": 0
     },
     "sebenar": {
-     "catatan": "500 titik baharu sahaja; 510 titik ialah kabel sedia ada (semakan). Disahkan pengguna 16/10/2026"
+     "catatan": "500 titik baharu sahaja; 510 titik ialah kabel sedia ada (semakan). Disahkan pengguna 16/10/2026 Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima.",
+     "peratus": 0
     }
    },
    {
@@ -1785,7 +1790,8 @@
     "rujukan": "3.1",
     "bukti": "Laporan Fluke selepas ganti",
     "sebenar": {
-     "catatan": "Hanya titik daripada 510 yang disahkan rosak"
+     "catatan": "Hanya titik daripada 510 yang disahkan rosak Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima.",
+     "peratus": 0
     }
    },
    {
