@@ -212,6 +212,10 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .step b{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--navy)}
 .step b i{font-style:normal;background:var(--navy);color:var(--bg);font-size:11px;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .step p{font-size:13px;color:var(--ink2);margin-top:4px}
+.kbt tr.kbw td{font-family:var(--f-mono);font-size:12px;letter-spacing:.5px;font-weight:700;color:var(--ink);background:var(--track);padding:8px 10px}
+.kbt tr.kbw td span{color:var(--mute);font-weight:500}
+.kbt tr.cur td{background:color-mix(in srgb,var(--brand) 6%,transparent)}
+.kbt tr.kbw.cur td{background:color-mix(in srgb,var(--brand) 14%,transparent)}
 td.q{text-align:right;font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap}
 .yr{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
 .yr:first-child{border-top:0}
@@ -471,6 +475,7 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
     <button role="tab" data-tab="jadual" aria-selected="false">Jadual lawatan</button>
     <button role="tab" data-tab="ptj" aria-selected="false">Senarai PTj</button>
     <button role="tab" data-tab="gantt" aria-selected="false">Gantt chart</button>
+    <button role="tab" data-tab="kabel" aria-selected="false" hidden>Jadual kabel</button>
     <button role="tab" data-tab="projek" aria-selected="false">Perincian projek</button>
   </nav>
 
@@ -550,6 +555,20 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
     <p class="h2s" style="margin-top:10px">Bar = jadual pelaksanaan pembekal (dibentang semasa Mesyuarat Kick-Off 22/9/2026). Isian = peratus siap sebenar. Garis kelabu di bawah bar = tempoh dalam Gantt Chart tawaran (Enclosure G). Status dibanding dengan kemajuan yang dijangka pada hari ini. Baris ↳ ialah item daripada Jadual Pematuhan Spesifikasi Teknikal (no. item spesifikasi dalam label "Spek"); bar putus-putus mengikut tempoh aktiviti induk.</p>
   </section>
 
+  <section id="t-kabel" hidden>
+    <div class="grid kpis" id="kbkpis"></div>
+    <div class="ghead" style="margin-top:18px">
+      <div><h2 id="kb-tajuk">Jadual pemasangan kabel</h2><p class="h2s" id="kb-sub" style="margin-bottom:0"></p></div>
+      <input type="search" id="kq" placeholder="Cari PTj…" aria-label="Cari PTj dalam jadual kabel">
+    </div>
+    <div class="card tblwrap" style="padding:8px 10px;margin-top:12px">
+      <table class="kbt">
+        <thead><tr><th>BIL.</th><th>PTJ / LOKASI</th><th style="text-align:right">UNIT CCTV</th><th>TARIKH MULA</th><th>STATUS</th></tr></thead>
+        <tbody id="kbbody"></tbody>
+      </table>
+    </div>
+  </section>
+
   <section id="t-projek" hidden>
     <div class="card lock" id="pj-lock">
       <div class="lk-ic" aria-hidden="true">🔒</div>
@@ -621,7 +640,7 @@ $('#theme').onclick=()=>{const cur=document.documentElement.dataset.theme||(matc
 /* tab */
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected',x===b));
-  ['ringkasan','jadual','ptj','gantt','projek'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.tab);
+  ['ringkasan','jadual','ptj','gantt','kabel','projek'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.tab);
   try{sessionStorage.setItem('tab',b.dataset.tab)}catch(e){}
   if(b.dataset.tab==='gantt'&&D)ganttScroll();
 });
@@ -842,6 +861,40 @@ function showAttn(){
   rows.forEach(r=>{r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash')});
   clearTimeout(showAttn.t);showAttn.t=setTimeout(()=>rows.forEach(r=>r.classList.remove('flash')),3300);
 }
+function renderKabel(){
+  const K=D.kabel, tab=document.querySelector('nav button[data-tab="kabel"]');
+  if(!K||!K.baris||!K.baris.length){tab.hidden=true;return}
+  tab.hidden=false;
+  const HARI=['Ahad','Isnin','Selasa','Rabu','Khamis','Jumaat','Sabtu'];
+  const T=pd(todayIso()), B=K.baris, tot=B.reduce((a,r)=>a+r.unit,0);
+  const wkStart=m=>{const ds=B.filter(r=>r.minggu===m).map(r=>pd(r.mula));const d=new Date(Math.min(...ds));return addD(d,-((d.getDay()+6)%7))};
+  const weeks=[...new Set(B.map(r=>r.minggu))].sort((a,b)=>a-b);
+  const curWk=weeks.find(m=>{const s=wkStart(m);return T>=s&&T<=addD(s,6)});
+  const st=r=>{if(r.status)return [r.status,r.status.toUpperCase()];const d=pd(r.mula);if(d>T)return['akan','AKAN DATANG'];return r.minggu===curWk?['ikut','MINGGU INI']:['dalam','TARIKH MULA LEPAS']};
+  const past=B.filter(r=>pd(r.mula)<=T), pu=past.reduce((a,r)=>a+r.unit,0);
+  const cw=B.filter(r=>r.minggu===curWk), cu=cw.reduce((a,r)=>a+r.unit,0);
+  const J0=pd(K.julat[0]), J1=pd(K.julat[1]);
+  $('#kb-tajuk').textContent=K.tajuk||'Jadual pemasangan kabel';
+  $('#kb-sub').textContent=`Cadangan pembekal · ${dmyy(J0)} – ${dmyy(J1)} · ${weeks.length} minggu. Status sebenar pemasangan belum dilaporkan; status di bawah dikira ikut tarikh mula.`;
+  $('#kbkpis').innerHTML=[
+    [B.length+'<span style="font-size:20px;color:var(--mute)"> PTj</span>','lokasi pemasangan kabel',`${tot.toLocaleString('ms-MY')} unit CCTV`,'var(--navy)'],
+    [curWk?'Minggu '+curWk:(T<J0?'Belum mula':'Tamat'),`daripada ${weeks.length} minggu`,curWk?`${K.minggu_label[curWk]||''} · ${cw.length} PTj · ${cu} unit`:'', 'var(--a)'],
+    [Math.round(pu/tot*100)+'%','unit dengan tarikh mula telah lepas',`${past.length} PTj · ${pu} daripada ${tot} unit`,'var(--a)'],
+    [B.filter(r=>r.status==='selesai').length+'<span style="font-size:20px;color:var(--mute)"> / '+B.length+'</span>','PTj disahkan selesai','menunggu laporan kemajuan pembekal','var(--ok)'],
+  ].map(([v,l,s2,c])=>`<div class="card kpi"><b style="color:${c}">${v}</b><span>${l}</span><small>${s2}</small></div>`).join('');
+  const q=($('#kq').value||'').toLowerCase().trim();
+  let h='';
+  weeks.forEach(m=>{
+    const rs=B.filter(r=>r.minggu===m&&(!q||r.ptj.toLowerCase().includes(q)));if(!rs.length)return;
+    const u=B.filter(r=>r.minggu===m).reduce((a,r)=>a+r.unit,0);
+    h+=`<tr class="kbw${m===curWk?' cur':''}"><td colspan="5">MINGGU ${m} <span>(${esc(K.minggu_label[m]||'')}) · ${u} unit</span>${m===curWk?' <span class="chip c-ikut">MINGGU INI</span>':''}</td></tr>`;
+    h+=rs.map(r=>{const d=pd(r.mula),[c,t]=st(r);return `<tr${m===curWk?' class="cur"':''}><td class="num">${r.bil}</td><td>${esc(r.ptj)}${r.catatan?`<small style="display:block;color:var(--mute)">${esc(r.catatan)}</small>`:''}</td><td class="q">${r.unit}</td><td style="white-space:nowrap">${dmy(d)} <span style="color:var(--mute)">${HARI[d.getDay()]}</span></td><td><span class="chip c-${c}">${t}</span></td></tr>`}).join('');
+  });
+  h+=`<tr class="kbw"><td></td><td><b>JUMLAH</b></td><td class="q">${tot}</td><td colspan="2"></td></tr>`;
+  $('#kbbody').innerHTML=h;
+}
+$('#kq').oninput=()=>{if(D)renderKabel()};
+
 function renderProjek(){
   const P=D.projek, tab=document.querySelector('nav button[data-tab="projek"]');
   if(!P&&!D.projek_enc){tab.hidden=true;return}
@@ -901,7 +954,7 @@ async function load(){
     $('#err').style.display='none';
     if(txt===lastJson)return;
     lastJson=txt;D=JSON.parse(txt);await applyProjek();
-    renderHeader();renderSummary();renderTimeline();renderPtj();renderGantt();renderProjek();
+    renderHeader();renderSummary();renderTimeline();renderPtj();renderGantt();renderKabel();renderProjek();
   }catch(e){const el=$('#err');el.textContent='Data tidak dapat dimuatkan ('+e.message+'). Cuba muat semula sebentar lagi.';el.style.display='block'}
 }
 
