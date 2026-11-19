@@ -769,9 +769,11 @@ const addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
 const dmy=d=>d.getDate()+' '+BULAN[d.getMonth()];
 const dmyy=d=>d.getDate()+' '+BULAN[d.getMonth()]+' '+d.getFullYear();
 const dayN=(a,b)=>Math.round((b-a)/864e5);
+let GMK=null; // mula kerja sebenar (gantt.json: mula_kerja_sebenar); kemajuan dijangka dikira dari tarikh ini
 function ganttStatus(a,S,E,T){
-  const s=a.sebenar||{}, pct=s.peratus, tot=dayN(S,E)+1;
-  const exp=T<S?0:T>E?100:Math.round((dayN(S,T)+1)/tot*100);
+  const s=a.sebenar||{}, pct=s.peratus;
+  const S0=(GMK&&S<GMK&&GMK<=E&&!(s.status==='selesai'||pct>=100))?GMK:S, tot=dayN(S0,E)+1;
+  const exp=T<S0?0:T>E?100:Math.round((dayN(S0,T)+1)/tot*100);
   let st;
   if(s.status==='selesai'||pct>=100)st='selesai';
   else if(s.status==='ditangguh')st='ditangguh';
@@ -798,9 +800,10 @@ function renderGantt(){
   if(!G){tab.hidden=true;return}
   tab.hidden=false;
   const W=G.minggu||24, M0=pd(G.mula_w1), T=pd(todayIso());
+  GMK=G.mula_kerja_sebenar?pd(G.mula_kerja_sebenar):null;
   const curW=Math.floor(dayN(M0,T)/7)+1, inW=curW>=1&&curW<=W, dayInW=dayN(M0,T)-(curW-1)*7;
   const endP=addD(M0,W*7-1);
-  $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">TARIKH ANGGARAN</span>`:'');
+  $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(GMK?` · mula kerja sebenar ${dmyy(GMK)} (kemajuan dijangka dikira dari tarikh ini)`:'')+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">TARIKH ANGGARAN</span>`:'');
   // baris 1: bulan kalendar (minggu dikira ikut hari Khamis), baris 2: bulan projek, baris 3: minggu + tarikh Isnin
   const cal=[];for(let w=1;w<=W;w++){const t=addD(M0,(w-1)*7+3),k=t.getFullYear()*12+t.getMonth();if(cal.length&&cal[cal.length-1].k===k)cal[cal.length-1].n++;else cal.push({k,n:1,d:t})}
   let h0='<tr><th class="nm" rowspan="3" style="vertical-align:bottom">AKTIVITI</th>'+cal.map((c,i)=>`<th class="calm" colspan="${c.n}" data-tip="${BULANP[c.d.getMonth()]} ${c.d.getFullYear()}">${c.n>=2?BULANP[c.d.getMonth()].toUpperCase():BULAN[c.d.getMonth()].toUpperCase()}${(i===0||c.d.getMonth()===0)&&c.n>=3?` <span style="font-weight:700;color:var(--mute)">${c.d.getFullYear()}</span>`:''}</th>`).join('')+'</tr>';
@@ -826,7 +829,7 @@ function renderGantt(){
     if(a.asal){const A0=addD(M0,(a.asal[0]-1)*7),A1=addD(M0,a.asal[1]*7-1);asalTxt=`<br>Pelan asal (Enclosure G): W${a.asal[0]}${a.asal[1]!==a.asal[0]?'–W'+a.asal[1]:''} (${dmy(A0)} – ${dmy(A1)})`;bs=span(M0,W,(a.asal[0]-1)*7,a.asal[1]*7)}
     const K=a.kiraan, kTxt=K?`${K.siap==null?'—':Number(K.siap).toLocaleString('en')} / ${Number(K.sasaran).toLocaleString('en')} ${esc(K.unit||'')}`:'';
     const specTxt=a.sub?`<br>Spesifikasi: item ${esc(a.rujukan)}${a.bukti?'<br>Bukti siap: '+esc(a.bukti):''}${K?'<br>Kiraan: '+kTxt:''}${a.semak?'<br>⚑ Semak skop: '+esc(a.semak):''}<br>Induk: ${esc(a.induk||'')}`:'';
-    const tipTxt=`<b>${esc(a.nama)}</b><br>Jadual: ${dmy(S)} – ${dmy(E)} (${len} hari)${asalTxt}${specTxt}<br>Dijangka hari ini: ${r.exp}%<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}${a.wajaran!=null?'<br>Wajaran pembekal: '+Math.round(a.wajaran*100)+'%':''}${a.tiada_dalam_pembekal?'<br><i>Tiada dalam jadual terkini pembekal; tarikh diselaraskan dengan aktiviti berkaitan.</i>':''}`.replace(/"/g,'&quot;');
+    const tipTxt=`<b>${esc(a.nama)}</b><br>Jadual: ${dmy(S)} – ${dmy(E)} (${len} hari)${asalTxt}${specTxt}<br>Dijangka hari ini: ${r.exp}%${GMK&&S<GMK&&GMK<=E&&r.st!=='selesai'?' (dikira dari mula kerja sebenar '+dmy(GMK)+')':''}<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}${a.wajaran!=null?'<br>Wajaran pembekal: '+Math.round(a.wajaran*100)+'%':''}${a.tiada_dalam_pembekal?'<br><i>Tiada dalam jadual terkini pembekal; tarikh diselaraskan dengan aktiviti berkaitan.</i>':''}`.replace(/"/g,'&quot;');
     const bb=span(M0,W,dayN(M0,S),dayN(M0,E)+1);
     let cells='';
     for(let w=1;w<=W;w++){
@@ -875,15 +878,18 @@ function renderKabel(){
   const curWk=weeks.find(m=>{const s=wkStart(m);return T>=s&&T<=addD(s,6)});
   const st=r=>{if(r.status)return [r.status,r.status==='selesai'?'KABEL SELESAI':r.status==='berjalan'?'SEDANG BERJALAN':r.status.toUpperCase()];const d=pd(r.mula);if(d>T)return['akan','AKAN DATANG'];return r.minggu===curWk?['ikut','MINGGU INI']:['dalam','TARIKH MULA LEPAS']};
   const past=B.filter(r=>pd(r.mula)<=T), pu=past.reduce((a,r)=>a+r.unit,0);
+  // mula kerja sebenar: jadual dianjak ikut beza tarikh mula sebenar dengan tarikh mula jadual (untuk peratus dijangka sahaja)
+  const KMK=K.mula_kerja_sebenar?pd(K.mula_kerja_sebenar):null, kOff=KMK?Math.max(0,dayN(pd(K.julat[0]),KMK)):0;
+  const pj=B.filter(r=>addD(pd(r.mula),kOff)<=T).reduce((a,r)=>a+r.unit,0);
   const cw=B.filter(r=>r.minggu===curWk), cu=cw.reduce((a,r)=>a+r.unit,0);
   const J0=pd(K.julat[0]), J1=pd(K.julat[1]);
   $('#kb-tajuk').textContent=K.tajuk||'Jadual pemasangan kabel';
   const KM=K.kemajuan, kS=B.reduce((a,r)=>a+(r.kabel_siap||0),0), pS=B.reduce((a,r)=>a+(r.pasang_siap||0),0), pc=(x,y)=>(Math.round(x/y*1000)/10).toLocaleString('ms-MY')+'%';
-  $('#kb-sub').textContent=`Jadual pembekal · ${dmyy(J0)} – ${dmyy(J1)} · ${weeks.length} minggu.`+(KM?` Kemajuan ikut laporan status pembekal ${dmyy(pd(KM.tarikh_laporan))}; PTj tanpa laporan diberi status ikut tarikh mula.`:' Status sebenar pemasangan belum dilaporkan; status di bawah dikira ikut tarikh mula.');
+  $('#kb-sub').textContent=`Jadual pembekal · ${dmyy(J0)} – ${dmyy(J1)} · ${weeks.length} minggu.`+(KM?` Kemajuan ikut laporan status pembekal ${dmyy(pd(KM.tarikh_laporan))}; PTj tanpa laporan diberi status ikut tarikh mula.`+(K.mula_kerja_sebenar?` Kerja sebenar bermula ${dmyy(pd(K.mula_kerja_sebenar))}; peratus dijangka dikira dari tarikh itu.`:''):' Status sebenar pemasangan belum dilaporkan; status di bawah dikira ikut tarikh mula.');
   $('#kbkpis').innerHTML=[
     [B.length+'<span style="font-size:20px;color:var(--mute)"> PTj</span>','lokasi pemasangan kabel',`${tot.toLocaleString('ms-MY')} unit CCTV`,'var(--navy)'],
     [curWk?'Minggu '+curWk:(T<J0?'Belum mula':'Tamat'),`daripada ${weeks.length} minggu`,curWk?`${K.minggu_label[curWk]||''} · ${cw.length} PTj · ${cu} unit`:'', 'var(--a)'],
-    ...(KM?[[pc(kS,tot),'kabel siap',`${kS} daripada ${tot} unit · dijangka ${Math.round(pu/tot*100)}% (tarikh mula lepas)`,kS/tot*100<pu/tot*100-10?'var(--bad)':'var(--a)'],
+    ...(KM?[[pc(kS,tot),'kabel siap',`${kS} daripada ${tot} unit · dijangka ${Math.round(pj/tot*100)}%`+(kOff?` (kerja bermula ${dmy(KMK)})`:' (tarikh mula lepas)'),kS/tot*100<pj/tot*100-10?'var(--bad)':'var(--a)'],
       [pc(pS,tot),'CCTV dipasang',`${pS} daripada ${tot} unit · ${B.filter(r=>r.status==='selesai').length}/${B.length} PTj kabel selesai`,'var(--ok)']]:
     [[Math.round(pu/tot*100)+'%','unit dengan tarikh mula telah lepas',`${past.length} PTj · ${pu} daripada ${tot} unit`,'var(--a)'],
     [B.filter(r=>r.status==='selesai').length+'<span style="font-size:20px;color:var(--mute)"> / '+B.length+'</span>','PTj disahkan selesai','menunggu laporan kemajuan pembekal','var(--ok)']]),
