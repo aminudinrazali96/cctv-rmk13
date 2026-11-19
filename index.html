@@ -552,7 +552,7 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
       </div>
     </div>
     <div class="card gwrap" id="gantt"></div>
-    <p class="h2s" style="margin-top:10px">Bar = jadual pelaksanaan pembekal (dibentang semasa Mesyuarat Kick-Off 22/9/2026). Isian = peratus siap sebenar. Garis kelabu di bawah bar = tempoh dalam Gantt Chart tawaran (Enclosure G). Status dibanding dengan kemajuan yang dijangka pada hari ini. Baris ↳ ialah item daripada Jadual Pematuhan Spesifikasi Teknikal (no. item spesifikasi dalam label "Spek"); bar putus-putus mengikut tempoh aktiviti induk.</p>
+    <p class="h2s" style="margin-top:10px">Bar = jadual pelaksanaan terkini pembekal (Current Project Status Weststar; tarikh bulan sahaja dipapar dari 1hb hingga hujung bulan). Kemajuan keseluruhan dikira ikut wajaran aktiviti pembekal. Isian = peratus siap sebenar. Garis kelabu di bawah bar = tempoh dalam Gantt Chart tawaran (Enclosure G). Status dibanding dengan kemajuan yang dijangka pada hari ini. Baris ↳ ialah item daripada Jadual Pematuhan Spesifikasi Teknikal (no. item spesifikasi dalam label "Spek"); bar putus-putus mengikut tempoh aktiviti induk.</p>
   </section>
 
   <section id="t-kabel" hidden>
@@ -563,7 +563,7 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
     </div>
     <div class="card tblwrap" style="padding:8px 10px;margin-top:12px">
       <table class="kbt">
-        <thead><tr><th>BIL.</th><th>PTJ / LOKASI</th><th style="text-align:right">UNIT CCTV</th><th>TARIKH MULA</th><th>STATUS</th></tr></thead>
+        <thead><tr><th>BIL.</th><th>PTJ / LOKASI</th><th style="text-align:right">UNIT CCTV</th><th style="text-align:right">KABEL SIAP</th><th style="text-align:right">CCTV DIPASANG</th><th>TARIKH MULA</th><th>STATUS</th></tr></thead>
         <tbody id="kbbody"></tbody>
       </table>
     </div>
@@ -826,7 +826,7 @@ function renderGantt(){
     if(a.asal){const A0=addD(M0,(a.asal[0]-1)*7),A1=addD(M0,a.asal[1]*7-1);asalTxt=`<br>Pelan asal (Enclosure G): W${a.asal[0]}${a.asal[1]!==a.asal[0]?'–W'+a.asal[1]:''} (${dmy(A0)} – ${dmy(A1)})`;bs=span(M0,W,(a.asal[0]-1)*7,a.asal[1]*7)}
     const K=a.kiraan, kTxt=K?`${K.siap==null?'—':Number(K.siap).toLocaleString('en')} / ${Number(K.sasaran).toLocaleString('en')} ${esc(K.unit||'')}`:'';
     const specTxt=a.sub?`<br>Spesifikasi: item ${esc(a.rujukan)}${a.bukti?'<br>Bukti siap: '+esc(a.bukti):''}${K?'<br>Kiraan: '+kTxt:''}${a.semak?'<br>⚑ Semak skop: '+esc(a.semak):''}<br>Induk: ${esc(a.induk||'')}`:'';
-    const tipTxt=`<b>${esc(a.nama)}</b><br>Jadual: ${dmy(S)} – ${dmy(E)} (${len} hari)${asalTxt}${specTxt}<br>Dijangka hari ini: ${r.exp}%<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}`.replace(/"/g,'&quot;');
+    const tipTxt=`<b>${esc(a.nama)}</b><br>Jadual: ${dmy(S)} – ${dmy(E)} (${len} hari)${asalTxt}${specTxt}<br>Dijangka hari ini: ${r.exp}%<br>Sebenar: ${r.pct==null?(r.st==='selesai'?'100%':'belum dikemas kini'):r.pct+'%'}${s.tarikh_siap?'<br>Siap: '+esc(s.tarikh_siap):''}${s.catatan?'<br>'+esc(s.catatan):''}${a.wajaran!=null?'<br>Wajaran pembekal: '+Math.round(a.wajaran*100)+'%':''}${a.tiada_dalam_pembekal?'<br><i>Tiada dalam jadual terkini pembekal; tarikh diselaraskan dengan aktiviti berkaitan.</i>':''}`.replace(/"/g,'&quot;');
     const bb=span(M0,W,dayN(M0,S),dayN(M0,E)+1);
     let cells='';
     for(let w=1;w<=W;w++){
@@ -842,8 +842,11 @@ function renderGantt(){
   });
   el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${body}</tbody></table>`;
   const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
+  let wT=0,wA=0,wE=0;G.aktiviti.forEach(a=>{if(a.sub||a.wajaran==null)return;const [S,E]=ganttDates(a,M0),r=ganttStatus(a,S,E,T);wT+=a.wajaran;wA+=a.wajaran*(r.st==='selesai'?100:(r.pct||0));wE+=a.wajaran*r.exp});
+  const SP=G.status_pembekal, hasW=wT>0, wAct=hasW?Math.round(wA/wT*10)/10:0, wExp=hasW?Math.round(wE/wT):0;
   $('#gkpis').innerHTML=[
     [inW?'W'+curW:(curW<1?'—':'Tamat'),`minggu semasa daripada ${W}`,inW?`${dmy(addD(M0,(curW-1)*7))} – ${dmy(addD(M0,curW*7-1))}`:'', 'var(--navy)'],
+    hasW?[wAct.toLocaleString('ms-MY')+'%','kemajuan keseluruhan (wajaran pembekal)',`dijangka ${wExp}% pada hari ini`+(SP?` · laporan pembekal ${dmy(pd(SP.tarikh_laporan))}`:''),wAct<wExp-10?'var(--bad)':'var(--a)']:
     [nw?act+'%':'—','kemajuan aktiviti yang dilaporkan',`dijangka ${exp}% pada hari ini`+(noUpd?` · ${noUpd} aktiviti bermula belum dikemas kini`:''),act<exp-10?'var(--bad)':'var(--a)'],
     [cnt.selesai+'<span style="font-size:20px;color:var(--mute)"> / '+nMain+'</span>','aktiviti selesai',`${cnt.aktif} aktiviti dalam tempoh`+(nSub?` · ${subSel}/${nSub} item spesifikasi selesai`+(nSkop?` · ${nSkop} perlu semak skop`:''):''),'var(--ok)'],
     [cnt.lewat+cnt.sahkan,'perlu perhatian',`${cnt.lewat} lewat · ${cnt.sahkan} melepasi tempoh, belum disahkan`,cnt.lewat+cnt.sahkan?'var(--warn)':'var(--ok)'],
@@ -870,27 +873,30 @@ function renderKabel(){
   const wkStart=m=>{const ds=B.filter(r=>r.minggu===m).map(r=>pd(r.mula));const d=new Date(Math.min(...ds));return addD(d,-((d.getDay()+6)%7))};
   const weeks=[...new Set(B.map(r=>r.minggu))].sort((a,b)=>a-b);
   const curWk=weeks.find(m=>{const s=wkStart(m);return T>=s&&T<=addD(s,6)});
-  const st=r=>{if(r.status)return [r.status,r.status.toUpperCase()];const d=pd(r.mula);if(d>T)return['akan','AKAN DATANG'];return r.minggu===curWk?['ikut','MINGGU INI']:['dalam','TARIKH MULA LEPAS']};
+  const st=r=>{if(r.status)return [r.status,r.status==='selesai'?'KABEL SELESAI':r.status==='berjalan'?'SEDANG BERJALAN':r.status.toUpperCase()];const d=pd(r.mula);if(d>T)return['akan','AKAN DATANG'];return r.minggu===curWk?['ikut','MINGGU INI']:['dalam','TARIKH MULA LEPAS']};
   const past=B.filter(r=>pd(r.mula)<=T), pu=past.reduce((a,r)=>a+r.unit,0);
   const cw=B.filter(r=>r.minggu===curWk), cu=cw.reduce((a,r)=>a+r.unit,0);
   const J0=pd(K.julat[0]), J1=pd(K.julat[1]);
   $('#kb-tajuk').textContent=K.tajuk||'Jadual pemasangan kabel';
-  $('#kb-sub').textContent=`Cadangan pembekal · ${dmyy(J0)} – ${dmyy(J1)} · ${weeks.length} minggu. Status sebenar pemasangan belum dilaporkan; status di bawah dikira ikut tarikh mula.`;
+  const KM=K.kemajuan, kS=B.reduce((a,r)=>a+(r.kabel_siap||0),0), pS=B.reduce((a,r)=>a+(r.pasang_siap||0),0), pc=(x,y)=>(Math.round(x/y*1000)/10).toLocaleString('ms-MY')+'%';
+  $('#kb-sub').textContent=`Jadual pembekal · ${dmyy(J0)} – ${dmyy(J1)} · ${weeks.length} minggu.`+(KM?` Kemajuan ikut laporan status pembekal ${dmyy(pd(KM.tarikh_laporan))}; PTj tanpa laporan diberi status ikut tarikh mula.`:' Status sebenar pemasangan belum dilaporkan; status di bawah dikira ikut tarikh mula.');
   $('#kbkpis').innerHTML=[
     [B.length+'<span style="font-size:20px;color:var(--mute)"> PTj</span>','lokasi pemasangan kabel',`${tot.toLocaleString('ms-MY')} unit CCTV`,'var(--navy)'],
     [curWk?'Minggu '+curWk:(T<J0?'Belum mula':'Tamat'),`daripada ${weeks.length} minggu`,curWk?`${K.minggu_label[curWk]||''} · ${cw.length} PTj · ${cu} unit`:'', 'var(--a)'],
-    [Math.round(pu/tot*100)+'%','unit dengan tarikh mula telah lepas',`${past.length} PTj · ${pu} daripada ${tot} unit`,'var(--a)'],
-    [B.filter(r=>r.status==='selesai').length+'<span style="font-size:20px;color:var(--mute)"> / '+B.length+'</span>','PTj disahkan selesai','menunggu laporan kemajuan pembekal','var(--ok)'],
+    ...(KM?[[pc(kS,tot),'kabel siap',`${kS} daripada ${tot} unit · dijangka ${Math.round(pu/tot*100)}% (tarikh mula lepas)`,kS/tot*100<pu/tot*100-10?'var(--bad)':'var(--a)'],
+      [pc(pS,tot),'CCTV dipasang',`${pS} daripada ${tot} unit · ${B.filter(r=>r.status==='selesai').length}/${B.length} PTj kabel selesai`,'var(--ok)']]:
+    [[Math.round(pu/tot*100)+'%','unit dengan tarikh mula telah lepas',`${past.length} PTj · ${pu} daripada ${tot} unit`,'var(--a)'],
+    [B.filter(r=>r.status==='selesai').length+'<span style="font-size:20px;color:var(--mute)"> / '+B.length+'</span>','PTj disahkan selesai','menunggu laporan kemajuan pembekal','var(--ok)']]),
   ].map(([v,l,s2,c])=>`<div class="card kpi"><b style="color:${c}">${v}</b><span>${l}</span><small>${s2}</small></div>`).join('');
   const q=($('#kq').value||'').toLowerCase().trim();
   let h='';
   weeks.forEach(m=>{
     const rs=B.filter(r=>r.minggu===m&&(!q||r.ptj.toLowerCase().includes(q)));if(!rs.length)return;
     const u=B.filter(r=>r.minggu===m).reduce((a,r)=>a+r.unit,0);
-    h+=`<tr class="kbw${m===curWk?' cur':''}"><td colspan="5">MINGGU ${m} <span>(${esc(K.minggu_label[m]||'')}) · ${u} unit</span>${m===curWk?' <span class="chip c-ikut">MINGGU INI</span>':''}</td></tr>`;
-    h+=rs.map(r=>{const d=pd(r.mula),[c,t]=st(r);return `<tr${m===curWk?' class="cur"':''}><td class="num">${r.bil}</td><td>${esc(r.ptj)}${r.catatan?`<small style="display:block;color:var(--mute)">${esc(r.catatan)}</small>`:''}</td><td class="q">${r.unit}</td><td style="white-space:nowrap">${dmy(d)} <span style="color:var(--mute)">${HARI[d.getDay()]}</span></td><td><span class="chip c-${c}">${t}</span></td></tr>`}).join('');
+    h+=`<tr class="kbw${m===curWk?' cur':''}"><td colspan="7">MINGGU ${m} <span>(${esc(K.minggu_label[m]||'')}) · ${u} unit</span>${m===curWk?' <span class="chip c-ikut">MINGGU INI</span>':''}</td></tr>`;
+    h+=rs.map(r=>{const d=pd(r.mula),[c,t]=st(r);return `<tr${m===curWk?' class="cur"':''}><td class="num">${r.bil}</td><td>${esc(r.ptj)}${r.catatan?`<small style="display:block;color:var(--mute)">${esc(r.catatan)}</small>`:''}</td><td class="q">${r.unit}</td><td class="q">${r.kabel_siap==null?'–':r.kabel_siap}</td><td class="q">${r.pasang_siap==null?'–':r.pasang_siap}</td><td style="white-space:nowrap">${dmy(d)} <span style="color:var(--mute)">${HARI[d.getDay()]}</span></td><td><span class="chip c-${c}">${t}</span></td></tr>`}).join('');
   });
-  h+=`<tr class="kbw"><td></td><td><b>JUMLAH</b></td><td class="q">${tot}</td><td colspan="2"></td></tr>`;
+  h+=`<tr class="kbw"><td></td><td><b>JUMLAH</b></td><td class="q">${tot}</td><td class="q">${kS}</td><td class="q">${pS}</td><td colspan="2"></td></tr>`;
   $('#kbbody').innerHTML=h;
 }
 $('#kq').oninput=()=>{if(D)renderKabel()};
