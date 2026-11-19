@@ -1,5 +1,5 @@
 {
- "dijana": "2026-11-16T09:37",
+ "dijana": "2026-11-19T16:13",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
@@ -1411,15 +1411,15 @@
  ],
  "nama_tidak_dikenali": [],
  "gantt": {
-  "rujukan": "Jadual pelaksanaan pembekal (Kick-Off 22/9/2026) · garis rujukan: Enclosure G UM.FC/FSD/PC/612/16/2026/11",
+  "rujukan": "Jadual Pelaksanaan Projek pembekal (Current Project Status, dikemas kini 16/11/2026) · garis rujukan: Enclosure G UM.FC/FSD/PC/612/16/2026/11",
   "mula_w1": "2026-09-07",
-  "minggu": 24,
+  "minggu": 30,
   "seksyen_julat": {
    "Preliminaries": "W1 – W8",
-   "Stage 1 · Project Planning & Design": "W2 – W8",
-   "Stage 2 · Implementation": "W9 – W17",
-   "Stage 3 · Testing and Commissioning": "W16 – W22",
-   "Transition and Closure": "W21 – W24"
+   "Stage 1 · Project Planning & Design": "W4 – W13",
+   "Stage 2 · Implementation": "W8 – W25",
+   "Stage 3 · Testing and Commissioning": "W22 – W30",
+   "Transition and Closure": "W22 – W30"
   },
   "aktiviti": [
    {
@@ -1433,8 +1433,9 @@
      "status": "selesai",
      "peratus": 100,
      "tarikh_siap": "2026-09-07",
-     "catatan": "Surat Setuju Terima 7/9/2026"
-    }
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 19/08/2026 · Surat Setuju Terima 7/9/2026"
+    },
+    "wajaran": 0.01
    },
    {
     "seksyen": "Preliminaries",
@@ -1451,120 +1452,72 @@
      "status": "selesai",
      "peratus": 100,
      "tarikh_siap": "2026-09-22",
-     "catatan": "Mesyuarat kick-off 22/9/2026, Bilik Mesyuarat Azalea, FBL"
-    }
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 22/09/2026 · Mesyuarat kick-off 22/9/2026, Bilik Mesyuarat Azalea, FBL"
+    },
+    "wajaran": 0.01
    },
    {
     "seksyen": "Preliminaries",
     "nama": "Project Planning & Scheduling",
     "tarikh": [
      "2026-09-17",
-     "2026-09-30"
+     "2026-10-31"
     ],
     "asal": [
      1,
      2
     ],
     "sebenar": {
-     "catatan": "Output untuk dikira selesai: (1) jadual dasar bertarikh ikut tarikh PO, mula dan tamat setiap aktiviti; (2) urutan pemasangan ikut PTj/zon (54 PTj); (3) carta organisasi pasukan projek; (4) pengesahan JTD (minit mesyuarat atau surat)."
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: Sep – Okt 2026* · Output untuk dikira selesai: (1) jadual dasar bertarikh ikut tarikh PO, mula dan tamat setiap aktiviti; (2) urutan pemasangan ikut PTj/zon (54 PTj); (3) carta organisasi pasukan projek; (4) pengesahan JTD (minit mesyuarat atau surat).",
+     "peratus": 100,
+     "status": "selesai"
     },
-    "ringkas": "Serahan: jadual dasar ikut tarikh PO · urutan pasang 54 PTj · carta organisasi · pengesahan JTD"
+    "ringkas": "Serahan: jadual dasar ikut tarikh PO · urutan pasang 54 PTj · carta organisasi · pengesahan JTD",
+    "wajaran": 0.02
    },
    {
     "seksyen": "Preliminaries",
     "nama": "Procurement Preparation (BOQ Confirmation)",
     "tarikh": [
      "2026-09-17",
-     "2026-10-08"
+     "2026-10-31"
     ],
     "asal": [
      2,
      4
     ],
     "sebenar": {
-     "catatan": "Output untuk dikira selesai: (1) BOQ muktamad ikut kontrak item 2.1–3.1, termasuk 40 suis tambahan (2.13.9) dan 1 kamera ALPR model sama + 1 lesen peranti tambahan tanpa kos kepada UM (2.6.14); (2) model dan nombor part sama seperti tawaran; (3) agihan kamera, titik kabel baharu dan suis ikut PTj; (4) senarai kamera sedia ada yang disahkan rosak; (5) lead time OEM setiap item; (6) pengesahan JTD. BOM aksesori pemasangan boleh diminta bersama. Pesanan hanya selepas kelulusan bahan dan PO."
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: Sep – Okt 2026* · Output untuk dikira selesai: (1) BOQ muktamad ikut kontrak item 2.1–3.1, termasuk 40 suis tambahan (2.13.9) dan 1 kamera ALPR model sama + 1 lesen peranti tambahan tanpa kos kepada UM (2.6.14); (2) model dan nombor part sama seperti tawaran; (3) agihan kamera, titik kabel baharu dan suis ikut PTj; (4) senarai kamera sedia ada yang disahkan rosak; (5) lead time OEM setiap item; (6) pengesahan JTD. BOM aksesori pemasangan boleh diminta bersama. Pesanan hanya selepas kelulusan bahan dan PO.",
+     "peratus": 100,
+     "status": "selesai"
     },
-    "ringkas": "Serahan: BOQ ikut kontrak (+40 suis, +1 kamera & lesen ALPR tanpa kos) · model/part no. · agihan ikut PTj · senarai kamera rosak · lead time OEM · pengesahan JTD"
+    "ringkas": "Serahan: BOQ ikut kontrak (+40 suis, +1 kamera & lesen ALPR tanpa kos) · model/part no. · agihan ikut PTj · senarai kamera rosak · lead time OEM · pengesahan JTD",
+    "wajaran": 0.02
    },
    {
     "seksyen": "Preliminaries",
     "nama": "Equipment Procurement & Logistics",
     "tarikh": [
-     "2026-10-12",
-     "2026-11-08"
+     "2026-09-14",
+     "2026-10-20"
     ],
     "asal": [
      2,
      8
     ],
-    "sebenar": {}
-   },
-   {
-    "seksyen": "Preliminaries",
-    "nama": "Penghantaran kamera (800 dome, 100 bullet, 100 dome analitik, 10 bullet AI)",
-    "tarikh": [
-     "2026-10-19",
-     "2026-11-08"
-    ],
-    "sub": true,
-    "induk": "Equipment Procurement & Logistics",
-    "rujukan": "2.1–2.4",
-    "bukti": "DO dan pemeriksaan terima barang",
-    "kiraan": {
-     "sasaran": 1010,
-     "unit": "kamera",
-     "siap": null
-    },
     "sebenar": {
-     "catatan": "Tarikh anggaran dalam tempoh induk."
-    }
-   },
-   {
-    "seksyen": "Preliminaries",
-    "nama": "Kamera ALPR + lesen (10 + 1 kamera dan 1 lesen tambahan tanpa kos kepada UM)",
-    "tarikh": [
-     "2026-10-26",
-     "2026-11-08"
-    ],
-    "sub": true,
-    "induk": "Equipment Procurement & Logistics",
-    "rujukan": "2.6, 2.6.14",
-    "bukti": "DO dan lesen perpetual",
-    "kiraan": {
-     "sasaran": 11,
-     "unit": "set",
-     "siap": null
+     "peratus": 100,
+     "status": "selesai",
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 14/09 – 20/10/2026"
     },
-    "sebenar": {
-     "catatan": "Tarikh anggaran dalam tempoh induk."
-    }
-   },
-   {
-    "seksyen": "Preliminaries",
-    "nama": "NVR: 16 unit 64-saluran (64TB) + 1 unit 16-saluran (72TB)",
-    "tarikh": [
-     "2026-10-19",
-     "2026-11-08"
-    ],
-    "sub": true,
-    "induk": "Equipment Procurement & Logistics",
-    "rujukan": "2.5, 2.11",
-    "bukti": "DO, semakan kapasiti HDD dan rel rak",
-    "kiraan": {
-     "sasaran": 17,
-     "unit": "unit",
-     "siap": null
-    },
-    "sebenar": {
-     "catatan": "Tarikh anggaran dalam tempoh induk."
-    }
+    "wajaran": 0.07
    },
    {
     "seksyen": "Preliminaries",
     "nama": "Suis PoE: 45 unit + 40 unit tambahan (penyelenggaraan)",
     "tarikh": [
-     "2026-10-12",
-     "2026-11-01"
+     "2026-09-14",
+     "2026-10-20"
     ],
     "sub": true,
     "induk": "Equipment Procurement & Logistics",
@@ -1581,30 +1534,10 @@
    },
    {
     "seksyen": "Preliminaries",
-    "nama": "Pelayan ALPR, 10 workstation, 16 video wall controller/decoder",
-    "tarikh": [
-     "2026-10-26",
-     "2026-11-08"
-    ],
-    "sub": true,
-    "induk": "Equipment Procurement & Logistics",
-    "rujukan": "2.9, 2.10, 2.12",
-    "bukti": "DO",
-    "kiraan": {
-     "sasaran": 27,
-     "unit": "unit",
-     "siap": null
-    },
-    "sebenar": {
-     "catatan": "Tarikh anggaran dalam tempoh induk."
-    }
-   },
-   {
-    "seksyen": "Preliminaries",
     "nama": "Lesen: 300 Lyt-X CSIM, 60 BriefCam add-on, pengurusan awan suis 5 tahun",
     "tarikh": [
-     "2026-10-26",
-     "2026-11-08"
+     "2026-09-14",
+     "2026-10-20"
     ],
     "sub": true,
     "induk": "Equipment Procurement & Logistics",
@@ -1623,8 +1556,8 @@
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Detailed Site Assessment & Verification",
     "tarikh": [
-     "2026-09-28",
-     "2026-10-25"
+     "2026-10-01",
+     "2026-10-29"
     ],
     "asal": [
      2,
@@ -1632,16 +1565,18 @@
     ],
     "auto": "lawatan_tapak",
     "sebenar": {
-     "peratus": 87,
-     "catatan": "Auto daripada jadual lawatan: 47/54 PTj dilawati; jadual lawatan sehingga 2026-10-30"
-    }
+     "peratus": 100,
+     "status": "selesai",
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 01/10 – 29/10/2026"
+    },
+    "wajaran": 0.05
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Semakan 510 titik kabel UTP sedia ada (guna semula jika tidak rosak)",
     "tarikh": [
-     "2026-09-28",
-     "2026-10-25"
+     "2026-10-01",
+     "2026-10-29"
     ],
     "sub": true,
     "induk": "Detailed Site Assessment & Verification",
@@ -1661,21 +1596,26 @@
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "System Architecture & Network Design",
     "tarikh": [
-     "2026-09-28",
-     "2026-10-25"
+     "2026-10-01",
+     "2026-11-30"
     ],
     "asal": [
      4,
      6
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 100,
+     "status": "selesai",
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: Okt – Nov 2026*"
+    },
+    "wajaran": 0.05
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Pelan IP/VLAN dan integrasi SDN UM",
     "tarikh": [
-     "2026-09-28",
-     "2026-10-25"
+     "2026-10-01",
+     "2026-11-30"
     ],
     "sub": true,
     "induk": "System Architecture & Network Design",
@@ -1687,21 +1627,26 @@
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Technical Submission & Approval",
     "tarikh": [
-     "2026-10-12",
-     "2026-11-01"
+     "2026-11-01",
+     "2026-11-30"
     ],
     "asal": [
      6,
      8
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 100,
+     "status": "selesai",
+     "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: Nov 2026*"
+    },
+    "wajaran": 0.02
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Kelulusan bahan setiap item (model, NDAA, LOA OEM, surat jaminan)",
     "tarikh": [
-     "2026-10-12",
-     "2026-11-01"
+     "2026-11-01",
+     "2026-11-30"
     ],
     "sub": true,
     "induk": "Technical Submission & Approval",
@@ -1717,8 +1662,8 @@
     "seksyen": "Stage 1 · Project Planning & Design",
     "nama": "Akses API/DB sistem stiker kenderaan (tindakan UM)",
     "tarikh": [
-     "2026-10-12",
-     "2026-11-01"
+     "2026-11-01",
+     "2026-11-30"
     ],
     "sub": true,
     "induk": "Technical Submission & Approval",
@@ -1730,38 +1675,41 @@
     "seksyen": "Stage 2 · Implementation",
     "nama": "Infrastructure Preparation (Power, Mounting)",
     "tarikh": [
-     "2026-10-15",
-     "2026-12-03"
+     "2026-10-26",
+     "2027-02-28"
     ],
     "asal": [
      9,
      12
     ],
-    "sebenar": {}
+    "sebenar": {},
+    "tiada_dalam_pembekal": true
    },
    {
     "seksyen": "Stage 2 · Implementation",
     "nama": "Network & Cabling Deployment",
     "tarikh": [
-     "2026-11-02",
-     "2027-01-01"
+     "2026-10-26",
+     "2027-02-28"
     ],
     "asal": [
      10,
      13
     ],
     "sebenar": {
-     "peratus": 0,
-     "catatan": "Tarikh ikut Cadangan Tarikh Pemasangan Kabel pembekal: 54 PTj, 507 unit CCTV, 2/11/2026 – 1/1/2027 (9 minggu; lihat tab Jadual kabel). Asal kick-off: 15/10 – 13/12/2026. Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima."
+     "peratus": 4.9,
+     "catatan": "Laporan status pembekal 16/11/2026: In progress (4.9%) · jadual pembekal: 26/10/2026 – Feb 2027 · Tarikh ikut Cadangan Tarikh Pemasangan Kabel pembekal: 54 PTj, 507 unit CCTV, 2/11/2026 – 1/1/2027 (9 minggu; lihat tab Jadual kabel). Asal kick-off: 15/10 – 13/12/2026. Tiada laporan kemajuan Weststar setakat 4/11/2026; dianggap 0% (keputusan pengguna). Kemas kini bila angka diterima.",
+     "status": "berjalan"
     },
-    "ringkas": "Jadual kabel pembekal: 54 PTj · 507 unit · 2/11/2026 – 1/1/2027"
+    "ringkas": "Jadual kabel pembekal: 54 PTj · 507 unit · 2/11/2026 – 1/1/2027",
+    "wajaran": 0.18
    },
    {
     "seksyen": "Stage 2 · Implementation",
     "nama": "Kabel UTP Cat6 baharu + ujian Fluke setiap titik",
     "tarikh": [
-     "2026-11-02",
-     "2027-01-01"
+     "2026-10-26",
+     "2027-02-28"
     ],
     "sub": true,
     "induk": "Network & Cabling Deployment",
@@ -1781,8 +1729,8 @@
     "seksyen": "Stage 2 · Implementation",
     "nama": "Ganti kabel sedia ada yang gagal semakan + uji semula",
     "tarikh": [
-     "2026-11-02",
-     "2027-01-01"
+     "2026-10-26",
+     "2027-02-28"
     ],
     "sub": true,
     "induk": "Network & Cabling Deployment",
@@ -1795,23 +1743,102 @@
    },
    {
     "seksyen": "Stage 2 · Implementation",
+    "nama": "Penghantaran CCTV Camera & NVR",
+    "tarikh": [
+     "2026-11-01",
+     "2026-11-30"
+    ],
+    "baru_pembekal": true,
+    "wajaran": 0.04,
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: November 2026"
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Penghantaran kamera (800 dome, 100 bullet, 100 dome analitik, 10 bullet AI)",
+    "tarikh": [
+     "2026-11-01",
+     "2026-11-30"
+    ],
+    "sub": true,
+    "induk": "Penghantaran CCTV Camera & NVR",
+    "rujukan": "2.1–2.4",
+    "bukti": "DO dan pemeriksaan terima barang",
+    "kiraan": {
+     "sasaran": 1010,
+     "unit": "kamera",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Kamera ALPR + lesen (10 + 1 kamera dan 1 lesen tambahan tanpa kos kepada UM)",
+    "tarikh": [
+     "2026-11-01",
+     "2026-11-30"
+    ],
+    "sub": true,
+    "induk": "Penghantaran CCTV Camera & NVR",
+    "rujukan": "2.6, 2.6.14",
+    "bukti": "DO dan lesen perpetual",
+    "kiraan": {
+     "sasaran": 11,
+     "unit": "set",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk."
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "NVR: 16 unit 64-saluran (64TB) + 1 unit 16-saluran (72TB)",
+    "tarikh": [
+     "2026-11-01",
+     "2026-11-30"
+    ],
+    "sub": true,
+    "induk": "Penghantaran CCTV Camera & NVR",
+    "rujukan": "2.5, 2.11",
+    "bukti": "DO, semakan kapasiti HDD dan rel rak",
+    "kiraan": {
+     "sasaran": 17,
+     "unit": "unit",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk."
+    }
+   },
+   {
+    "seksyen": "Stage 2 · Implementation",
     "nama": "CCTV Installation (Phased Deployment)",
     "tarikh": [
-     "2026-10-19",
-     "2026-12-13"
+     "2026-11-01",
+     "2027-02-28"
     ],
     "asal": [
      11,
      16
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 1.4,
+     "status": "berjalan",
+     "catatan": "Laporan status pembekal 16/11/2026: In progress (1.4%) · jadual pembekal: Nov 2026 – Feb 2027"
+    },
+    "wajaran": 0.2
    },
    {
     "seksyen": "Stage 2 · Implementation",
     "nama": "Kamera dipasang",
     "tarikh": [
-     "2026-10-19",
-     "2026-12-13"
+     "2026-11-01",
+     "2027-02-28"
     ],
     "sub": true,
     "induk": "CCTV Installation (Phased Deployment)",
@@ -1828,8 +1855,8 @@
     "seksyen": "Stage 2 · Implementation",
     "nama": "Ganti kamera sedia ada yang disahkan rosak sahaja",
     "tarikh": [
-     "2026-10-19",
-     "2026-12-13"
+     "2026-11-01",
+     "2027-02-28"
     ],
     "sub": true,
     "induk": "CCTV Installation (Phased Deployment)",
@@ -1841,36 +1868,78 @@
    },
    {
     "seksyen": "Stage 2 · Implementation",
+    "nama": "Penghantaran Dell Monitor & Server",
+    "tarikh": [
+     "2027-02-01",
+     "2027-02-28"
+    ],
+    "baru_pembekal": true,
+    "wajaran": 0.03,
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Februari 2027"
+    }
+   },
+   {
+    "seksyen": "Preliminaries",
+    "nama": "Pelayan ALPR, 10 workstation, 16 video wall controller/decoder",
+    "tarikh": [
+     "2027-02-01",
+     "2027-02-28"
+    ],
+    "sub": true,
+    "induk": "Penghantaran Dell Monitor & Server",
+    "rujukan": "2.9, 2.10, 2.12",
+    "bukti": "DO",
+    "kiraan": {
+     "sasaran": 27,
+     "unit": "unit",
+     "siap": null
+    },
+    "sebenar": {
+     "catatan": "Tarikh anggaran dalam tempoh induk."
+    }
+   },
+   {
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Server, Storage & NVR Setup",
     "tarikh": [
-     "2026-10-19",
-     "2026-12-13"
+     "2026-11-01",
+     "2027-02-28"
     ],
     "asal": [
      12,
      16
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Nov 2026 – Feb 2027*"
+    },
+    "wajaran": 0.08
    },
    {
     "seksyen": "Stage 2 · Implementation",
     "nama": "System Configuration & Integration",
     "tarikh": [
-     "2026-12-04",
-     "2026-12-31"
+     "2026-12-01",
+     "2027-02-28"
     ],
     "asal": [
      14,
      17
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Dis 2026 – Feb 2027*"
+    },
+    "wajaran": 0.07
    },
    {
     "seksyen": "Stage 2 · Implementation",
     "nama": "Migrasi dan konfigurasi semula kamera serta rakaman sedia ada",
     "tarikh": [
-     "2026-12-04",
-     "2026-12-31"
+     "2026-12-01",
+     "2027-02-28"
     ],
     "sub": true,
     "induk": "System Configuration & Integration",
@@ -1882,21 +1951,25 @@
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "System Testing (Functional & Performance)",
     "tarikh": [
-     "2026-12-21",
-     "2027-01-17"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "asal": [
      16,
      19
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Feb – Mac 2027*"
+    },
+    "wajaran": 0.06
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Senarai semak ciri wajib (ColorHunter, SIP, face capture, people counting, ALPR ≤120 km/j, plat 2–3 baris)",
     "tarikh": [
-     "2026-12-21",
-     "2027-01-17"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "System Testing (Functional & Performance)",
@@ -1908,21 +1981,22 @@
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Integration Testing (CSIM & Analytics)",
     "tarikh": [
-     "2026-12-28",
-     "2027-01-24"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "asal": [
      17,
      20
     ],
-    "sebenar": {}
+    "sebenar": {},
+    "tiada_dalam_pembekal": true
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Integrasi Lyt-X CSIM (300 lesen, tanpa perkakasan baharu)",
     "tarikh": [
-     "2026-12-28",
-     "2027-01-24"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Integration Testing (CSIM & Analytics)",
@@ -1934,8 +2008,8 @@
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "BriefCam: 60 add-on dan naik taraf ke versi terkini",
     "tarikh": [
-     "2026-12-28",
-     "2027-01-24"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Integration Testing (CSIM & Analytics)",
@@ -1947,8 +2021,8 @@
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "ALPR dengan DB stiker kenderaan (allow/block 20,000 setiap senarai)",
     "tarikh": [
-     "2026-12-28",
-     "2027-01-24"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Integration Testing (CSIM & Analytics)",
@@ -1960,8 +2034,8 @@
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Suis dengan SDN UM dan pengurusan awan",
     "tarikh": [
-     "2026-12-28",
-     "2027-01-24"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Integration Testing (CSIM & Analytics)",
@@ -1973,34 +2047,39 @@
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Issue Rectification & Optimization",
     "tarikh": [
-     "2027-01-04",
-     "2027-01-31"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "asal": [
      18,
      21
     ],
-    "sebenar": {}
+    "sebenar": {},
+    "tiada_dalam_pembekal": true
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "User Acceptance Test (UAT)",
     "tarikh": [
-     "2027-01-25",
-     "2027-02-07"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "asal": [
      21,
      22
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Feb – Mac 2027*"
+    },
+    "wajaran": 0.04
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Final Acceptance Test (FAT) dengan pemindahan teknologi",
     "tarikh": [
-     "2027-01-25",
-     "2027-02-07"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "User Acceptance Test (UAT)",
@@ -2013,21 +2092,25 @@
     "seksyen": "Transition and Closure",
     "nama": "Training (Admin & End Users)",
     "tarikh": [
-     "2027-01-25",
-     "2027-02-07"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "asal": [
      21,
      22
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Feb – Mac 2027*"
+    },
+    "wajaran": 0.02
    },
    {
     "seksyen": "Transition and Closure",
     "nama": "Latihan hands-on (min. 20 peserta)",
     "tarikh": [
-     "2027-01-25",
-     "2027-02-07"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Training (Admin & End Users)",
@@ -2044,8 +2127,8 @@
     "seksyen": "Transition and Closure",
     "nama": "Latihan admin bertauliah (min. 20 peserta, setahun sekali)",
     "tarikh": [
-     "2027-01-25",
-     "2027-02-07"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Training (Admin & End Users)",
@@ -2064,8 +2147,8 @@
     "seksyen": "Transition and Closure",
     "nama": "Pemindahan teknologi dan kemas kini teknologi (sekali)",
     "tarikh": [
-     "2027-01-25",
-     "2027-02-07"
+     "2027-02-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Training (Admin & End Users)",
@@ -2077,21 +2160,25 @@
     "seksyen": "Transition and Closure",
     "nama": "Documentation",
     "tarikh": [
-     "2027-02-01",
-     "2027-02-14"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "asal": [
      22,
      23
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Mac 2027*"
+    },
+    "wajaran": 0.01
    },
    {
     "seksyen": "Transition and Closure",
     "nama": "Laporan Fluke semua titik rangkaian",
     "tarikh": [
-     "2027-02-01",
-     "2027-02-14"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Documentation",
@@ -2103,8 +2190,8 @@
     "seksyen": "Transition and Closure",
     "nama": "Lukisan as-built dan manual",
     "tarikh": [
-     "2027-02-01",
-     "2027-02-14"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Documentation",
@@ -2116,8 +2203,8 @@
     "seksyen": "Transition and Closure",
     "nama": "Daftar jaminan (tarikh luput setiap item) dan kunci lesen",
     "tarikh": [
-     "2027-02-01",
-     "2027-02-14"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Documentation",
@@ -2130,34 +2217,42 @@
     "seksyen": "Transition and Closure",
     "nama": "Final Handover & Acceptance",
     "tarikh": [
-     "2027-02-08",
-     "2027-02-21"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "asal": [
      23,
      24
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Mac 2027*"
+    },
+    "wajaran": 0.01
    },
    {
     "seksyen": "Transition and Closure",
     "nama": "Project closure and sign-off",
     "tarikh": [
-     "2027-02-15",
-     "2027-02-21"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "asal": [
      24,
      24
     ],
-    "sebenar": {}
+    "sebenar": {
+     "peratus": 0,
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Mac 2027*"
+    },
+    "wajaran": 0.01
    },
    {
     "seksyen": "Transition and Closure",
     "nama": "Mula sokongan 5 tahun (respons 4 jam, NBD) dan jadual PM pertama",
     "tarikh": [
-     "2027-02-15",
-     "2027-02-21"
+     "2027-03-01",
+     "2027-03-31"
     ],
     "sub": true,
     "induk": "Project closure and sign-off",
@@ -2169,7 +2264,12 @@
   "mula_anggaran": true,
   "nota_mula": "Tarikh mula dianggar ikut SST (7/9/2026).",
   "po": null,
-  "spesifikasi": "Jadual Pematuhan Spesifikasi Teknikal CCTV 1010 Unit (FINAL)"
+  "spesifikasi": "Jadual Pematuhan Spesifikasi Teknikal CCTV 1010 Unit (FINAL)",
+  "status_pembekal": {
+   "tarikh_laporan": "2026-11-16",
+   "keseluruhan": 26.2,
+   "sumber": "Jadual_Cabling_Status_CCTV_UM (1).xlsx (OneDrive pembekal)"
+  }
  },
  "kabel": {
   "tajuk": "Cadangan Tarikh Pemasangan Kabel",
@@ -2195,380 +2295,504 @@
     "minggu": 1,
     "ptj": "Bangunan Peperiksaan",
     "unit": 7,
-    "mula": "2026-11-02"
+    "mula": "2026-11-02",
+    "kabel_siap": 7,
+    "pasang_siap": 7,
+    "status": "selesai",
+    "catatan": "Pemasangan: loaner unit already deploy, and waiting for CCTV arrived at mid december"
    },
    {
     "bil": 2,
     "minggu": 1,
     "ptj": "Fakulti Kejuruteraan (FK)",
     "unit": 38,
-    "mula": "2026-11-05"
+    "mula": "2026-11-05",
+    "kabel_siap": 18,
+    "pasang_siap": 0,
+    "status": "berjalan",
+    "catatan": "Kabel: setakat 18/11 RJ45 termination di block A,B,C,D,E,J,K,G,R"
    },
    {
     "bil": 3,
     "minggu": 2,
     "ptj": "Fakulti Perubatan",
     "unit": 25,
-    "mula": "2026-11-10"
+    "mula": "2026-11-10",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 4,
     "minggu": 2,
     "ptj": "Fakulti Bahasa dan Linguistik (FBL)",
     "unit": 5,
-    "mula": "2026-11-10"
+    "mula": "2026-11-10",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 5,
     "minggu": 2,
     "ptj": "Fakulti Sastera dan Sains Sosial (FSSS)",
-    "unit": 20,
-    "mula": "2026-11-11"
+    "unit": 7,
+    "mula": "2026-11-11",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 6,
     "minggu": 2,
     "ptj": "Kolej Kediaman Pertama (ASTAR) - KK1",
-    "unit": 7,
-    "mula": "2026-11-10"
+    "unit": 20,
+    "mula": "2026-11-10",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 7,
     "minggu": 2,
     "ptj": "Kolej Kediaman Ketujuh (Za'ba) - KK7",
     "unit": 7,
-    "mula": "2026-11-12"
+    "mula": "2026-11-12",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 8,
     "minggu": 3,
     "ptj": "Institut Pengajian Termaju (IAS)",
     "unit": 4,
-    "mula": "2026-11-16"
+    "mula": "2026-11-16",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 9,
     "minggu": 3,
     "ptj": "Kolej Kediaman Kedua (Tuanku Bahiyah) - KK2",
     "unit": 7,
-    "mula": "2026-11-16"
+    "mula": "2026-11-16",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 10,
     "minggu": 3,
     "ptj": "Pusat Sukan",
     "unit": 7,
-    "mula": "2026-11-18"
+    "mula": "2026-11-18",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 11,
     "minggu": 3,
     "ptj": "Fakulti Farmasi",
     "unit": 6,
-    "mula": "2026-11-18"
+    "mula": "2026-11-18",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 12,
     "minggu": 3,
     "ptj": "Perpustakaan Utama",
     "unit": 10,
-    "mula": "2026-11-19"
+    "mula": "2026-11-19",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 13,
     "minggu": 3,
     "ptj": "Perpustakaan Za'ba",
     "unit": 2,
-    "mula": "2026-11-19"
+    "mula": "2026-11-19",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 14,
     "minggu": 3,
     "ptj": "Kolej Kediaman Ketiga (Tuanku Kurshiah) - KK3",
     "unit": 5,
-    "mula": "2026-11-20"
+    "mula": "2026-11-20",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 15,
     "minggu": 3,
     "ptj": "Fakulti Seni Kreatif (FSK)",
     "unit": 5,
-    "mula": "2026-11-20"
+    "mula": "2026-11-20",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 16,
     "minggu": 4,
     "ptj": "Fakulti Undang-Undang (FUU)",
     "unit": 8,
-    "mula": "2026-11-23"
+    "mula": "2026-11-23",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 17,
     "minggu": 4,
     "ptj": "Fakulti Sains Sukan dan Eksesais (FSSE)",
     "unit": 5,
-    "mula": "2026-11-23"
+    "mula": "2026-11-23",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 18,
     "minggu": 4,
     "ptj": "Fakulti Pergigian",
     "unit": 20,
-    "mula": "2026-11-24"
+    "mula": "2026-11-24",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 19,
     "minggu": 4,
     "ptj": "Kolej Kediaman Keempat (Bestari) - KK4",
     "unit": 5,
-    "mula": "2026-11-24"
+    "mula": "2026-11-24",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 20,
     "minggu": 4,
     "ptj": "Kolej Kediaman Keenam (Ibnu Sina) - KK6",
     "unit": 7,
-    "mula": "2026-11-25"
+    "mula": "2026-11-25",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 21,
     "minggu": 4,
     "ptj": "Klinik UM",
     "unit": 5,
-    "mula": "2026-11-26"
+    "mula": "2026-11-26",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 22,
     "minggu": 4,
     "ptj": "Pusat Pendidikan Awal Kanak-kanak UM (PPAKKUM)",
     "unit": 7,
-    "mula": "2026-11-28"
+    "mula": "2026-11-28",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 23,
     "minggu": 5,
     "ptj": "Dewan Tunku Canselor (DTC)",
     "unit": 25,
-    "mula": "2026-11-30"
+    "mula": "2026-11-30",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 24,
     "minggu": 5,
     "ptj": "Balai Ungku Aziz",
     "unit": 7,
-    "mula": "2026-11-30"
+    "mula": "2026-11-30",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 25,
     "minggu": 5,
     "ptj": "Kolej Kediaman Kelapan (Kinabalu) - KK8",
     "unit": 7,
-    "mula": "2026-11-30"
+    "mula": "2026-11-30",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 26,
     "minggu": 5,
     "ptj": "Fakulti Alam Bina (FAB)",
     "unit": 10,
-    "mula": "2026-12-01"
+    "mula": "2026-12-01",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 27,
     "minggu": 5,
     "ptj": "Kolej Kediaman Kesembilan (Tun Syed Zahiruddin) - KK9",
     "unit": 7,
-    "mula": "2026-12-02"
+    "mula": "2026-12-02",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 28,
     "minggu": 5,
     "ptj": "Fakulti Pendidikan",
     "unit": 18,
-    "mula": "2026-12-02"
+    "mula": "2026-12-02",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 29,
     "minggu": 6,
     "ptj": "Kolej Kediaman Kesepuluh (Tun Ahmad Zaidi) - KK10",
     "unit": 7,
-    "mula": "2026-12-07"
+    "mula": "2026-12-07",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 30,
     "minggu": 6,
     "ptj": "Institut Kongzi",
     "unit": 6,
-    "mula": "2026-12-07"
+    "mula": "2026-12-07",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 31,
     "minggu": 6,
     "ptj": "Jabatan Hal Ehwal Pelajar (JHEP)",
     "unit": 5,
-    "mula": "2026-12-07"
+    "mula": "2026-12-07",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 32,
     "minggu": 6,
     "ptj": "Muzium Seni Asia",
     "unit": 5,
-    "mula": "2026-12-08"
+    "mula": "2026-12-08",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 33,
     "minggu": 6,
     "ptj": "Kolej Kediaman Kesebelas (Ungku Aziz) - KK11",
     "unit": 7,
-    "mula": "2026-12-08"
+    "mula": "2026-12-08",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 34,
     "minggu": 6,
     "ptj": "Rimba Ilmu",
     "unit": 8,
-    "mula": "2026-12-09"
+    "mula": "2026-12-09",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 35,
     "minggu": 6,
     "ptj": "Fakulti Perniagaan dan Ekonomi (FPE)",
     "unit": 8,
-    "mula": "2026-12-10"
+    "mula": "2026-12-10",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 36,
     "minggu": 6,
     "ptj": "Kolej Kediaman Kedua Belas (Raja Dr. Nazrin Shah) - KK12",
     "unit": 7,
-    "mula": "2026-12-10"
+    "mula": "2026-12-10",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 37,
     "minggu": 6,
     "ptj": "Zero Waste",
     "unit": 5,
-    "mula": "2026-12-11"
+    "mula": "2026-12-11",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 38,
     "minggu": 6,
     "ptj": "Galeri Seni (UMAG)",
     "unit": 2,
-    "mula": "2026-12-11"
+    "mula": "2026-12-11",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 39,
     "minggu": 7,
     "ptj": "Kolej Kediaman Ketiga Belas - KK13 (3 Blok)",
     "unit": 15,
-    "mula": "2026-12-14"
+    "mula": "2026-12-14",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 40,
     "minggu": 7,
     "ptj": "Kompleks Pengurusan Penyelidikan dan Inovasi (KPPI)",
     "unit": 9,
-    "mula": "2026-12-14"
+    "mula": "2026-12-14",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 41,
     "minggu": 7,
     "ptj": "Kompleks Inkubator Inovasi UM (UMX)",
     "unit": 3,
-    "mula": "2026-12-14"
+    "mula": "2026-12-14",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 42,
     "minggu": 7,
     "ptj": "Apartment Jepun (AJ)",
     "unit": 8,
-    "mula": "2026-12-14"
+    "mula": "2026-12-14",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 43,
     "minggu": 7,
     "ptj": "Institut Asia Eropah (AEI)",
     "unit": 7,
-    "mula": "2026-12-15"
+    "mula": "2026-12-15",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 44,
     "minggu": 7,
     "ptj": "Institut Antarabangsa Polisi Awam (INPUMA)",
     "unit": 2,
-    "mula": "2026-12-15"
+    "mula": "2026-12-15",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 45,
     "minggu": 7,
     "ptj": "Pusat Asasi Sains UM (PASUM)",
     "unit": 8,
-    "mula": "2026-12-16"
+    "mula": "2026-12-16",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 46,
     "minggu": 7,
     "ptj": "Wisma R&D",
     "unit": 3,
-    "mula": "2026-12-16"
+    "mula": "2026-12-16",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 47,
     "minggu": 7,
     "ptj": "Jabatan Harta Benda (JHB)",
     "unit": 3,
-    "mula": "2026-12-17"
+    "mula": "2026-12-17",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 48,
     "minggu": 7,
     "ptj": "Pusat Pembelajaran Integral (CITRA)",
     "unit": 1,
-    "mula": "2026-12-17"
+    "mula": "2026-12-17",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 49,
     "minggu": 8,
     "ptj": "Kampus Bachok API",
     "unit": 7,
-    "mula": "2026-12-20"
+    "mula": "2026-12-20",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 50,
     "minggu": 8,
     "ptj": "UMCCed",
     "unit": 12,
-    "mula": "2026-12-21"
+    "mula": "2026-12-21",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 51,
     "minggu": 8,
     "ptj": "High Impact Research (HIR)",
     "unit": 6,
-    "mula": "2026-12-21"
+    "mula": "2026-12-21",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 52,
     "minggu": 8,
     "ptj": "Penerbit",
     "unit": 5,
-    "mula": "2026-12-23"
+    "mula": "2026-12-23",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 53,
     "minggu": 8,
     "ptj": "One Stop Centre",
     "unit": 2,
-    "mula": "2026-12-23"
+    "mula": "2026-12-23",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    },
    {
     "bil": 54,
     "minggu": 9,
     "ptj": "Fakulti Sains",
     "unit": 70,
-    "mula": "2026-12-28"
+    "mula": "2026-12-28",
+    "kabel_siap": 0,
+    "pasang_siap": 0
    }
-  ]
+  ],
+  "kemajuan": {
+   "tarikh_laporan": "2026-11-16",
+   "sumber": "Jadual_Cabling_Status_CCTV_UM (1).xlsx (OneDrive pembekal)",
+   "kabel": [
+    507,
+    25
+   ],
+   "pasang": [
+    507,
+    7
+   ]
+  }
  },
  "projek": null,
  "projek_enc": {
