@@ -1,5 +1,5 @@
 {
- "dijana": "2026-11-19T16:13",
+ "dijana": "2026-11-20T07:47",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
@@ -2269,7 +2269,9 @@
    "tarikh_laporan": "2026-11-16",
    "keseluruhan": 26.2,
    "sumber": "Jadual_Cabling_Status_CCTV_UM (1).xlsx (OneDrive pembekal)"
-  }
+  },
+  "mula_kerja_sebenar": "2026-11-16",
+  "nota_mula_kerja": "Mula kerja sebenar di tapak 16/11/2026 (disahkan pengguna 20/11/2026). Kemajuan dijangka dikira dari tarikh ini; tiada kelewatan bagi tempoh sebelum 16/11/2026."
  },
  "kabel": {
   "tajuk": "Cadangan Tarikh Pemasangan Kabel",
@@ -2792,7 +2794,9 @@
     507,
     7
    ]
-  }
+  },
+  "mula_kerja_sebenar": "2026-11-16",
+  "nota_mula_kerja": "Mula kerja sebenar di tapak 16/11/2026 (disahkan pengguna 20/11/2026). Kemajuan dijangka dikira dari tarikh ini; tiada kelewatan bagi tempoh sebelum 16/11/2026."
  },
  "projek": null,
  "projek_enc": {
