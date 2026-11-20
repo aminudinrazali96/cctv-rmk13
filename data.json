@@ -1,5 +1,5 @@
 {
- "dijana": "2026-11-20T08:09",
+ "dijana": "2026-11-20T08:14",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
@@ -1415,11 +1415,11 @@
   "mula_w1": "2026-09-07",
   "minggu": 30,
   "seksyen_julat": {
-   "Preliminaries": "W1 – W8",
-   "Stage 1 · Project Planning & Design": "W4 – W13",
-   "Stage 2 · Implementation": "W8 – W25",
-   "Stage 3 · Testing and Commissioning": "W22 – W30",
-   "Transition and Closure": "W22 – W30"
+   "Preliminaries": "Ogo – Okt 2026 · W1 – W8",
+   "Stage 1 · Project Planning & Design": "Okt – Nov 2026 · W4 – W13",
+   "Stage 2 · Implementation": "Okt 2026 – Feb 2027 · W8 – W25",
+   "Stage 3 · Testing and Commissioning": "Mac 2027 · W22 – W30",
+   "Transition and Closure": "Mac 2027 · W22 – W30"
   },
   "aktiviti": [
    {
@@ -1435,7 +1435,9 @@
      "tarikh_siap": "2026-09-07",
      "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 19/08/2026 · Surat Setuju Terima 7/9/2026"
     },
-    "wajaran": 0.01
+    "wajaran": 0.01,
+    "jadual_pembekal": "19/08/2026",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Preliminaries",
@@ -1454,7 +1456,9 @@
      "tarikh_siap": "2026-09-22",
      "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 22/09/2026 · Mesyuarat kick-off 22/9/2026, Bilik Mesyuarat Azalea, FBL"
     },
-    "wajaran": 0.01
+    "wajaran": 0.01,
+    "jadual_pembekal": "22/09/2026",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Preliminaries",
@@ -1473,7 +1477,9 @@
      "status": "selesai"
     },
     "ringkas": "Serahan: jadual dasar ikut tarikh PO · urutan pasang 54 PTj · carta organisasi · pengesahan JTD",
-    "wajaran": 0.02
+    "wajaran": 0.02,
+    "jadual_pembekal": "Sep – Okt 2026*",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Preliminaries",
@@ -1492,7 +1498,9 @@
      "status": "selesai"
     },
     "ringkas": "Serahan: BOQ ikut kontrak (+40 suis, +1 kamera & lesen ALPR tanpa kos) · model/part no. · agihan ikut PTj · senarai kamera rosak · lead time OEM · pengesahan JTD",
-    "wajaran": 0.02
+    "wajaran": 0.02,
+    "jadual_pembekal": "Sep – Okt 2026*",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Preliminaries",
@@ -1510,7 +1518,9 @@
      "status": "selesai",
      "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 14/09 – 20/10/2026"
     },
-    "wajaran": 0.07
+    "wajaran": 0.07,
+    "jadual_pembekal": "14/09 – 20/10/2026",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Preliminaries",
@@ -1569,7 +1579,9 @@
      "status": "selesai",
      "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: 01/10 – 29/10/2026"
     },
-    "wajaran": 0.05
+    "wajaran": 0.05,
+    "jadual_pembekal": "01/10 – 29/10/2026",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
@@ -1608,7 +1620,9 @@
      "status": "selesai",
      "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: Okt – Nov 2026*"
     },
-    "wajaran": 0.05
+    "wajaran": 0.05,
+    "jadual_pembekal": "Okt – Nov 2026*",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
@@ -1639,7 +1653,9 @@
      "status": "selesai",
      "catatan": "Laporan status pembekal 16/11/2026: Completed (100%) · jadual pembekal: Nov 2026*"
     },
-    "wajaran": 0.02
+    "wajaran": 0.02,
+    "jadual_pembekal": "Nov 2026*",
+    "status_teks": "Completed"
    },
    {
     "seksyen": "Stage 1 · Project Planning & Design",
@@ -1673,20 +1689,6 @@
    },
    {
     "seksyen": "Stage 2 · Implementation",
-    "nama": "Infrastructure Preparation (Power, Mounting)",
-    "tarikh": [
-     "2026-10-26",
-     "2027-02-28"
-    ],
-    "asal": [
-     9,
-     12
-    ],
-    "sebenar": {},
-    "tiada_dalam_pembekal": true
-   },
-   {
-    "seksyen": "Stage 2 · Implementation",
     "nama": "Network & Cabling Deployment",
     "tarikh": [
      "2026-10-26",
@@ -1702,7 +1704,9 @@
      "status": "berjalan"
     },
     "ringkas": "Jadual kabel pembekal: 54 PTj · 507 unit · 2/11/2026 – 1/1/2027",
-    "wajaran": 0.18
+    "wajaran": 0.18,
+    "jadual_pembekal": "26/10/2026 – Feb 2027",
+    "status_teks": "In progress"
    },
    {
     "seksyen": "Stage 2 · Implementation",
@@ -1757,10 +1761,12 @@
     "tarikh_pindaan": [
      "2026-12-01",
      "2026-12-31"
-    ]
+    ],
+    "jadual_pembekal": "November 2026",
+    "status_teks": "Not started"
    },
    {
-    "seksyen": "Preliminaries",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Penghantaran kamera (800 dome, 100 bullet, 100 dome analitik, 10 bullet AI)",
     "tarikh": [
      "2026-12-01",
@@ -1780,7 +1786,7 @@
     }
    },
    {
-    "seksyen": "Preliminaries",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Kamera ALPR + lesen (10 + 1 kamera dan 1 lesen tambahan tanpa kos kepada UM)",
     "tarikh": [
      "2026-12-01",
@@ -1800,7 +1806,7 @@
     }
    },
    {
-    "seksyen": "Preliminaries",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "NVR: 16 unit 64-saluran (64TB) + 1 unit 16-saluran (72TB)",
     "tarikh": [
      "2026-12-01",
@@ -1835,7 +1841,9 @@
      "status": "berjalan",
      "catatan": "Laporan status pembekal 16/11/2026: In progress (1.4%) · jadual pembekal: Nov 2026 – Feb 2027"
     },
-    "wajaran": 0.2
+    "wajaran": 0.2,
+    "jadual_pembekal": "Nov 2026 – Feb 2027",
+    "status_teks": "In progress"
    },
    {
     "seksyen": "Stage 2 · Implementation",
@@ -1882,10 +1890,12 @@
     "sebenar": {
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Februari 2027"
-    }
+    },
+    "jadual_pembekal": "Februari 2027",
+    "status_teks": "Not started"
    },
    {
-    "seksyen": "Preliminaries",
+    "seksyen": "Stage 2 · Implementation",
     "nama": "Pelayan ALPR, 10 workstation, 16 video wall controller/decoder",
     "tarikh": [
      "2027-02-01",
@@ -1919,7 +1929,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Nov 2026 – Feb 2027*"
     },
-    "wajaran": 0.08
+    "wajaran": 0.08,
+    "jadual_pembekal": "Nov 2026 – Feb 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Stage 2 · Implementation",
@@ -1936,7 +1948,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Dis 2026 – Feb 2027*"
     },
-    "wajaran": 0.07
+    "wajaran": 0.07,
+    "jadual_pembekal": "Dis 2026 – Feb 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Stage 2 · Implementation",
@@ -1966,7 +1980,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Feb – Mac 2027*"
     },
-    "wajaran": 0.06
+    "wajaran": 0.06,
+    "jadual_pembekal": "Feb – Mac 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
@@ -1983,27 +1999,13 @@
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
-    "nama": "Integration Testing (CSIM & Analytics)",
-    "tarikh": [
-     "2027-02-01",
-     "2027-03-31"
-    ],
-    "asal": [
-     17,
-     20
-    ],
-    "sebenar": {},
-    "tiada_dalam_pembekal": true
-   },
-   {
-    "seksyen": "Stage 3 · Testing and Commissioning",
     "nama": "Integrasi Lyt-X CSIM (300 lesen, tanpa perkakasan baharu)",
     "tarikh": [
      "2027-02-01",
      "2027-03-31"
     ],
     "sub": true,
-    "induk": "Integration Testing (CSIM & Analytics)",
+    "induk": "System Testing (Functional & Performance)",
     "rujukan": "2.8.4",
     "bukti": "Kamera dipaparkan dalam CSIM",
     "sebenar": {}
@@ -2016,7 +2018,7 @@
      "2027-03-31"
     ],
     "sub": true,
-    "induk": "Integration Testing (CSIM & Analytics)",
+    "induk": "System Testing (Functional & Performance)",
     "rujukan": "2.7.6",
     "bukti": "Versi dan lesen disahkan",
     "sebenar": {}
@@ -2029,7 +2031,7 @@
      "2027-03-31"
     ],
     "sub": true,
-    "induk": "Integration Testing (CSIM & Analytics)",
+    "induk": "System Testing (Functional & Performance)",
     "rujukan": "2.6.14, 2.10.11",
     "bukti": "Ujian padanan plat",
     "sebenar": {}
@@ -2042,24 +2044,10 @@
      "2027-03-31"
     ],
     "sub": true,
-    "induk": "Integration Testing (CSIM & Analytics)",
+    "induk": "System Testing (Functional & Performance)",
     "rujukan": "2.13.8",
     "bukti": "Suis dipantau dalam SDN/portal awan",
     "sebenar": {}
-   },
-   {
-    "seksyen": "Stage 3 · Testing and Commissioning",
-    "nama": "Issue Rectification & Optimization",
-    "tarikh": [
-     "2027-02-01",
-     "2027-03-31"
-    ],
-    "asal": [
-     18,
-     21
-    ],
-    "sebenar": {},
-    "tiada_dalam_pembekal": true
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
@@ -2076,7 +2064,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Feb – Mac 2027*"
     },
-    "wajaran": 0.04
+    "wajaran": 0.04,
+    "jadual_pembekal": "Feb – Mac 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Stage 3 · Testing and Commissioning",
@@ -2107,7 +2097,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Feb – Mac 2027*"
     },
-    "wajaran": 0.02
+    "wajaran": 0.02,
+    "jadual_pembekal": "Feb – Mac 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Transition and Closure",
@@ -2175,7 +2167,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Mac 2027*"
     },
-    "wajaran": 0.01
+    "wajaran": 0.01,
+    "jadual_pembekal": "Mac 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Transition and Closure",
@@ -2232,7 +2226,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Mac 2027*"
     },
-    "wajaran": 0.01
+    "wajaran": 0.01,
+    "jadual_pembekal": "Mac 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Transition and Closure",
@@ -2249,7 +2245,9 @@
      "peratus": 0,
      "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: Mac 2027*"
     },
-    "wajaran": 0.01
+    "wajaran": 0.01,
+    "jadual_pembekal": "Mac 2027*",
+    "status_teks": "Not started"
    },
    {
     "seksyen": "Transition and Closure",
