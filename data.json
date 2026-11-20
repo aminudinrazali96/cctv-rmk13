@@ -1,5 +1,5 @@
 {
- "dijana": "2026-11-20T07:47",
+ "dijana": "2026-11-20T08:08",
  "excel_diubah": "2026-10-20T07:32",
  "ringkasan": {
   "ptj": 54,
@@ -1745,22 +1745,26 @@
     "seksyen": "Stage 2 · Implementation",
     "nama": "Penghantaran CCTV Camera & NVR",
     "tarikh": [
-     "2026-11-01",
-     "2026-11-30"
+     "2026-12-01",
+     "2026-12-31"
     ],
     "baru_pembekal": true,
     "wajaran": 0.04,
     "sebenar": {
      "peratus": 0,
-     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: November 2026"
-    }
+     "catatan": "Laporan status pembekal 16/11/2026: Not started (0%) · jadual pembekal: November 2026 · Tarikh dipinda ke Disember 2026 (disahkan pengguna 20/11/2026): CCTV dijangka tiba pertengahan Disember; jadual asal pembekal November 2026."
+    },
+    "tarikh_pindaan": [
+     "2026-12-01",
+     "2026-12-31"
+    ]
    },
    {
     "seksyen": "Preliminaries",
     "nama": "Penghantaran kamera (800 dome, 100 bullet, 100 dome analitik, 10 bullet AI)",
     "tarikh": [
-     "2026-11-01",
-     "2026-11-30"
+     "2026-12-01",
+     "2026-12-31"
     ],
     "sub": true,
     "induk": "Penghantaran CCTV Camera & NVR",
@@ -1779,8 +1783,8 @@
     "seksyen": "Preliminaries",
     "nama": "Kamera ALPR + lesen (10 + 1 kamera dan 1 lesen tambahan tanpa kos kepada UM)",
     "tarikh": [
-     "2026-11-01",
-     "2026-11-30"
+     "2026-12-01",
+     "2026-12-31"
     ],
     "sub": true,
     "induk": "Penghantaran CCTV Camera & NVR",
@@ -1799,8 +1803,8 @@
     "seksyen": "Preliminaries",
     "nama": "NVR: 16 unit 64-saluran (64TB) + 1 unit 16-saluran (72TB)",
     "tarikh": [
-     "2026-11-01",
-     "2026-11-30"
+     "2026-12-01",
+     "2026-12-31"
     ],
     "sub": true,
     "induk": "Penghantaran CCTV Camera & NVR",
