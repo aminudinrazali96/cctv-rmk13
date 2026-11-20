@@ -175,6 +175,10 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .gt tr.sub .gbar span{font-size:9.5px}
 .c-skop{background:var(--warnbg);color:var(--warn)}
 .gref{color:var(--mute);font-size:11px;font-weight:700;white-space:nowrap}
+.gt .nm .gwp{display:flex;flex-wrap:wrap;gap:3px 10px;margin-top:4px;font-size:11px;color:var(--ink2);font-family:var(--f-mono);letter-spacing:.2px}
+.gt .nm .gwp em{font-style:normal;color:var(--mute)}
+.gt .nm .gwp b{display:inline;font-size:11px;font-weight:800}
+.gt tr.gtot td{background:var(--track);border-top:2px solid var(--ink2)}
 .gt .nm .gnote{display:block;margin-top:4px;font-size:11.5px;line-height:1.35;color:var(--ink2);font-weight:500}
 .gtog{display:inline-flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
 .gtog input{accent-color:var(--a);margin:0}
@@ -557,7 +561,7 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
       </div>
     </div>
     <div class="card gwrap" id="gantt"></div>
-    <p class="h2s" style="margin-top:10px">Bar = jadual pelaksanaan terkini pembekal (Current Project Status Weststar; tarikh bulan sahaja dipapar dari 1hb hingga hujung bulan). Kemajuan keseluruhan dikira ikut wajaran aktiviti pembekal. Isian = peratus siap sebenar. Garis kelabu di bawah bar = tempoh dalam Gantt Chart tawaran (Enclosure G). Status dibanding dengan kemajuan yang dijangka pada hari ini. Baris ↳ ialah item daripada Jadual Pematuhan Spesifikasi Teknikal (no. item spesifikasi dalam label "Spek"); bar putus-putus mengikut tempoh aktiviti induk.</p>
+    <p class="h2s" style="margin-top:10px">Carta mengikut 20 work package dalam helaian Current Project Status Weststar: setiap baris memaparkan Wajaran, Siap (Current Progress), Earned (Wajaran × Siap) dan Baseline Schedule pembekal; baris JUMLAH di bawah = Overall Project Progress. Bar = Baseline Schedule (tarikh bulan sahaja dipapar dari 1hb hingga hujung bulan). Isian = peratus siap sebenar. Garis kelabu di bawah bar = tempoh dalam Gantt Chart tawaran (Enclosure G). Status dibanding dengan kemajuan yang dijangka pada hari ini. Baris ↳ ialah item daripada Jadual Pematuhan Spesifikasi Teknikal (no. item spesifikasi dalam label "Spek"); bar putus-putus mengikut tempoh aktiviti induk.</p>
   </section>
 
   <section id="t-kabel" hidden>
@@ -812,7 +816,7 @@ function renderGantt(){
   $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(GMK?` · mula kerja sebenar ${dmyy(GMK)} (kemajuan dijangka dikira dari tarikh ini)`:'')+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">TARIKH ANGGARAN</span>`:'');
   // baris 1: bulan kalendar (minggu dikira ikut hari Khamis), baris 2: bulan projek, baris 3: minggu + tarikh Isnin
   const cal=[];for(let w=1;w<=W;w++){const t=addD(M0,(w-1)*7+3),k=t.getFullYear()*12+t.getMonth();if(cal.length&&cal[cal.length-1].k===k)cal[cal.length-1].n++;else cal.push({k,n:1,d:t})}
-  let h0='<tr><th class="nm" rowspan="3" style="vertical-align:bottom">AKTIVITI</th>'+cal.map((c,i)=>`<th class="calm" colspan="${c.n}" data-tip="${BULANP[c.d.getMonth()]} ${c.d.getFullYear()}">${c.n>=2?BULANP[c.d.getMonth()].toUpperCase():BULAN[c.d.getMonth()].toUpperCase()}${(i===0||c.d.getMonth()===0)&&c.n>=3?` <span style="font-weight:700;color:var(--mute)">${c.d.getFullYear()}</span>`:''}</th>`).join('')+'</tr>';
+  let h0='<tr><th class="nm" rowspan="3" style="vertical-align:bottom">WORK PACKAGE</th>'+cal.map((c,i)=>`<th class="calm" colspan="${c.n}" data-tip="${BULANP[c.d.getMonth()]} ${c.d.getFullYear()}">${c.n>=2?BULANP[c.d.getMonth()].toUpperCase():BULAN[c.d.getMonth()].toUpperCase()}${(i===0||c.d.getMonth()===0)&&c.n>=3?` <span style="font-weight:700;color:var(--mute)">${c.d.getFullYear()}</span>`:''}</th>`).join('')+'</tr>';
   let h1='<tr>', h2='<tr>';
   for(let m=0;m<Math.ceil(W/4);m++)h1+=`<th colspan="${Math.min(4,W-m*4)}">BULAN ${m+1}</th>`;
   for(let w=1;w<=W;w++){const d=addD(M0,(w-1)*7);h2+=`<th class="${w===curW?'cur':''}" data-tip="W${w}: ${dmy(d)} – ${dmy(addD(d,6))}">W${w}<small>${d.getDate()}/${d.getMonth()+1}</small></th>`}
@@ -848,7 +852,9 @@ function renderGantt(){
     }
     const cls=[a.sub?'sub':'',r.st==='lewat'||r.st==='sahkan'?`attn attn-${r.st}`:''].filter(Boolean).join(' ');
     const extra=a.sub?`<span class="gref">Spek ${esc(a.rujukan)}</span>${K?`<span class="gref" style="font-weight:600">${kTxt}</span>`:''}${a.semak?`<span class="chip c-skop" data-tip="${('<b>Semak skop</b><br>'+esc(a.semak)).replace(/"/g,'&quot;')}">⚑ SEMAK SKOP</span>`:''}`:'';
-    body+=`<tr${cls?` class="${cls}"`:''}><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}${extra}</small>${a.ringkas?`<span class="gnote">${esc(a.ringkas)}</span>`:''}</td>${cells}</tr>`;
+    const pv=r.st==='selesai'?100:(r.pct||0), f1=x=>(Math.round(x*10)/10).toLocaleString('ms-MY');
+    const wp=!a.sub&&a.wajaran!=null?`<span class="gwp"><span><em>Wajaran</em> <b>${f1(a.wajaran*100)}%</b></span><span><em>Siap</em> <b>${f1(pv)}%</b></span><span><em>Earned</em> <b>${(Math.round(a.wajaran*pv*100)/100).toLocaleString('ms-MY')}%</b></span>${a.jadual_pembekal?`<span><em>Baseline</em> ${esc(a.jadual_pembekal.replace('*',''))}${a.tarikh_pindaan?` → <b>${dmy(pd(a.tarikh_pindaan[0]))}–${dmy(pd(a.tarikh_pindaan[1]))}</b> (dipinda)`:''}</span>`:''}</span>`:'';
+    body+=`<tr${cls?` class="${cls}"`:''}><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}${extra}</small>${wp}${a.ringkas?`<span class="gnote">${esc(a.ringkas)}</span>`:''}</td>${cells}</tr>`;
   });
   let mrow='';
   if(wPO){mrow='<tr class="mrow"><td class="nm">PENANDA</td>';for(let w=1;w<=W;w++){let x='';if(w===wPO)x=`<div class="pline" style="left:${pOff}%"></div><div class="pflag" style="left:${pOff}%" data-tip="${('<b>Tarikh mula kerja (PO)</b><br>'+dmyy(PO)+'<br>Kemajuan dijangka dikira dari tarikh ini.').replace(/"/g,'&quot;')}">▶ MULA KERJA (PO) ${dmy(PO)}</div>`;if(w===curW)x+=`<div class="tline" style="left:${((dayInW+.5)/7*100).toFixed(1)}%"></div>`;mrow+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${w===curW?' today':''}" style="overflow:visible">${x}</td>`}mrow+='</tr>'}
@@ -856,6 +862,9 @@ function renderGantt(){
   const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
   let wT=0,wA=0,wE=0;G.aktiviti.forEach(a=>{if(a.sub||a.wajaran==null)return;const [S,E]=ganttDates(a,M0),r=ganttStatus(a,S,E,T);wT+=a.wajaran;wA+=a.wajaran*(r.st==='selesai'?100:(r.pct||0));wE+=a.wajaran*r.exp});
   const SP=G.status_pembekal, hasW=wT>0, wAct=hasW?Math.round(wA/wT*10)/10:0, wExp=hasW?Math.round(wE/wT):0;
+  if(hasW){const tb=el.querySelector('tbody'), tr=document.createElement('tr');tr.className='gtot';
+    let c='';for(let w=1;w<=W;w++)c+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}"></td>`;
+    tr.innerHTML=`<td class="nm"><b>JUMLAH (TOTAL)</b><span class="gwp"><span><em>Wajaran</em> <b>${Math.round(wT*100)}%</b></span><span><em>Earned</em> <b>${wAct.toLocaleString('ms-MY')}%</b></span><span><em>Dijangka</em> <b>${wExp}%</b></span><span><em>Status</em> ${wAct>=100?'Completed':wAct>0?'In progress':'Not started'}</span></span></td>`+c;tb.appendChild(tr)}
   $('#gkpis').innerHTML=[
     [inW?'W'+curW:(curW<1?'—':'Tamat'),`minggu semasa daripada ${W}`,inW?`${dmy(addD(M0,(curW-1)*7))} – ${dmy(addD(M0,curW*7-1))}`:'', 'var(--navy)'],
     hasW?[wAct.toLocaleString('ms-MY')+'%','kemajuan keseluruhan (wajaran pembekal)',`dijangka ${wExp}% pada hari ini`+(SP?` · laporan pembekal ${dmy(pd(SP.tarikh_laporan))}`:''),wAct<wExp-10?'var(--bad)':'var(--a)']:
