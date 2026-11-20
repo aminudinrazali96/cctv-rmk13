@@ -149,6 +149,10 @@ footer{margin-top:28px;color:var(--mute);font-size:12.5px}
 .gt td.sec{background:var(--track);color:var(--navy);font-weight:900;font-size:12px;letter-spacing:.5px;padding:6px 14px;position:sticky;left:0}
 .gt td.wk{width:34px;min-width:30px;height:40px;position:relative;border-left:1px solid var(--line)}
 .gt td.wk.m{border-left:1px solid var(--ink2)}
+.pline{position:absolute;top:0;bottom:-1px;width:0;border-left:2px dashed var(--ok);margin-left:-1px;z-index:2;pointer-events:none}
+.gt tr.mrow td{height:24px;border-bottom:1px solid var(--line)}
+.gt tr.mrow td.nm{padding:3px 10px 3px 14px;font-size:10.5px;color:var(--mute);font-family:var(--f-mono);letter-spacing:.5px}
+.pflag{position:absolute;top:3px;left:0;transform:translateX(-1px);white-space:nowrap;font-size:10.5px;font-weight:800;color:#fff;background:var(--ok);border-radius:0 4px 4px 0;padding:2px 7px 2px 6px;z-index:3;font-family:var(--f-mono);letter-spacing:.3px}
 .tline{position:absolute;top:0;bottom:-1px;width:2px;margin-left:-1px;background:var(--bad);z-index:2;pointer-events:none}
 .gbar{position:absolute;top:11px;height:18px;border-radius:4px;background:var(--track);border:1px solid var(--ink2);overflow:hidden;z-index:1}
 .gbar i{display:block;height:100%}
@@ -547,6 +551,7 @@ header.hero::after{content:'';position:absolute;width:150px;height:150px;border-
         <span><i style="background:var(--bad)"></i>Lewat jadual</span>
         <span><i style="background:var(--mute);opacity:.55;height:4px;vertical-align:2px"></i>Pelan asal (Enclosure G)</span>
         <span><i style="background:var(--bad);width:2px"></i>Hari ini</span>
+        <span><i style="width:0;border-left:2px dashed var(--ok);border-radius:0"></i>Mula kerja (PO) 16/11/2026</span>
         <span><span class="chip c-skop">⚑ SEMAK SKOP</span> Isu spesifikasi perlu disahkan</span>
         <label class="gtog"><input type="checkbox" id="gsubtog" checked> Tunjuk item spesifikasi</label>
       </div>
@@ -801,6 +806,7 @@ function renderGantt(){
   tab.hidden=false;
   const W=G.minggu||24, M0=pd(G.mula_w1), T=pd(todayIso());
   GMK=G.mula_kerja_sebenar?pd(G.mula_kerja_sebenar):null;
+  const PO=G.po?pd(G.po):GMK, dPO=PO?dayN(M0,PO):-1, wPO=PO&&dPO>=0&&dPO<W*7?Math.floor(dPO/7)+1:0, pOff=wPO?((dPO-(wPO-1)*7)/7*100).toFixed(1):0;
   const curW=Math.floor(dayN(M0,T)/7)+1, inW=curW>=1&&curW<=W, dayInW=dayN(M0,T)-(curW-1)*7;
   const endP=addD(M0,W*7-1);
   $('#gsub').innerHTML=esc(G.rujukan||'')+` · W1 ${G.mula_anggaran?'dianggar ':''}bermula ${dmyy(M0)}${G.mula_anggaran?' (ikut SST)':''}, W${W} tamat ${dmyy(endP)}`+(GMK?` · mula kerja sebenar ${dmyy(GMK)} (kemajuan dijangka dikira dari tarikh ini)`:'')+(G.mula_anggaran?` <span class="chip c-sahkan" style="margin-left:4px">TARIKH ANGGARAN</span>`:'');
@@ -835,6 +841,7 @@ function renderGantt(){
     for(let w=1;w<=W;w++){
       const today=w===curW?' today':'';
       let x=w===curW?`<div class="tline" style="left:${((dayInW+.5)/7*100).toFixed(1)}%"></div>`:'';
+      if(w===wPO)x+=`<div class="pline" style="left:${pOff}%"></div>`;
       if(bb&&w===bb.w)x+=`<div class="gbar" style="${bb.css}" data-tip="${tipTxt}"><i style="width:${fill}%;background:${fc}"></i>${r.st==='lewat'?`<span>${fill}% · jangka ${r.exp}%</span>`:(len>10&&fill>0&&fill<100?`<span>${fill}%</span>`:'')}</div>`;
       if(bs&&w===bs.w)x+=`<div class="gbase" style="${bs.css}" data-tip="${tipTxt}"></div>`;
       cells+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${today}">${x}</td>`;
@@ -843,7 +850,9 @@ function renderGantt(){
     const extra=a.sub?`<span class="gref">Spek ${esc(a.rujukan)}</span>${K?`<span class="gref" style="font-weight:600">${kTxt}</span>`:''}${a.semak?`<span class="chip c-skop" data-tip="${('<b>Semak skop</b><br>'+esc(a.semak)).replace(/"/g,'&quot;')}">⚑ SEMAK SKOP</span>`:''}`:'';
     body+=`<tr${cls?` class="${cls}"`:''}><td class="nm"><b>${esc(a.nama)}</b><small>${gchip(r.st)}${a.auto?`<span style="color:var(--mute);font-size:11.5px">${r.pct}% PTj dilawati</span>`:''}${extra}</small>${a.ringkas?`<span class="gnote">${esc(a.ringkas)}</span>`:''}</td>${cells}</tr>`;
   });
-  el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${body}</tbody></table>`;
+  let mrow='';
+  if(wPO){mrow='<tr class="mrow"><td class="nm">PENANDA</td>';for(let w=1;w<=W;w++){let x='';if(w===wPO)x=`<div class="pline" style="left:${pOff}%"></div><div class="pflag" style="left:${pOff}%" data-tip="${('<b>Tarikh mula kerja (PO)</b><br>'+dmyy(PO)+'<br>Kemajuan dijangka dikira dari tarikh ini.').replace(/"/g,'&quot;')}">▶ MULA KERJA (PO) ${dmy(PO)}</div>`;if(w===curW)x+=`<div class="tline" style="left:${((dayInW+.5)/7*100).toFixed(1)}%"></div>`;mrow+=`<td class="wk${(w-1)%4===0&&w>1?' m':''}${w===curW?' today':''}" style="overflow:visible">${x}</td>`}mrow+='</tr>'}
+  el.innerHTML=`<table class="gt"><thead>${h1}${h2}</thead><tbody>${mrow}${body}</tbody></table>`;
   const exp=nw?Math.round(totExp/nw):0, act=nw?Math.round(totAct/nw):0;
   let wT=0,wA=0,wE=0;G.aktiviti.forEach(a=>{if(a.sub||a.wajaran==null)return;const [S,E]=ganttDates(a,M0),r=ganttStatus(a,S,E,T);wT+=a.wajaran;wA+=a.wajaran*(r.st==='selesai'?100:(r.pct||0));wE+=a.wajaran*r.exp});
   const SP=G.status_pembekal, hasW=wT>0, wAct=hasW?Math.round(wA/wT*10)/10:0, wExp=hasW?Math.round(wE/wT):0;
