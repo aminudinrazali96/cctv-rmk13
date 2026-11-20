@@ -932,7 +932,11 @@ function renderProjek(){
   $('#pj-lock').hidden=!!P; $('#pj-body').hidden=!P;
   if(!P)return;
   const T=pd(todayIso()), K0=pd(P.kontrak[0]), K1=pd(P.kontrak[1]), J1=pd(P.jaminan[1]);
-  const G=D.gantt, M0=G?pd(G.mula_w1):K0, Pend=addD(M0,(P.pelaksanaan_minggu||24)*7-1);
+  const G=D.gantt, M0=G?pd(G.mula_w1):K0;
+  // tempoh pelaksanaan ikut jadual pembekal (Gantt): tarikh tamat = aktiviti utama terakhir
+  const gEnd=G&&G.aktiviti?G.aktiviti.filter(a=>!a.sub&&a.tarikh).reduce((m,a)=>{const e=pd(a.tarikh[1]);return e>m?e:m},M0):null;
+  const Pend=gEnd||addD(M0,(P.pelaksanaan_minggu||24)*7-1), nMg=Math.ceil((dayN(M0,Pend)+1)/7);
+  const MK=G&&G.mula_kerja_sebenar?pd(G.mula_kerja_sebenar):(P.po?pd(P.po):null);
   $('#pj-tajuk').textContent=P.tajuk;
   const PO=P.po_info||{};
   $('#pj-facts').innerHTML=[
@@ -940,14 +944,18 @@ function renderProjek(){
     ['SURAT SETUJU TERIMA',dmyy(pd(P.sst_tarikh)),esc(P.sst_no)],
     ['TEMPOH KONTRAK',`${dmyy(K0)} – ${dmyy(K1)}`,'Satu (1) tahun'],
     ['JAMINAN & SOKONGAN',`hingga ${dmyy(J1)}`,'Lima (5) tahun dari SST'],
-    ['TEMPOH PELAKSANAAN',`${P.pelaksanaan_minggu} minggu`,`${P.mula_anggaran?'Anggaran ':''}${dmyy(M0)} – ${dmyy(Pend)}`],
-    ['PESANAN BELIAN (PO)',P.po?dmyy(pd(P.po)):'<em style="color:var(--warn);font-style:normal">Belum diterima</em>',PO.no?'No. PO '+esc(PO.no):(P.mula_anggaran?'Tarikh mula projek masih anggaran ikut SST':'')],
+    ['TEMPOH PELAKSANAAN',`${gEnd?nMg:P.pelaksanaan_minggu} minggu`,`${P.mula_anggaran?'Anggaran ':''}${dmyy(M0)} – ${dmyy(Pend)}`+(gEnd?` · ikut jadual pembekal (asal ${P.pelaksanaan_minggu} minggu)`:'')],
+    ['PESANAN BELIAN (PO)',P.po?dmyy(pd(P.po)):'<em style="color:var(--warn);font-style:normal">Belum diterima</em>',(PO.no?'No. PO '+esc(PO.no):(P.mula_anggaran?'Tarikh mula projek masih anggaran ikut SST':''))+(MK?` · mula kerja ${dmyy(MK)}`:'')],
     ...(PO.no?[['NILAI PO',esc(PO.nilai),PO.penghantaran?'Jangkaan penghantaran '+dmyy(pd(PO.penghantaran)):''],
     ['RUJUKAN PO','PR '+esc(PO.pr),'RFQ/Tender '+esc(PO.tender)+' · Kod PTj/Projek '+esc(PO.kod)]]:[]),
     ['NILAI KONTRAK',esc(P.nilai_kontrak),'Termasuk SST 8%'],
   ].map(([l,v,s])=>`<div class="fact"><span>${l}</span><b>${v}</b>${s?`<small>${s}</small>`:''}</div>`).join('');
   const p=Math.max(0,Math.min(100,Math.round(dayN(M0,T)/(dayN(M0,Pend)+1)*100)));
-  $('#pj-prog').innerHTML=`<div class="meter"><div class="mlab"><b>Masa pelaksanaan berlalu${P.mula_anggaran?' (anggaran)':''}</b><em>${p}% · hari ke-${Math.max(0,dayN(M0,T)+1)} daripada ${dayN(M0,Pend)+1}</em></div><div class="track"><div style="width:${p}%;background:var(--navy)"></div></div></div>`;
+  let kw='';
+  if(G&&G.aktiviti){let wT=0,wA=0;G.aktiviti.forEach(a=>{if(a.sub||a.wajaran==null)return;const s=a.sebenar||{};wT+=a.wajaran;wA+=a.wajaran*((s.status==='selesai'||s.peratus>=100)?100:(+s.peratus||0))});
+    if(wT){const k=Math.round(wA/wT*10)/10, SP=G.status_pembekal;kw=`<div class="meter" style="margin-top:14px"><div class="mlab"><b>Kemajuan kerja (wajaran pembekal)</b><em>${k.toLocaleString('ms-MY')}%${SP?' · laporan pembekal '+dmyy(pd(SP.tarikh_laporan)):''}</em></div><div class="track"><div style="width:${Math.min(100,k)}%;background:var(--ok)"></div></div></div>`}}
+  const mk=MK&&MK>M0&&MK<Pend?`<i style="position:absolute;top:-4px;bottom:-4px;left:${(dayN(M0,MK)/(dayN(M0,Pend)+1)*100).toFixed(1)}%;border-left:2px dashed var(--ok)" title="Mula kerja (PO) ${dmyy(MK)}"></i>`:'';
+  $('#pj-prog').innerHTML=`<div class="meter"><div class="mlab"><b>Masa pelaksanaan berlalu${P.mula_anggaran?' (anggaran)':''}</b><em>${p}% · hari ke-${Math.max(0,dayN(M0,T)+1)} daripada ${dayN(M0,Pend)+1}${MK?' · mula kerja (PO) '+dmy(MK):''}</em></div><div class="track" style="position:relative;overflow:visible"><div style="width:${p}%;background:var(--navy)"></div>${mk}</div></div>`+kw;
   $('#pj-skop').innerHTML=P.skop.map(([n,t],i)=>`<div class="step"><b><i>${i+1}</i>${esc(n)}</b><p>${esc(t)}</p></div>`).join('');
   const cam=P.bom.filter(([n])=>/camera/i.test(n)&&!/licen|cabling/i.test(n)).reduce((a,[,q])=>a+q,0);
   $('#pj-bom-sub').textContent=`${P.bom.length} item perkakasan dan lesen · ${cam.toLocaleString('ms-MY')} unit kamera CCTV`;
@@ -963,7 +971,7 @@ function renderProjek(){
   if(!P.po)by['2026'].push(['9999','PO','belum diterima']);
   const tIso=todayIso().slice(0,7);
   $('#pj-p5').innerHTML=Object.keys(by).sort().map(y=>`<div class="yr"><b>${y}</b><div class="ms">${by[y].map(([ym,k,t])=>{const m=+ym.slice(5,7);return ym==='9999'?`<span style="background:var(--warnbg);color:var(--warn)">PO · ${esc(t)}</span>`:`<span class="${ym<tIso?'done':(/^(FAT|TOT)$/.test(k)?'k':'')}" title="${esc(t)}">${esc(k)} · ${BULAN[m-1]}${t?' · '+esc(t):''}</span>`}).join('')}</div></div>`).join('')+
-   `<div class="yr"><b></b><div class="ms"><span>Pelaksanaan ${P.pelaksanaan_minggu} minggu</span><span>Sokongan 5 tahun · respons 4 jam · NBD di tapak</span></div></div>`;
+   `<div class="yr"><b></b><div class="ms"><span>Pelaksanaan ${gEnd?nMg:P.pelaksanaan_minggu} minggu (${dmy(M0)}/${String(M0.getFullYear()).slice(2)} – ${dmy(Pend)}/${String(Pend.getFullYear()).slice(2)})</span><span>Sokongan 5 tahun · respons 4 jam · NBD di tapak</span></div></div>`;
 }
 
 function renderHeader(){
